@@ -24,10 +24,10 @@
     "npm": ">=4.0"
   },
   "dependencies": {
+    "@nuxtjs/component-cache": "latest",
     "@nuxtjs/manifest": "latest",
     "@nuxtjs/meta": "latest",
     "@nuxtjs/workbox": "latest",
-    "@nuxtjs/component-cache": "latest",
     "firebase": "^4.1.1",
     "nuxt": "^1.0.0-alpha2",
     "stylus": "^0.54.5",
