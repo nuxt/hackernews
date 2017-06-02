@@ -2,19 +2,25 @@
 # yarn lockfile v1
 
 
-"@nuxtjs/manifest@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.1.1.tgz#050a7db9cf70c9d087f0ea357c00ee68c4c7dcc9"
+"@nuxtjs/component-cache@latest":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/component-cache/-/component-cache-0.1.2.tgz#b7ab8d64f382d6a0b0fe0a0b42d3b9c3599f1d25"
+  dependencies:
+    lru-cache "^4.0.2"
+
+"@nuxtjs/manifest@latest":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.3.0.tgz#20dd82c099454f4d6552fedc77b64a88177c630c"
   dependencies:
     fs-extra "^3.0.1"
     hash-sum "^1.0.2"
     lodash "^4.17.4"
 
-"@nuxtjs/meta@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-1.0.1.tgz#9e7721a9dae5dc160283028970f983315564977a"
+"@nuxtjs/meta@latest":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-1.1.0.tgz#7cfa7b666d23a21eba752c46ce13357ac898ffd1"
 
-"@nuxtjs/workbox@^0.1.0":
+"@nuxtjs/workbox@latest":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.1.0.tgz#e9fe7b3e9f51bb772885a697e40a0c31998116a4"
   dependencies:
