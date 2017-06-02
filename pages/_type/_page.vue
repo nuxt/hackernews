@@ -1,5 +1,5 @@
 <template>
-  <div class="news-view">
+  <div class="news-view view">
     <div class="news-list-nav">
       <router-link v-if="page > 1" :to="'/' + type + '/' + (page - 1)">&lt; prev</router-link>
       <a v-else class="disabled">&lt; prev</a>
