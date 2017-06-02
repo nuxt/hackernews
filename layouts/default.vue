@@ -59,7 +59,7 @@
       margin-right 1.8em
       &:hover
         color #fff
-      &.router-link-active
+      &.router-link-active, &.nuxt-link-active
         color #fff
         font-weight 400
       &:nth-child(6)
