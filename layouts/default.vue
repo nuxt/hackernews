@@ -36,7 +36,7 @@
     text-decoration none
 
   .header
-    background-color #3B8070
+    background-color #41B883
     position fixed
     z-index 999
     height 55px
