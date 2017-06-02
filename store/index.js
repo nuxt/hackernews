@@ -1,14 +1,10 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
 import actions from './actions'
 import mutations from './mutations'
 import getters from './getters'
 
-Vue.use(Vuex)
-
-export function createStore () {
-  return new Vuex.Store({
-    state: {
+export default {
+  state() {
+    return {
       activeType: null,
       itemsPerPage: 20,
       items: {/* [id: number]: Item */},
@@ -20,9 +16,9 @@ export function createStore () {
         ask: [],
         job: []
       }
-    },
-    actions,
-    mutations,
-    getters
-  })
+    }
+  },
+  actions,
+  mutations,
+  getters
 }
