@@ -42,8 +42,8 @@
     "@nuxtjs/workbox" latest
 
 "@nuxtjs/workbox@latest":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.3.1.tgz#dee367552bdf5ccb2c809c8cb9d7113e25bd66a6"
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.3.2.tgz#f9039435e8d490671e7685b6b138a18389b88e3e"
   dependencies:
     workbox-webpack-plugin "^1.0.1"
 
