@@ -11,13 +11,6 @@ module.exports = {
   ],
   build: {
     extractCSS: true,
-    ssr: {
-      // TODO: make component-cache module working in production without this extra setting
-      cache: require('lru-cache')({
-        max: 10000,
-        maxAge: 1000 * 60 * 15
-      })
-    },
     extend(config, {isClient}) {
       config.resolve.alias['create-api'] =
         `./create-api-${isClient ? 'client' : 'server'}.js`
