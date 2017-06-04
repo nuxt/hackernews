@@ -42,8 +42,8 @@
     "@nuxtjs/workbox" latest
 
 "@nuxtjs/workbox@latest":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.3.2.tgz#f9039435e8d490671e7685b6b138a18389b88e3e"
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.3.3.tgz#ae2d0a0e7b08cab55bf2fb23fc3205d2a10d43ff"
   dependencies:
     workbox-webpack-plugin "^1.0.1"
 
@@ -975,12 +975,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000676"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000676.tgz#82ea578237637c8ff34a28acaade373b624c4ea8"
+  version "1.0.30000677"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000677.tgz#13f421d40ae1434702103c494d2c4d716e2a8fcb"
 
 caniuse-lite@^1.0.30000670:
-  version "1.0.30000676"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000676.tgz#1e962123f48073f0c51c4ea0651dd64d25786498"
+  version "1.0.30000677"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000677.tgz#43090233d4b2c7190657f95455983d94d264baaa"
 
 caseless@~0.12.0:
   version "0.12.0"
