@@ -15,9 +15,7 @@
         </a>
       </nav>
     </header>
-    <transition name="fade" mode="out-in">
-      <nuxt></nuxt>
-    </transition>
+    <nuxt></nuxt>
   </div>
 </template>
 
@@ -81,10 +79,10 @@
     margin 0 auto
     position relative
 
-  .fade-enter-active, .fade-leave-active
+  .page-enter-active, .page-leave-active
     transition all .2s ease
 
-  .fade-enter, .fade-leave-active
+  .page-enter, .page-leave-active
     opacity 0
 
   @media (max-width 860px)
