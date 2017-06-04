@@ -24,6 +24,10 @@
     "node": ">=7.0",
     "npm": ">=4.0"
   },
+  "now": {
+    "alias": "nuxt-hn",
+    "public": true
+  },
   "dependencies": {
     "@nuxtjs/component-cache": "^0.1.3",
     "@nuxtjs/pwa": "latest",
