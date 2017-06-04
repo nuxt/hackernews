@@ -29,7 +29,7 @@
     "@nuxtjs/meta": "latest",
     "@nuxtjs/workbox": "latest",
     "firebase": "^4.1.1",
-    "nuxt": "^1.0.0-alpha2",
+    "nuxt": "^1.0.0-alpha.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
   }
