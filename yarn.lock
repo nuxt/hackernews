@@ -15,8 +15,8 @@
     cssnano "^3.10.0"
 
 "@nuxtjs/manifest@latest":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.4.1.tgz#38a94bd7706f7acc0d901e56fa683312fff9f208"
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.4.2.tgz#c92e9458891d03b9f8623dfa9fedaa9286406ef1"
   dependencies:
     fs-extra "^3.0.1"
     hash-sum "^1.0.2"
@@ -42,8 +42,8 @@
     "@nuxtjs/workbox" latest
 
 "@nuxtjs/workbox@latest":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.3.0.tgz#46db0a691df0697871946a71135885aa60b8ee99"
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.3.1.tgz#dee367552bdf5ccb2c809c8cb9d7113e25bd66a6"
   dependencies:
     workbox-webpack-plugin "^1.0.1"
 
