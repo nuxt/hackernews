@@ -7,6 +7,6 @@ yarn-error.log
 *.iml
 .nuxt
 
-static/manifest.*.json
+static/manifest*.json
 static/sw.js
-static/workbox-sw.*.js
+static/workbox-sw*.js
