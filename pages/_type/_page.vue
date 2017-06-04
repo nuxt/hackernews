@@ -23,14 +23,15 @@
   import Item from '../../components/Item.vue'
 
   const camelize = str => str.charAt(0).toUpperCase() + str.slice(1)
+  const TYPES = ['top', 'new', 'show', 'ask', 'job']
 
   export default {
     name: 'item-list',
+    validate({params: {type, page = 0}}) {
+      return TYPES.includes(type) && /^[0-9]+$/.test(page)
+    },
     components: {
       Item
-    },
-    validate({ params }) {
-      return ['top', 'new', 'show', 'ask', 'job'].includes(params.type)
     },
     data() {
       return {
