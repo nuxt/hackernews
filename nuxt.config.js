@@ -18,5 +18,8 @@ module.exports = {
       config.resolve.alias['create-api'] =
         `./create-api-${isClient ? 'client' : 'server'}.js`
     }
+  },
+  manifest: {
+    theme_color: '#41B883'
   }
 }
