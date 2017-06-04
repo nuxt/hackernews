@@ -19,16 +19,18 @@
 </template>
 
 <script>
-  import {watchList} from '../../api'
+  import { watchList } from '../../api'
   import Item from '../../components/Item.vue'
 
   const camelize = str => str.charAt(0).toUpperCase() + str.slice(1)
 
   export default {
     name: 'item-list',
-
     components: {
       Item
+    },
+    validate({ params }) {
+      return ['top', 'new', 'show', 'ask', 'job'].includes(params.type)
     },
     data() {
       return {
@@ -40,9 +42,6 @@
     },
     fetch({store, params}) {
       return store.dispatch('FETCH_LIST_DATA', {type: params.type})
-    },
-    meta: {
-
     },
     computed: {
       page() {
