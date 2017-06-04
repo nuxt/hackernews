@@ -10,7 +10,8 @@
         </span>
         <p class="meta">
           {{ item.score }} points
-          | by <router-link :to="'/user/' + item.by">{{ item.by }}</router-link>
+          | by
+          <router-link :to="'/user/' + item.by">{{ item.by }}</router-link>
           {{ item.time | timeAgo }} ago
         </p>
       </div>
@@ -33,14 +34,20 @@
 
   export default {
     name: 'item-view',
-    components: { Spinner, Comment },
+    components: {Spinner, Comment},
 
     data: () => ({
       loading: true
     }),
 
+    head() {
+      return {
+        title: this.item.title
+      }
+    },
+
     computed: {
-      item () {
+      item() {
         return this.$store.state.items[this.$route.params.id]
       }
     },
@@ -48,16 +55,12 @@
     // We only fetch the item itself before entering the view, because
     // it might take a long time to load threads with hundreds of comments
     // due to how the HN Firebase API works.
-    asyncData ({ store, route: { params: { id }}}) {
-      return store.dispatch('FETCH_ITEMS', { ids: [id] })
-    },
-
-    title () {
-      return this.item.title
+    asyncData({store, route: {params: {id}}}) {
+      return store.dispatch('FETCH_ITEMS', {ids: [id]})
     },
 
     // Fetch comments when mounted on the client
-    beforeMount () {
+    beforeMount() {
       this.fetchComments()
     },
 
@@ -67,7 +70,7 @@
     },
 
     methods: {
-      fetchComments () {
+      fetchComments() {
         this.loading = true
         fetchComments(this.$store, this.item).then(() => {
           this.loading = false
@@ -77,7 +80,7 @@
   }
 
   // recursively fetch all descendent comments
-  function fetchComments (store, item) {
+  function fetchComments(store, item) {
     if (item && item.kids) {
       return store.dispatch('FETCH_ITEMS', {
         ids: item.kids
@@ -92,7 +95,7 @@
   .item-view-header
     background-color #fff
     padding 1.8em 2em 1em
-    box-shadow 0 1px 2px rgba(0,0,0,.1)
+    box-shadow 0 1px 2px rgba(0, 0, 0, .1)
     h1
       display inline
       font-size 1.5em

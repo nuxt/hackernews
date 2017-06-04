@@ -33,6 +33,11 @@
     components: {
       Item
     },
+    head() {
+      return {
+        title: camelize(this.$route.params.type)
+      }
+    },
     data() {
       return {
         transition: 'slide-right',
