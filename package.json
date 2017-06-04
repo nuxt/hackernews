@@ -1,6 +1,7 @@
 {
   "name": "nuxt-hn",
   "description": "Nuxt Hacker News",
+  "version": "1.0.0",
   "author": "Evan You <yyx990803@gmail.com>",
   "contributors": [
     {
