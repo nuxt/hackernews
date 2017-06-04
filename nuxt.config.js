@@ -1,4 +1,7 @@
 module.exports = {
+  head: {
+    titleTemplate: 'Nuxt HN | %s',
+  },
   loading: {color: '#ff6600'},
   modules: [
     require('@nuxtjs/manifest'),
@@ -15,5 +18,5 @@ module.exports = {
       config.resolve.alias['create-api'] =
         `./create-api-${isClient ? 'client' : 'server'}.js`
     }
-  },
+  }
 }
