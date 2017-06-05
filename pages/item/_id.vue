@@ -88,6 +88,7 @@
         return fetchComments(store, store.state.items[id])
       })))
     }
+    return Promise.resolve()
   }
 </script>
 
