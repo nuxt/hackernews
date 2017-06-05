@@ -21,7 +21,10 @@ module.exports = {
     color: '#66e8ad'
   },
   manifest: {
-    theme_color: '#41b883'
+    theme_color: '#41b883',
+    defaultIcon: {
+        sizes: '16x16'
+    }    
   },
   modules: [
     '@nuxtjs/pwa',
