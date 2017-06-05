@@ -10,7 +10,7 @@
         <router-link to="/show">Show</router-link>
         <router-link to="/ask">Ask</router-link>
         <router-link to="/job">Jobs</router-link>
-        <a class="github" href="https://github.com/nuxt/nuxt.js" target="_blank" rel="noopener">
+        <a class="github" href="https://github.com/nuxt/hackernews" target="_blank" rel="noopener">
           Built with Nuxt.js
         </a>
       </nav>
