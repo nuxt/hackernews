@@ -15,8 +15,8 @@
     cssnano "^3.10.0"
 
 "@nuxtjs/manifest@latest":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.4.2.tgz#c92e9458891d03b9f8623dfa9fedaa9286406ef1"
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.5.0.tgz#582e59b013149c669e2257827c5cb4225a97135f"
   dependencies:
     fs-extra "^3.0.1"
     hash-sum "^1.0.2"
@@ -42,8 +42,8 @@
     "@nuxtjs/workbox" latest
 
 "@nuxtjs/workbox@latest":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.3.3.tgz#ae2d0a0e7b08cab55bf2fb23fc3205d2a10d43ff"
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-0.3.4.tgz#d0021bd7a7ab9290ceacb61cd45eb5b58834b074"
   dependencies:
     workbox-webpack-plugin "^1.0.1"
 
@@ -1735,8 +1735,8 @@ figures@^2.0.0:
     escape-string-regexp "^1.0.5"
 
 file-loader@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.11.1.tgz#6b328ee1234a729e4e47d36375dd6d35c0e1db84"
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.11.2.tgz#4ff1df28af38719a6098093b88c82c71d1794a34"
   dependencies:
     loader-utils "^1.0.2"
 
