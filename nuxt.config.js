@@ -9,10 +9,10 @@ module.exports = {
     titleTemplate: 'Nuxt HN | %s'
   },
   loading: {
-    color: '#ff6600'
+    color: '#66e8ad'
   },
   manifest: {
-    theme_color: '#41B883'
+    theme_color: '#41b883'
   },
   modules: [
     '@nuxtjs/pwa',
@@ -20,5 +20,15 @@ module.exports = {
   ],
   plugins: [
     '~plugins/filters.js'
-  ]
+  ],
+  render: {
+    static: {
+      maxAge: '1y',
+      setHeaders: function (res, path) {
+        if (path.includes('sw.js') || path.includes('workbox-sw.')) {
+          res.setHeader('Cache-Control', 'public, max-age=0')
+        }
+      }
+    }
+  }
 }
