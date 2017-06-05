@@ -28,6 +28,7 @@ module.exports = {
     '@nuxtjs/component-cache'
   ],
   plugins: [
+    '~plugins/vuex-router-sync.js',
     '~plugins/filters.js'
   ],
   render: {

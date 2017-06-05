@@ -69,6 +69,7 @@ export default {
 
   watch: {
     page(to, from) {
+      console.log('Page changed', to, from)
       this.loadItems(to, from)
     }
   },

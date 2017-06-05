@@ -8,7 +8,7 @@ export default {
       return []
     }
 
-    const page = 1 // Number(state.route.params.page) || 1
+    const page = Number(state.route.params.page) || 1
     const start = (page - 1) * itemsPerPage
     const end = page * itemsPerPage
 
