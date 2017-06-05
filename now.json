@@ -1,0 +1,10 @@
+{
+ "alias": "nuxt-hn",
+ "public": true,
+ "type": "docker",
+ "env": {
+     "NODE_ENV": "production",
+     "HOST": "0.0.0.0"
+ }
+}
+ 

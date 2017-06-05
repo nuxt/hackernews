@@ -1,6 +1,7 @@
 {
   "name": "nuxt-hn",
   "description": "Nuxt Hacker News",
+  "version": "1.0.0",
   "author": "Evan You <yyx990803@gmail.com>",
   "contributors": [
     {
@@ -23,13 +24,11 @@
     "node": ">=7.0",
     "npm": ">=4.0"
   },
-  "dependencies": {
-    "@nuxtjs/component-cache": "latest",
-    "@nuxtjs/manifest": "latest",
-    "@nuxtjs/meta": "latest",
-    "@nuxtjs/workbox": "latest",
+ "dependencies": {
+    "@nuxtjs/component-cache": "^0.1.3",
+    "@nuxtjs/pwa": "latest",
     "firebase": "^4.1.1",
-    "nuxt": "^1.0.0-alpha2",
+    "nuxt": "1.0.0-alpha.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
   }

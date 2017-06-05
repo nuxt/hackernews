@@ -1,10 +1,12 @@
+import Vuex from 'vuex'
+
 import actions from './actions'
 import mutations from './mutations'
 import getters from './getters'
 
-export default {
-  state() {
-    return {
+export default () => {
+  return new Vuex.Store({
+    state: {
       activeType: null,
       itemsPerPage: 20,
       items: {/* [id: number]: Item */},
@@ -16,9 +18,9 @@ export default {
         ask: [],
         job: []
       }
-    }
-  },
-  actions,
-  mutations,
-  getters
+    },
+    actions,
+    mutations,
+    getters
+  })
 }
