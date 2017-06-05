@@ -17,11 +17,14 @@ HackerNews clone built with Nuxt.js
 
 ## Features
 
-*[TODO]*
+- Server Side Rendering
+- Code Splitting
+- Single-file Vue Components
+- Real-time List Updates with FLIP Animation
 
 ## Build Setup
 
-**Requires Node.js 7+**
+**Requires Node.js 6+**
 
 ``` bash
 # install dependencies
