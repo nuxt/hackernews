@@ -1,5 +1,5 @@
 <template>
-  <div class="item-view" v-if="item">
+  <div class="item-view view" v-if="item">
     <template v-if="item">
       <div class="item-view-header">
         <a :href="item.url" target="_blank">

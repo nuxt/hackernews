@@ -1,5 +1,5 @@
 <template>
-  <div class="user-view">
+  <div class="user-view view">
     <template v-if="user">
       <h1>User : {{ user.id }}</h1>
       <ul class="meta">
