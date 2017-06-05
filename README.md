@@ -3,7 +3,7 @@ Port of [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) for [n
 
 <p align="center">
   <a href="https://nuxt-hn.now.sh" target="_blank">
-    <img src="https://cloud.githubusercontent.com/assets/5158436/26746925/ddce1a4c-4807-11e7-8791-f8d87f3e1556.png" width="700px">
+    <img src="https://cloud.githubusercontent.com/assets/5158436/26766664/5694c26a-49ab-11e7-8789-049fd9161af5.png" width="256px">
     <br>
     Live Demo
   </a>
@@ -11,9 +11,9 @@ Port of [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) for [n
 
 ## Performance
 
-- Lighthouse [result](https://www.webpagetest.org/lighthouse.php?test=170602_3H_1GWK&run=2)
-- Interactive (Faster 3G) [result](https://www.webpagetest.org/result/170602_G7_1GWC/)
-- Interactive (Emerging Markets) [result](https://www.webpagetest.org/result/170602_R0_1GSB)
+- Lighthouse [91/100](https://www.webpagetest.org/lighthouse.php?test=170605_Y1_ZF&run=1)
+- Interactive (Faster 3G) [result](https://www.webpagetest.org/result/170605_Y1_ZF)
+- Interactive (Emerging Markets) [result](https://www.webpagetest.org/result/170605_EQ_144)
 
 ## Features
 
