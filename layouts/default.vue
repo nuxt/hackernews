@@ -33,10 +33,13 @@
     color #34495e
     text-decoration none
 
+  .progress
+    z-index: 1000 !important
+
   .header
     background-color #41B883
     position fixed
-    z-index 0
+    z-index 999
     height 55px
     top 0
     left 0
