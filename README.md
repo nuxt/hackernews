@@ -1,8 +1,9 @@
-# Nuxt Hacker News!
-Port of [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) for [nuxt.js](https://github.com/nuxt/nuxt.js).
+# Nuxt.js Hacker News
+
+Port of [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) with [nuxt.js](https://github.com/nuxt/nuxt.js).
 
 <p align="center">
-  <a href="https://nuxt-hn.now.sh" target="_blank">
+  <a href="https://hn.nuxtjs.org" target="_blank">
     <img src="https://cloud.githubusercontent.com/assets/5158436/26766664/5694c26a-49ab-11e7-8789-049fd9161af5.png" width="256px">
     <br>
     Live Demo
