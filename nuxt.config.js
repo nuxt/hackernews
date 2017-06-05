@@ -6,7 +6,16 @@ module.exports = {
     }
   },
   head: {
-    titleTemplate: 'Nuxt HN | %s'
+    titleTemplate: 'Nuxt HN | %s',
+    meta: [
+      { hid: 'description', name: 'description', content: 'HackerNews clone built with Nuxt.js' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: 'https://cloud.githubusercontent.com/assets/904724/26784102/0d2f8000-49fc-11e7-8091-2b66901c73ee.png' },
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:site', content: '@nuxt_js' },
+      { property: 'twitter:image', content: 'https://cloud.githubusercontent.com/assets/904724/26784102/0d2f8000-49fc-11e7-8091-2b66901c73ee.png' },
+      { property: 'twitter:description', content: 'HackerNews clone built with Nuxt.js' }
+    ]
   },
   loading: {
     color: '#66e8ad'
