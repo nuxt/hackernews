@@ -1,10 +1,9 @@
 # Nuxt.js Hacker News
-
-Port of [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) with [nuxt.js](https://github.com/nuxt/nuxt.js).
+HackerNews clone built with Nuxt.js
 
 <p align="center">
   <a href="https://hn.nuxtjs.org" target="_blank">
-    <img src="https://cloud.githubusercontent.com/assets/5158436/26766664/5694c26a-49ab-11e7-8789-049fd9161af5.png" width="256px">
+    <img src="https://cloud.githubusercontent.com/assets/5158436/26785443/a70cfa48-4a17-11e7-9cda-1333932baf5c.png" width="256px">
     <br>
     Live Demo
   </a>
@@ -18,11 +17,14 @@ Port of [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) with [
 
 ## Features
 
-*[TODO]*
+- Server Side Rendering
+- Code Splitting
+- Single-file Vue Components
+- Real-time List Updates with FLIP Animation
 
 ## Build Setup
 
-**Requires Node.js 7+**
+**Requires Node.js 6+**
 
 ``` bash
 # install dependencies
@@ -41,3 +43,5 @@ npm start
 ## License
 
 MIT
+
+This repository is originally ported from [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0)
