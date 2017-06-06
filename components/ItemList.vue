@@ -116,7 +116,7 @@ export default {
   a
     margin 0 1em
   .disabled
-    color #ccc
+    color #595959
 
 .news-list
   position absolute

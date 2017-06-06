@@ -22,7 +22,7 @@ module.exports = {
   manifest: {
     name: 'Nuxt Hacker News',
     description: 'HackerNews clone built with Nuxt.js',
-    theme_color: '#41b883'
+    theme_color: '#2B8358'
   },
   modules: [
     '@nuxtjs/pwa',

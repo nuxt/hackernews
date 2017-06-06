@@ -37,7 +37,7 @@
     z-index: 1000 !important
 
   .header
-    background-color #41B883
+    background-color #2B8358
     position fixed
     z-index 999
     height 55px
@@ -50,7 +50,7 @@
       margin 0px auto
       padding 15px 5px
     a
-      color rgba(255, 255, 255, .8)
+      color #fff
       line-height 24px
       transition color .15s ease
       display inline-block

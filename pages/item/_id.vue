@@ -103,7 +103,7 @@
       margin 0
       margin-right .5em
     .host, .meta, .meta a
-      color #828282
+      color #595959
     .meta a
       text-decoration underline
 
