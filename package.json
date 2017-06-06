@@ -28,7 +28,7 @@
     "@nuxtjs/component-cache": "^0.1.3",
     "@nuxtjs/pwa": "latest",
     "firebase": "^4.1.1",
-    "nuxt": "1.0.0-alpha.3",
+    "nuxt": "1.0.0-alpha.4",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "vuex-router-sync": "^4.2.0"
