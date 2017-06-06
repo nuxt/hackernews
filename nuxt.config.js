@@ -1,6 +1,5 @@
 module.exports = {
   build: {
-    extractCSS: true,
     extend (config, { isClient }) {
       config.resolve.alias['create-api'] = `./create-api-${isClient ? 'client' : 'server'}.js`
     }
