@@ -21,6 +21,7 @@ HackerNews clone built with Nuxt.js
 - Code Splitting
 - Single-file Vue Components
 - Real-time List Updates with FLIP Animation
+- PWA experience using [pwa preset](https://github.com/nuxt/modules/tree/master/modules/pwa) with almost _zero config_
 
 ## Build Setup
 
