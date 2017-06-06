@@ -13,7 +13,7 @@ HackerNews clone built with Nuxt.js
 
 - Lighthouse [100/100](https://cdn.rawgit.com/Atinux/e2f424e6794babc00d2158406b0ab37d/raw/7ed7607325dd3e1d1ae26bff14d49032ed8656d5/lighthouse-result-nuxt.html)
 - Interactive (Faster 3G) [result](https://www.webpagetest.org/result/170605_F3_805beee9baa2d3c0542176e79cdb148c/)
-- Interactive (Emerging Markets) [result](https://www.webpagetest.org/result/170605_EQ_144)
+- Interactive (Emerging Markets) [result](https://www.webpagetest.org/result/170606_C7_469006cad2a2266e76b7cdcf4740ad87/)
 
 ## Features
 
