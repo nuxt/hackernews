@@ -19,6 +19,18 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      link: [
+        { rel: 'canonical', href: `https://hn.nuxtjs.org${this.$route.fullPath}` }
+      ]
+    }
+  }
+}
+</script>
+
 <style lang="stylus">
   body
     font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

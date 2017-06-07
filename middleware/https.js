@@ -1,6 +1,9 @@
 export default ({ isDev, req, redirect }) => {
   // Redirect to https
-  if (!isDev && req && !req.connection.encrypted) {
-    return redirect(301, `https://${req.headers.host}${req.url}`)
+  if (!isDev && req) {
+    const protocol = req.headers['X-Forwarded-Proto'] || (req.connection.encrypted ? 'https' : 'http')
+    if (protocol === 'http') {
+      return redirect(301, `https://${req.headers.host}${req.url}`)
+    }
   }
 }
