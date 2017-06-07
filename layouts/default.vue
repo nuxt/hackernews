@@ -24,7 +24,8 @@ export default {
   head() {
     return {
       link: [
-        { rel: 'canonical', href: `https://hn.nuxtjs.org${this.$route.fullPath}` }
+        // We use $route.path since we don't use query parameters
+        { rel: 'canonical', href: `https://hn.nuxtjs.org${this.$route.path}` }
       ]
     }
   }
@@ -37,7 +38,7 @@ export default {
     font-size 15px
     background-color lighten(#eceef1, 30%)
     margin 0
-    padding-top 55px
+    padding 0
     color #34495e
     overflow-y scroll
 
@@ -45,17 +46,10 @@ export default {
     color #34495e
     text-decoration none
 
-  .progress
-    z-index: 1000 !important
-
   .header
     background-color #188269
-    position fixed
     z-index 999
     height 55px
-    top 0
-    left 0
-    right 0
     .inner
       max-width 800px
       box-sizing border-box
