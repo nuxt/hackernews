@@ -9,7 +9,7 @@ module.exports = {
     meta: [
       {
         property: 'og:image',
-        content: 'https://cloud.githubusercontent.com/assets/904724/26784102/0d2f8000-49fc-11e7-8091-2b66901c73ee.png'
+        content: 'https://user-images.githubusercontent.com/904724/26879447-689b56a8-4b91-11e7-968f-5eea1d6c71b4.png'
       },
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'twitter:site', content: '@nuxt_js' },
