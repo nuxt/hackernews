@@ -37,7 +37,7 @@
     z-index: 1000 !important
 
   .header
-    background-color #2B8358
+    background-color #188269
     position fixed
     z-index 999
     height 55px

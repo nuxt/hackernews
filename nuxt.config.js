@@ -16,7 +16,7 @@ module.exports = {
     ]
   },
   loading: {
-    color: '#66e8ad'
+    color: '#59cc93'
   },
   manifest: {
     name: 'Nuxt Hacker News',
@@ -31,6 +31,9 @@ module.exports = {
     '~plugins/vuex-router-sync.js',
     '~plugins/filters.js'
   ],
+  router: {
+    middleware: ['https']
+  },
   render: {
     static: {
       maxAge: '1y',
