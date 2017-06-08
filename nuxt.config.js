@@ -13,6 +13,9 @@ module.exports = {
       },
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'twitter:site', content: '@nuxt_js' },
+    ],
+    link: [
+      { rel: 'dns-prefetch', href: 'https://hacker-news.firebaseio.com' }
     ]
   },
   loading: {
