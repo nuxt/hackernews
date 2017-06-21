@@ -1,5 +1,5 @@
 # Nuxt.js Hacker News
-HackerNews clone built with Nuxt.js
+HackerNews clone built with Nuxt.js.
 
 <p align="center">
   <a href="https://hn.nuxtjs.org" target="_blank">
@@ -12,17 +12,19 @@ HackerNews clone built with Nuxt.js
 ## Performance
 
 - Lighthouse [100/100](https://cdn.rawgit.com/Atinux/e2f424e6794babc00d2158406b0ab37d/raw/4de834145881697ea83292b381df5f591f1ed2f5/lighthouse-result-nuxt.html) - [Webpagetest](https://www.webpagetest.org/lighthouse.php?test=170620_PG_a2a9feaf4ace07a61b2c6c2a171b1c79&run=1)
-
-- Interactive (Faster 3G) [2.4s](https://www.webpagetest.org/result/170620_PG_a2a9feaf4ace07a61b2c6c2a171b1c79)
-- Interactive (Emerging Markets) [2.8s](https://www.webpagetest.org/result/170620_AM_f5e1ae2f305c1d81b44cfe0c9c930e35)
+- Interactive (Faster 3G) [3.5s](https://www.webpagetest.org/result/170620_PG_a2a9feaf4ace07a61b2c6c2a171b1c79)
+- Interactive (Emerging Markets) [3.8s](https://www.webpagetest.org/result/170620_B1_0b83d61272c77c16c3f3f1f16fb72d2e)
 
 ## Features
 
-- Server Side Rendering
+- Server Side Rendering & Caching
 - Code Splitting
 - Single-file Vue Components
 - Real-time List Updates with FLIP Animation
-- PWA experience using [pwa preset](https://github.com/nuxt/modules/tree/master/modules/pwa) with almost _zero config_
+- Prefetch/Preload JS + DNS + Data
+- Critical Path CSS
+- PWA experience using [PWA Module](https://github.com/nuxt/modules/tree/master/modules/pwa) with almost _zero config_
+- PRPL
 
 ## Build Setup
 
