@@ -9,4 +9,4 @@ yarn-error.log
 
 static/manifest*.json
 static/sw.js
-static/workbox-sw*.js
+static/workbox-sw*.js*

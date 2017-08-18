@@ -21,8 +21,7 @@
     "build": "nuxt build"
   },
   "engines": {
-    "node": ">=7.0",
-    "npm": ">=4.0"
+    "node": ">=8.0"
   },
   "dependencies": {
     "@nuxtjs/component-cache": "^1.0.0",

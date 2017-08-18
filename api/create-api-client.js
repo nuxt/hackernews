@@ -1,7 +1,7 @@
-import Firebase from 'firebase/app'
-import 'firebase/database'
+import { initializeApp, database } from 'firebase/app'
 
-export function createAPI ({ config, version }) {
-  Firebase.initializeApp(config)
-  return Firebase.database().ref(version)
+export async function createAPI({ config, version }) {
+    await import(/* webpackChunkName: "firebase" */ 'firebase/database')
+    initializeApp(config)
+    return database().ref(version)
 }

@@ -1,32 +1,37 @@
-// this is aliased in webpack config based on server/client build
+// This is aliased in webpack config based on server/client build
 import { createAPI } from 'create-api'
 
 const logRequests = !!process.env.DEBUG_API
+let api = {}
 
-const api = createAPI({
+let _api = createAPI({
   version: '/v0',
   config: {
     databaseURL: 'https://hacker-news.firebaseio.com'
   }
+}).then(_api => {
+  api = _api
+  // warm the front page cache every 15 min
+  // make sure to do this only once across all requests
+  if (api.onServer) {
+    warmCache()
+  }
 })
 
-// warm the front page cache every 15 min
-// make sure to do this only once across all requests
-if (api.onServer) {
-  warmCache()
-}
 
-function warmCache () {
+
+function warmCache() {
   fetchItems((api.cachedIds.top || []).slice(0, 30))
   setTimeout(warmCache, 1000 * 60 * 15)
 }
 
-function fetch (child) {
+async function fetch(child) {
   logRequests && console.log(`fetching ${child}...`)
+  await _api
   const cache = api.cachedItems
   if (cache && cache.has(child)) {
     logRequests && console.log(`cache hit for ${child}.`)
-    return Promise.resolve(cache.get(child))
+    return cache.get(child)
   } else {
     return new Promise((resolve, reject) => {
       api.child(child).once('value', snapshot => {
@@ -41,25 +46,25 @@ function fetch (child) {
   }
 }
 
-export function fetchIdsByType (type) {
+export function fetchIdsByType(type) {
   return api.cachedIds && api.cachedIds[type]
     ? Promise.resolve(api.cachedIds[type])
     : fetch(`${type}stories`)
 }
 
-export function fetchItem (id) {
+export function fetchItem(id) {
   return fetch(`item/${id}`)
 }
 
-export function fetchItems (ids) {
+export function fetchItems(ids) {
   return Promise.all(ids.map(id => fetchItem(id)))
 }
 
-export function fetchUser (id) {
+export function fetchUser(id) {
   return fetch(`user/${id}`)
 }
 
-export function watchList (type, cb) {
+export function watchList(type, cb) {
   let first = true
   const ref = api.child(`${type}stories`)
   const handler = snapshot => {
