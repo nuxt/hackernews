@@ -1,4 +1,5 @@
 module.exports = {
+  // mode: 'spa',
   build: {
     extend (config, { isClient }) {
       config.resolve.alias['create-api'] = `./create-api-${isClient ? 'client' : 'server'}.js`
@@ -26,7 +27,7 @@ module.exports = {
   loadingIndicator: {
     name: 'rectangle-bounce',
     color: 'white',
-    background: '#1abc9c'
+    background: '#188269'
   },
   manifest: {
     name: 'Nuxt Hacker News',
