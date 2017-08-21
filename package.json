@@ -18,6 +18,8 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
+    "dev-spa": "nuxt dev --spa",
+    "build-spa": "nuxt build --spa",
     "start": "nuxt start"
   },
   "engines": {

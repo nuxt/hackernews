@@ -1,5 +1,4 @@
 module.exports = {
-  // mode: 'spa',
   build: {
     extend (config, { isClient }) {
       config.resolve.alias['create-api'] = `./create-api-${isClient ? 'client' : 'server'}.js`
