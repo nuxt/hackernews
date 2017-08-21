@@ -17,8 +17,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "start": "nuxt start",
-    "build": "nuxt build"
+    "build": "nuxt build",
+    "start": "nuxt start"
   },
   "engines": {
     "node": ">=8.0"
@@ -26,11 +26,10 @@
   "dependencies": {
     "@nuxtjs/component-cache": "^1.0.0",
     "@nuxtjs/pwa": "latest",
-    "nuxt-start": "^1.0.0-rc5"
+    "nuxt": "^1.0.0-rc5"
   },
   "devDependencies": {
     "firebase": "^4.3.0",
-    "nuxt": "^1.0.0-rc5",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "vuex-router-sync": "^4.2.0"
