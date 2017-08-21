@@ -2,7 +2,7 @@
 import { createAPI } from 'create-api'
 
 const logRequests = !!process.env.DEBUG_API
-let api = null
+let api = {}
 
 let _api = createAPI({
   version: '/v0',
@@ -21,6 +21,7 @@ let _api = createAPI({
 
 
 function warmCache() {
+  if (!api.cachedIds) return
   fetchItems((api.cachedIds.top || []).slice(0, 30))
   setTimeout(warmCache, 1000 * 60 * 15)
 }
