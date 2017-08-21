@@ -15,7 +15,7 @@
         </a>
       </nav>
     </header>
-    <nuxt></nuxt>
+    <nuxt nuxt-child-key="none"></nuxt>
   </div>
 </template>
 
@@ -88,10 +88,11 @@ export default {
     margin 0 auto
     position relative
 
+  .appear-active
+    transition opacity .4s ease
   .page-enter-active, .page-leave-active
     transition all .2s ease
-
-  .page-enter, .page-leave-active
+  .appear, .page-enter, .page-leave-active
     opacity 0
 
   @media (max-width 860px)
