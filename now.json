@@ -1,8 +1,0 @@
-{
-  "public": true,
-  "alias": "hn.nuxtjs.org",
-  "env": {
-    "NODE_ENV": "production",
-    "HOST": "0.0.0.0"
-  }
-}
