@@ -2,7 +2,11 @@ module.exports = {
   build: {
     extend (config, { isClient }) {
       config.resolve.alias['create-api'] = `./create-api-${isClient ? 'client' : 'server'}.js`
-    }
+    },
+    vendor: [
+      'firebase',
+      'promise-polyfill'
+    ]
   },
   head: {
     titleTemplate: 'Nuxt HN | %s',
