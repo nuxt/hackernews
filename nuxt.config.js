@@ -36,9 +36,9 @@ module.exports = {
     '@nuxtjs/component-cache'
   ],
   plugins: [
-    '~plugins/vuex-router-sync',
-    '~plugins/filters',
-    '~plugins/components'
+    '~/plugins/vuex-router-sync',
+    '~/plugins/filters',
+    '~/plugins/components'
   ],
   router: {
     middleware: ['https']
