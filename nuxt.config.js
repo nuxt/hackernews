@@ -16,6 +16,7 @@ module.exports = {
       { property: 'twitter:site', content: '@nuxt_js' },
     ],
     link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'dns-prefetch', href: 'https://hacker-news.firebaseio.com' }
     ]
   },
