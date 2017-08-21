@@ -44,12 +44,12 @@ export default {
     }
   },
 
-  beforeMount() {
+  async beforeMount() {
     if (this.$root._isMounted) {
       this.loadItems(this.page)
     }
     // watch the current list for realtime updates
-    this.unwatchList = watchList(this.type, ids => {
+    this.unwatchList = await watchList(this.type, ids => {
       this.$store.commit('SET_LIST', {type: this.type, ids})
       this.$store.dispatch('ENSURE_ACTIVE_ITEMS').then(() => {
         this.displayedItems = this.$store.getters.activeItems

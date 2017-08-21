@@ -2,7 +2,7 @@
 import { createAPI } from 'create-api'
 
 const logRequests = !!process.env.DEBUG_API
-let api = {}
+let api = null
 
 let _api = createAPI({
   version: '/v0',
@@ -64,8 +64,9 @@ export function fetchUser(id) {
   return fetch(`user/${id}`)
 }
 
-export function watchList(type, cb) {
+export async function watchList(type, cb) {
   let first = true
+  await _api
   const ref = api.child(`${type}stories`)
   const handler = snapshot => {
     if (first) {
