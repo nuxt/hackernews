@@ -2195,9 +2195,9 @@ find-up@^2.0.0, find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
-firebase@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.2.0.tgz#9181a0a22c6afc2b27bd810789beac48a438207d"
+firebase@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.3.0.tgz#21d95a92f862c7e406ddf871c173b50f153f8d46"
   dependencies:
     dom-storage "^2.0.2"
     faye-websocket "0.9.3"
@@ -3345,6 +3345,32 @@ num2fraction@^1.2.2:
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
+
+nuxt-start@^1.0.0-rc5:
+  version "1.0.0-rc5"
+  resolved "https://registry.yarnpkg.com/nuxt-start/-/nuxt-start-1.0.0-rc5.tgz#82294d2567bfcd859ce65e0645ac55425558095e"
+  dependencies:
+    "@nuxtjs/youch" "3.0.2"
+    ansi-html "^0.0.7"
+    chalk "^2.1.0"
+    compression "^1.7.0"
+    connect "^3.6.3"
+    debug "^3.0.0"
+    etag "^1.8.0"
+    fresh "^0.5.0"
+    fs-extra "^4.0.1"
+    hash-sum "^1.0.2"
+    lodash "^4.17.4"
+    lru-cache "^4.1.1"
+    pify "^3.0.0"
+    pretty-error "^2.1.1"
+    serialize-javascript "^1.4.0"
+    serve-static "^1.12.4"
+    server-destroy "^1.0.1"
+    source-map "^0.5.6"
+    source-map-support "^0.4.16"
+    tappable "^1.1.0"
+    vue-server-renderer "~2.4.2"
 
 nuxt@1.0.0-rc5:
   version "1.0.0-rc5"
