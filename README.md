@@ -34,7 +34,7 @@ HackerNews clone built with Nuxt.js.
 # install dependencies
 npm install # or yarn
 
-# serve in dev mode, with hot reload at localhost:300
+# serve in dev mode, with hot reload at localhost:3000
 npm run dev
 
 # build for production
