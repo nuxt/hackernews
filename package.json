@@ -23,6 +23,9 @@
     "build-spa": "nuxt build --spa",
     "start-spa": "nuxt start --spa"
   },
+  "now": {
+    "alias": "hn.nuxtjs.org"
+  },
   "engines": {
     "node": ">=8.0"
   },
