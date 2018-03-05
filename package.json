@@ -21,7 +21,9 @@
     "start": "nuxt start",
     "dev-spa": "nuxt dev --spa",
     "build-spa": "nuxt build --spa",
-    "start-spa": "nuxt start --spa"
+    "start-spa": "nuxt start --spa",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "now": {
     "alias": "hn.nuxtjs.org"
@@ -30,14 +32,23 @@
     "node": ">=8.0"
   },
   "dependencies": {
-    "@nuxtjs/component-cache": "^1.1.0",
-    "@nuxtjs/pwa": "latest",
-    "nuxt": "^1.0.0-rc11"
+    "@nuxtjs/component-cache": "^1.1.1",
+    "@nuxtjs/pwa": "2.0.6",
+    "nuxt": "^1.4.0",
+    "vue-server-renderer": "^2.5.13"
   },
   "devDependencies": {
-    "firebase": "^4.3.1",
+    "@babel/helper-module-imports": "^7.0.0-beta.40",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-vue": "^4.3.0",
+    "firebase": "^4.10.1",
+    "prettier": "^1.11.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "vuex-router-sync": "^4.3.2"
+    "stylus-loader": "^3.0.2",
+    "vuex-router-sync": "^5.0.0"
   }
 }

@@ -11,9 +11,18 @@
 <script>
 export default {
   props: {
-    type: String,
-    page: Number,
-    maxPage: Number
+    type: {
+      type: String,
+      required: true
+    },
+    page: {
+      type: Number,
+      required: true
+    },
+    maxPage: {
+      type: Number,
+      required: true
+    }
   },
   computed: {
     hasMore() {
@@ -24,16 +33,22 @@ export default {
 </script>
 
 <style lang="stylus">
-.news-list-nav, .news-list
-  background-color #fff
-  border-radius 2px
+.news-list-nav, .news-list {
+  background-color: #fff;
+  border-radius: 2px;
+}
 
-.news-list-nav
-  padding 15px 30px
-  text-align center
-  box-shadow 0 1px 2px rgba(0, 0, 0, .1)
-  a
-    margin 0 1em
-  .disabled
-    opacity 0.8
+.news-list-nav {
+  padding: 15px 30px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  a {
+    margin: 0 1em;
+  }
+
+  .disabled {
+    opacity: 0.8;
+  }
+}
 </style>

@@ -1,13 +1,13 @@
 // This is aliased in webpack config based on server/client build
-import { createAPI } from 'create-api'
+import { createAPI } from "create-api"
 
 const logRequests = !!process.env.DEBUG_API
 let api = {}
 
 let _api = createAPI({
-  version: '/v0',
+  version: "/v0",
   config: {
-    databaseURL: 'https://hacker-news.firebaseio.com'
+    databaseURL: "https://hacker-news.firebaseio.com"
   }
 }).then(_api => {
   api = _api
@@ -17,8 +17,6 @@ let _api = createAPI({
     warmCache()
   }
 })
-
-
 
 function warmCache() {
   if (!api.cachedIds) return
@@ -35,14 +33,18 @@ async function fetch(child) {
     return cache.get(child)
   } else {
     return new Promise((resolve, reject) => {
-      api.child(child).once('value', snapshot => {
-        const val = snapshot.val()
-        // mark the timestamp when this item is cached
-        if (val) val.__lastUpdated = Date.now()
-        cache && cache.set(child, val)
-        logRequests && console.log(`fetched ${child}.`)
-        resolve(val)
-      }, reject)
+      api.child(child).once(
+        "value",
+        snapshot => {
+          const val = snapshot.val()
+          // mark the timestamp when this item is cached
+          if (val) val.__lastUpdated = Date.now()
+          cache && cache.set(child, val)
+          logRequests && console.log(`fetched ${child}.`)
+          resolve(val)
+        },
+        reject
+      )
     })
   }
 }
@@ -76,8 +78,8 @@ export async function watchList(type, cb) {
       cb(snapshot.val())
     }
   }
-  ref.on('value', handler)
+  ref.on("value", handler)
   return () => {
-    ref.off('value', handler)
+    ref.off("value", handler)
   }
 }

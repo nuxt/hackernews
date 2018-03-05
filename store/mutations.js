@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from "vue"
 
 export default {
   SET_ACTIVE_TYPE: (state, { type }) => {

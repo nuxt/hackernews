@@ -1,5 +1,5 @@
 <script>
-import createListView from '~/components/createListView'
+import createListView from "~/components/createListView"
 
-export default createListView('new')
+export default createListView("new")
 </script>
