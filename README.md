@@ -25,6 +25,7 @@ HackerNews clone built with Nuxt.js.
 - Critical Path CSS
 - PWA experience using [PWA Module](https://github.com/nuxt/modules/tree/master/modules/pwa) with almost _zero config_
 - PRPL
+- Hot reloading dev environment integrated with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 
 ## Build Setup
 
@@ -42,6 +43,13 @@ npm run build
 
 # serve in production mode
 npm start
+
+# validate code with ESLint (with Prettier)
+npm run lint
+
+# validate andf fix with ESLint (with Prettier)
+npm run lintfix
+
 ```
 
 ## License
