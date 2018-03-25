@@ -5,11 +5,9 @@
         <router-link to="/" exact>
           <img class="logo" src="~assets/logo.png" alt="logo">
         </router-link>
-        <router-link to="/top">Top</router-link>
-        <router-link to="/new">New</router-link>
-        <router-link to="/show">Show</router-link>
-        <router-link to="/ask">Ask</router-link>
-        <router-link to="/job">Jobs</router-link>
+        <router-link v-for="(list, key) in feeds" :key="key" :to="`/${key}`">
+          {{ list.title }}
+        </router-link>
         <a class="github" href="https://github.com/nuxt/hackernews" target="_blank" rel="noopener">
           Built with Nuxt.js
         </a>
@@ -20,6 +18,8 @@
 </template>
 
 <script>
+import { feeds } from "~/common/api"
+
 export default {
   head() {
     return {
@@ -28,6 +28,9 @@ export default {
         { rel: "canonical", href: `https://hn.nuxtjs.org${this.$route.path}` }
       ]
     }
+  },
+  computed: {
+    feeds: () => feeds
   }
 }
 </script>

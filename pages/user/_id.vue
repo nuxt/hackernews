@@ -2,27 +2,33 @@
   <div class="user-view view">
     <template v-if="user">
       <h1>User : {{ user.id }}</h1>
-      <ul class="meta">
-        <li>
-        <span class="label">Created:</span> {{ user.created | timeAgo }} ago</li>
-        <li>
-        <span class="label">Karma:</span> {{ user.karma }}</li>
-        <li v-if="user.about" class="about" v-html="user.about" />
-      </ul>
+      <lazy-wrapper :loading="user.loading">
+        <ul class="meta">
+          <li>
+          <span class="label">Created:</span> {{ user.created_time | timeAgo }} ago</li>
+          <li>
+          <span class="label">Karma:</span> {{ user.karma || '-' }}</li>
+          <li v-if="user.about" class="about" v-html="user.about" />
+        </ul>
+      </lazy-wrapper>
       <p class="links">
         <a :href="'https://news.ycombinator.com/submitted?id=' + user.id">submissions</a> |
         <a :href="'https://news.ycombinator.com/threads?id=' + user.id">comments</a>
       </p>
     </template>
-    <template v-else-if="user === false">
+    <template v-else>
       <h1>User not found.</h1>
     </template>
   </div>
 </template>
 
 <script>
+import LazyWrapper from "~/components/lazy-wrapper"
+
 export default {
   name: "UserView",
+
+  components: { LazyWrapper },
 
   computed: {
     user() {
@@ -31,9 +37,7 @@ export default {
   },
 
   head() {
-    return {
-      title: this.user.id || "User not found"
-    }
+    return this.user ? this.user.id : "User not found"
   },
 
   fetch({ store, route: { params: { id } } }) {

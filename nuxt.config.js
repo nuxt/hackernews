@@ -1,22 +1,4 @@
 module.exports = {
-  mode: "universal",
-  build: {
-    extend(config, { isClient, isDev }) {
-      // Run ESLint on save
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        })
-      }
-      config.resolve.alias["create-api"] = `./create-api-${
-        isClient ? "client" : "server"
-      }.js`
-    },
-    vendor: ["firebase"]
-  },
   head: {
     titleTemplate: "Nuxt HN | %s",
     meta: [
@@ -28,10 +10,7 @@ module.exports = {
       { property: "twitter:card", content: "summary_large_image" },
       { property: "twitter:site", content: "@nuxt_js" }
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "dns-prefetch", href: "https://hacker-news.firebaseio.com" }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   loading: {
     color: "#59cc93"
@@ -46,15 +25,17 @@ module.exports = {
     description: "HackerNews clone built with Nuxt.js",
     theme_color: "#188269"
   },
-  modules: ["@nuxtjs/pwa", "@nuxtjs/component-cache"],
-  plugins: [
-    "~/plugins/vuex-router-sync",
-    "~/plugins/filters",
-    "~/plugins/components"
-  ],
-  router: {
-    middleware: ["https"]
+  modules: ["@nuxtjs/pwa", "@nuxtjs/component-cache", "@nuxtjs/axios"],
+  axios: {
+    proxy: true
   },
+  proxy: {
+    "/api": {
+      target: "https://api.hnpwa.com/v0/",
+      pathRewrite: { "^/api/": "" }
+    }
+  },
+  plugins: ["~/plugins/filters"],
   render: {
     static: {
       maxAge: "1y",

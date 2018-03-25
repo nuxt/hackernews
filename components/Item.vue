@@ -1,6 +1,6 @@
 <template>
   <li class="news-item">
-    <span class="score">{{ item.score }}</span>
+    <span class="score">{{ item.points }}</span>
     <span class="title">
       <template v-if="item.url">
         <a :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
@@ -14,7 +14,7 @@
     <span class="meta">
       <span v-if="item.type !== 'job'" class="by">
         by
-        <router-link :to="'/user/' + item.by">{{ item.by }}</router-link>
+        <router-link :to="'/user/' + item.user">{{ item.user }}</router-link>
       </span>
       <span class="time">
         {{ item.time | timeAgo }} ago

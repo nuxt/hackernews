@@ -1,16 +1,16 @@
 <template>
   <li v-if="comment" class="comment">
     <div class="by">
-      <router-link :to="'/user/' + comment.by">{{ comment.by }}</router-link>
+      <router-link :to="'/user/' + comment.user">{{ comment.user }}</router-link>
       {{ comment.time | timeAgo }} ago
     </div>
-    <div class="text" v-html="comment.text" />
-    <div v-if="comment.kids && comment.kids.length" :class="{ open }" class="toggle">
-      <a @click="open = !open">{{ open ? '[-]' : '[+] ' + pluralize(comment.kids.length) + ' collapsed' }}
+    <div class="text" v-html="comment.content" />
+    <div v-if="comment.comments && comment.comments.length" :class="{ open }" class="toggle">
+      <a @click="open = !open">{{ open ? '[-]' : '[+] ' + pluralize(comment.comments.length) + ' collapsed' }}
       </a>
     </div>
     <ul v-show="open" class="comment-children">
-      <comment v-for="id in comment.kids" :key="id" :id="id" />
+      <comment v-for="childComment in comment.comments" :key="childComment.id" :comment="childComment" />
     </ul>
   </li>
 </template>
@@ -19,19 +19,14 @@
 export default {
   name: "Comment",
   props: {
-    id: {
-      type: String,
+    comment: {
+      type: Object,
       required: true
     }
   },
   data() {
     return {
       open: true
-    }
-  },
-  computed: {
-    comment() {
-      return this.$store.state.items[this.id]
     }
   },
   methods: {

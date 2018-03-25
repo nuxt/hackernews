@@ -1,7 +1,9 @@
 <script>
+import { validFeeds } from "~/common/api"
+
 export default {
   fetch({ redirect }) {
-    redirect("/top")
+    redirect("/" + validFeeds[0])
   }
 }
 </script>
