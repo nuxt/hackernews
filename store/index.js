@@ -32,6 +32,10 @@ export default {
   // =================================================
   actions: {
     FETCH_FEED({ commit, state }, { feed, page, prefetch }) {
+      // Don't priorotize already fetched feeds
+      if (state.feeds[feed][page] && state.feeds[feed][page].length) {
+        prefetch = true
+      }
       if (!prefetch) {
         if (this.feedCancelSource) {
           this.feedCancelSource.cancel(
