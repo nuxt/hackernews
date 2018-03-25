@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   head: {
     titleTemplate: "Nuxt HN | %s",
     meta: [
@@ -36,6 +36,7 @@ module.exports = {
     }
   },
   plugins: ["~/plugins/filters"],
+  serverMiddleware: ["~/common/cache.js"],
   render: {
     static: {
       maxAge: "1y",
