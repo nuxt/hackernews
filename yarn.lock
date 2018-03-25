@@ -4100,9 +4100,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-edge@^2.0.0-25364965.06067bf:
-  version "2.0.0-25364965.06067bf"
-  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25364965.06067bf.tgz#966eef3688cfa55e701b225703a6c41d6ec0e881"
+nuxt-edge@^2.0.0-25366812.8b82168:
+  version "2.0.0-25366812.8b82168"
+  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25366812.8b82168.tgz#cbedb96f068fda80874a2faa64003088b782a1f6"
   dependencies:
     "@nuxtjs/friendly-errors-webpack-plugin" "^2.0.2"
     "@nuxtjs/youch" "^4.2.3"
@@ -4157,7 +4157,7 @@ nuxt-edge@^2.0.0-25364965.06067bf:
     upath "^1.0.2"
     url-loader "^1.0.1"
     vue "^2.5.16"
-    vue-loader "^15.0.0-beta.4"
+    vue-loader "^15.0.0-beta.7"
     vue-meta "^1.5.0"
     vue-router "^3.0.1"
     vue-server-renderer "^2.5.16"
@@ -4168,7 +4168,7 @@ nuxt-edge@^2.0.0-25364965.06067bf:
     webpack-dev-middleware "^3.0.1"
     webpack-hot-middleware "^2.21.2"
     webpack-node-externals "^1.6.0"
-    webpackbar "^1.0.0"
+    webpackbar "^1.1.3"
 
 oauth-sign@~0.8.1, oauth-sign@~0.8.2:
   version "0.8.2"
@@ -6341,7 +6341,7 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
 
-vue-loader@^15.0.0-beta.4:
+vue-loader@^15.0.0-beta.7:
   version "15.0.0-beta.7"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.0.0-beta.7.tgz#2066ea26a940eed1fd97d2751c6abf5282f87b54"
   dependencies:
@@ -6498,7 +6498,7 @@ webpack@^4.2.0:
     watchpack "^1.5.0"
     webpack-sources "^1.0.1"
 
-webpackbar@^1.0.0:
+webpackbar@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/webpackbar/-/webpackbar-1.1.3.tgz#8c6388a6391a415fcadde5028a0f89b8f1bcc6c2"
   dependencies:

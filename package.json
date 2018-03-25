@@ -37,8 +37,7 @@
     "@nuxtjs/pwa": "2.0.8",
     "apicache": "^1.2.1",
     "express": "^4.16.3",
-    "nuxt-edge": "^2.0.0-25364965.06067bf",
-    "vue-server-renderer": "^2.5.16"
+    "nuxt-edge": "^2.0.0-25366812.8b82168"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",

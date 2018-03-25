@@ -15,11 +15,6 @@ export default {
   loading: {
     color: "#59cc93"
   },
-  loadingIndicator: {
-    name: "rectangle-bounce",
-    color: "white",
-    background: "#188269"
-  },
   manifest: {
     name: "Nuxt Hacker News",
     description: "HackerNews clone built with Nuxt.js",
