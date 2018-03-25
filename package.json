@@ -39,17 +39,14 @@
     "vue-server-renderer": "^2.5.16"
   },
   "devDependencies": {
-    "@babel/helper-module-imports": "^7.0.0-beta.42",
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-vue": "^4.4.0",
-    "firebase": "^4.12.0",
     "prettier": "^1.11.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "vuex-router-sync": "^5.0.0"
+    "stylus-loader": "^3.0.2"
   }
 }
