@@ -33,19 +33,19 @@
   },
   "dependencies": {
     "@nuxtjs/component-cache": "^1.1.1",
-    "@nuxtjs/pwa": "2.0.6",
-    "nuxt": "^1.4.0",
-    "vue-server-renderer": "^2.5.13"
+    "@nuxtjs/pwa": "2.0.8",
+    "nuxt-edge": "^2.0.0-25364965.06067bf",
+    "vue-server-renderer": "^2.5.16"
   },
   "devDependencies": {
-    "@babel/helper-module-imports": "^7.0.0-beta.40",
+    "@babel/helper-module-imports": "^7.0.0-beta.42",
     "babel-eslint": "^8.2.2",
-    "eslint": "^4.18.2",
+    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-vue": "^4.3.0",
-    "firebase": "^4.10.1",
+    "eslint-plugin-vue": "^4.4.0",
+    "firebase": "^4.12.0",
     "prettier": "^1.11.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
