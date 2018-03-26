@@ -33,11 +33,14 @@ export default {
   plugins: ["~/plugins/filters"],
   serverMiddleware: ["~/common/cache.js"],
   render: {
+    http2: {
+      push: true
+    },
     static: {
       maxAge: "1y",
       setHeaders(res, path) {
         if (path.includes("sw.js")) {
-          res.setHeader("Cache-Control", "public, max-age=0")
+          res.setHeader("Cache-Control", `public, max-age=${15 * 60}`)
         }
       }
     }
