@@ -21,7 +21,7 @@
       </span>
       <span v-if="item.type !== 'job'" class="comments-link">
         |
-        <router-link :to="'/item/' + item.id">{{ item.descendants }} comments</router-link>
+        <router-link :to="'/item/' + item.id">{{ item.comments_count }} comments</router-link>
       </span>
     </span>
     <span v-if="item.type !== 'story'" class="label" >{{ item.type }}</span>
