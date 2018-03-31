@@ -24,7 +24,7 @@
         <router-link :to="'/item/' + item.id">{{ item.comments_count }} comments</router-link>
       </span>
     </span>
-    <span v-if="item.type !== 'story'" class="label" >{{ item.type }}</span>
+    <span v-if="item.type !== 'link'" class="label">{{ item.type }}</span>
   </li>
 </template>
 
