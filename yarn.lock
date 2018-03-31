@@ -79,13 +79,13 @@
     to-fast-properties "^2.0.0"
 
 "@nuxtjs/axios@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.3.0.tgz#9d117b239fed5a5cedf89afd15001f84add37d64"
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.3.1.tgz#9f9e6c817dae44c16955af659f6d5ac2a8085148"
   dependencies:
-    "@nuxtjs/proxy" "^1.2.3"
+    "@nuxtjs/proxy" "^1.2.4"
     axios "^0.18.0"
     axios-retry "^3.0.2"
-    consola "^1.1.1"
+    consola "^1.1.4"
 
 "@nuxtjs/component-cache@^1.1.1":
   version "1.1.1"
@@ -120,11 +120,11 @@
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.2.1.tgz#ad7c8658ef0357cdef56856a9ff21d595102e089"
 
-"@nuxtjs/proxy@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.2.3.tgz#142e603b5d7b0412e0c35afa53bf9b4b26b70198"
+"@nuxtjs/proxy@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.2.4.tgz#41aafac58854f14e28aed17238936bb6404e6071"
   dependencies:
-    consola "^1.1.1"
+    consola "^1.1.4"
     http-proxy-middleware "^0.18.0"
 
 "@nuxtjs/pwa@2.0.8":
@@ -1578,18 +1578,11 @@ connect@^3.6.5:
     parseurl "~1.3.2"
     utils-merge "1.0.1"
 
-consola@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-1.1.1.tgz#282566e34573d33f01e3c0aca0cd6d383f82925c"
+consola@^1.1.3, consola@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-1.1.4.tgz#278035fb0c7b10c93528a57c2685ede476e00c9b"
   dependencies:
-    figures "^2.0.0"
-    lodash "^4.17.5"
-    std-env "^1.1.0"
-
-consola@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-1.1.2.tgz#b475910f42e14b6789a296c83ce5cd67a2222ce7"
-  dependencies:
+    chalk "^2.3.2"
     figures "^2.0.0"
     lodash "^4.17.5"
     std-env "^1.1.0"
@@ -3948,9 +3941,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-edge@2.0.0-25375445.a5373f2:
-  version "2.0.0-25375445.a5373f2"
-  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25375445.a5373f2.tgz#7d442a3912167c67f5e394622f6fbca320e01a32"
+nuxt-edge@^2.0.0-25375479.ba18127:
+  version "2.0.0-25375479.ba18127"
+  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25375479.ba18127.tgz#2c018dbd2087c08e3845dad56bfd92d49b58bf32"
   dependencies:
     "@nuxtjs/friendly-errors-webpack-plugin" "^2.0.2"
     "@nuxtjs/youch" "^4.2.3"
@@ -3964,7 +3957,7 @@ nuxt-edge@2.0.0-25375445.a5373f2:
     chokidar "^2.0.3"
     compression "^1.7.1"
     connect "^3.6.5"
-    consola "^1.1.2"
+    consola "^1.1.3"
     css-loader "^0.28.11"
     es6-promise "^4.2.4"
     esm "^3.0.14"
@@ -4012,7 +4005,7 @@ nuxt-edge@2.0.0-25375445.a5373f2:
     webpack-dev-middleware "^3.1.0"
     webpack-hot-middleware "^2.21.2"
     webpack-node-externals "^1.6.0"
-    webpackbar "^2.3.1"
+    webpackbar "^2.3.2"
 
 oauth-sign@~0.8.1, oauth-sign@~0.8.2:
   version "0.8.2"
@@ -6292,12 +6285,12 @@ webpack@^4.4.1:
     watchpack "^1.5.0"
     webpack-sources "^1.0.1"
 
-webpackbar@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/webpackbar/-/webpackbar-2.3.1.tgz#cbaee8c500ad18efe3bfa81aad79c575e1c38420"
+webpackbar@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/webpackbar/-/webpackbar-2.3.2.tgz#bdb1cfae1725a1341e583c9c8ef4e37a16bb8136"
   dependencies:
     chalk "^2.3.2"
-    consola "^1.1.1"
+    consola "^1.1.3"
     figures "^2.0.0"
     loader-utils "^1.1.0"
     lodash "^4.17.5"
