@@ -17,6 +17,7 @@ export default {
   },
   manifest: {
     name: "Nuxt Hacker News",
+    short_name: "Nuxt HN",
     description: "HackerNews clone built with Nuxt.js",
     theme_color: "#188269"
   },
