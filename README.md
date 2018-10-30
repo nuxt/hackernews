@@ -23,7 +23,7 @@ HackerNews clone built with Nuxt.js.
 - Real-time List Updates with FLIP Animation
 - Prefetch/Preload JS + DNS + Data
 - Critical Path CSS
-- PWA experience using [PWA Module](https://github.com/nuxt/modules/tree/master/modules/pwa) with almost _zero config_
+- PWA experience using [PWA Module](https://github.com/nuxt-community/pwa-module) with almost _zero config_
 - PRPL
 - Hot reloading dev environment integrated with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 
