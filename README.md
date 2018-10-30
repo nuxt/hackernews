@@ -3,8 +3,8 @@ HackerNews clone built with Nuxt.js.
 
 <p align="center">
   <a href="https://hn.nuxtjs.org" target="_blank">
-    <img src="https://user-images.githubusercontent.com/5158436/27347011-428833aa-5604-11e7-9f43-a12e576e9b18.png" width="256px">
-    <br>
+    <img src="https://user-images.githubusercontent.com/5158436/27347011-428833aa-5604-11e7-9f43-a12e576e9b18.png" width="256px"
+    ><br>
     Live Demo
   </a>
 </p>
