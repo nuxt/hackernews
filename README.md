@@ -52,6 +52,10 @@ npm run lintfix
 
 ```
 
+## Links
+
+For Nuxt TS version of Hackernews clone go [here](https://github.com/nuxt-community/hackernews-nuxt-ts)
+
 ## License
 
 MIT
