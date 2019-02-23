@@ -54,7 +54,7 @@ npm run lintfix
 
 ## Links
 
-For Nuxt TS version of Hackernews clone go [here](https://github.com/nuxt-community/hackernews-nuxt-ts)
+For the communiy typescript fork please see [nuxt-community/hackernews-nuxt-ts](https://github.com/nuxt-community/hackernews-nuxt-ts)
 
 ## License
 
