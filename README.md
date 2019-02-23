@@ -29,7 +29,7 @@ HackerNews clone built with Nuxt.js.
 
 ## Build Setup
 
-**Requires Node.js 6+**
+**Requires Node.js 8+**
 
 ``` bash
 # install dependencies
