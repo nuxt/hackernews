@@ -1,15 +1,17 @@
 <template>
-  <div class="item-view view" >
+  <div class="item-view view">
     <div class="item-view-header">
       <a :href="item.url" target="_blank">
-        <h1 v-html="item.title" />
+        <h1 v-text="item.title" />
       </a>
       <span v-if="item.url" class="host">
         ({{ item.url | host }})
       </span>
       <p class="meta">
         {{ item.points }} points | by
-        <router-link :to="'/user/' + item.user">{{ item.user }}</router-link>
+        <router-link :to="'/user/' + item.user">
+          {{ item.user }}
+        </router-link>
         {{ item.time | timeAgo }} ago
       </p>
     </div>
@@ -19,7 +21,7 @@
           {{ item.comments ? item.comments.length + ' comments' : 'No comments yet.' }}
         </p>
         <ul class="comment-children">
-          <comment v-for="comment in item.comments" :key="comment.id" :comment="comment"/>
+          <comment v-for="comment in item.comments" :key="comment.id" :comment="comment" />
         </ul>
       </lazy-wrapper>
     </div>
@@ -27,11 +29,11 @@
 </template>
 
 <script>
-import Comment from "~/components/comment.vue"
-import LazyWrapper from "~/components/lazy-wrapper"
+import Comment from '~/components/comment.vue'
+import LazyWrapper from '~/components/lazy-wrapper'
 
 export default {
-  name: "ItemView",
+  name: 'ItemView',
   components: { Comment, LazyWrapper },
 
   head() {
@@ -50,7 +52,7 @@ export default {
   },
 
   fetch({ store, params: { id } }) {
-    return store.dispatch("FETCH_ITEM", { id })
+    return store.dispatch('FETCH_ITEM', { id })
   }
 }
 </script>

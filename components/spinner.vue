@@ -1,14 +1,29 @@
 <template>
   <transition>
-    <svg v-show="show" :class="{ show: show }" class="spinner" width="44px" height="44px" viewBox="0 0 44 44">
-      <circle class="path" fill="none" stroke-width="4" stroke-linecap="round" cx="22" cy="22" r="20"/>
+    <svg
+      v-show="show"
+      :class="{ show: show }"
+      class="spinner"
+      width="44px"
+      height="44px"
+      viewBox="0 0 44 44"
+    >
+      <circle
+        class="path"
+        fill="none"
+        stroke-width="4"
+        stroke-linecap="round"
+        cx="22"
+        cy="22"
+        r="20"
+      />
     </svg>
   </transition>
 </template>
 
 <script>
 export default {
-  name: "Spinner",
+  name: 'Spinner',
   props: {
     show: {
       type: Boolean,

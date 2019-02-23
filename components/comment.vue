@@ -1,10 +1,12 @@
 <template>
   <li v-if="comment" class="comment">
     <div class="by">
-      <router-link :to="'/user/' + comment.user">{{ comment.user }}</router-link>
+      <router-link :to="'/user/' + comment.user">
+        {{ comment.user }}
+      </router-link>
       {{ comment.time | timeAgo }} ago
     </div>
-    <div class="text" v-html="comment.content" />
+    <div class="text" v-text="comment.content" />
     <div v-if="comment.comments && comment.comments.length" :class="{ open }" class="toggle">
       <a @click="open = !open">{{ open ? '[-]' : '[+] ' + pluralize(comment.comments.length) + ' collapsed' }}
       </a>
@@ -17,7 +19,7 @@
 
 <script>
 export default {
-  name: "Comment",
+  name: 'Comment',
   props: {
     comment: {
       type: Object,
@@ -30,7 +32,7 @@ export default {
     }
   },
   methods: {
-    pluralize: n => n + (n === 1 ? " reply" : " replies")
+    pluralize: n => n + (n === 1 ? ' reply' : ' replies')
   }
 }
 </script>

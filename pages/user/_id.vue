@@ -5,10 +5,12 @@
       <lazy-wrapper :loading="user.loading">
         <ul class="meta">
           <li>
-          <span class="label">Created:</span> {{ user.created_time | timeAgo }} ago</li>
+            <span class="label">Created:</span> {{ user.created_time | timeAgo }} ago
+          </li>
           <li>
-          <span class="label">Karma:</span> {{ user.karma || '-' }}</li>
-          <li v-if="user.about" class="about" v-html="user.about" />
+            <span class="label">Karma:</span> {{ user.karma || '-' }}
+          </li>
+          <li v-if="user.about" class="about" v-text="user.about" />
         </ul>
       </lazy-wrapper>
       <p class="links">
@@ -23,10 +25,10 @@
 </template>
 
 <script>
-import LazyWrapper from "~/components/lazy-wrapper"
+import LazyWrapper from '~/components/lazy-wrapper'
 
 export default {
-  name: "UserView",
+  name: 'UserView',
 
   components: { LazyWrapper },
 
@@ -37,11 +39,11 @@ export default {
   },
 
   head() {
-    return this.user ? this.user.id : "User not found"
+    return this.user ? this.user.id : 'User not found'
   },
 
   fetch({ store, route: { params: { id } } }) {
-    return store.dispatch("FETCH_USER", { id })
+    return store.dispatch('FETCH_USER', { id })
   }
 }
 </script>

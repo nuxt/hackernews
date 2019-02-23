@@ -1,8 +1,8 @@
-import Vue from "vue"
+import Vue from 'vue'
 
-import { validFeeds } from "~/common/api"
-import { lazy } from "~/common/utils"
-import { CancelToken } from "axios"
+import { validFeeds } from '~/common/api'
+import { lazy } from '~/common/utils'
+import { CancelToken } from 'axios'
 
 export default {
   // =================================================
@@ -21,7 +21,7 @@ export default {
       }
     }
 
-    validFeeds.forEach(feed => {
+    validFeeds.forEach((feed) => {
       state.feeds[feed] = {}
     })
 
@@ -39,17 +39,17 @@ export default {
       if (!prefetch) {
         if (this.feedCancelSource) {
           this.feedCancelSource.cancel(
-            "priorotize feed: " + feed + " page: " + page
+            'priorotize feed: ' + feed + ' page: ' + page
           )
         }
         this.feedCancelSource = CancelToken.source()
       }
 
       return lazy(
-        items => {
+        (items) => {
           const ids = items.map(item => item.id)
-          commit("SET_FEED", { feed, ids, page })
-          commit("SET_ITEMS", { items })
+          commit('SET_FEED', { feed, ids, page })
+          commit('SET_ITEMS', { items })
         },
         () =>
           this.$axios.$get(`/api/${feed}/${page}.json`, {
@@ -61,7 +61,7 @@ export default {
 
     FETCH_ITEM({ commit, state }, { id }) {
       return lazy(
-        item => commit("SET_ITEM", { item }),
+        item => commit('SET_ITEM', { item }),
         () => this.$axios.$get(`/api/item/${id}.json`),
         Object.assign({ id, loading: true, comments: [] }, state.items[id])
       )
@@ -69,7 +69,7 @@ export default {
 
     FETCH_USER({ state, commit }, { id }) {
       return lazy(
-        user => commit("SET_USER", { id, user }),
+        user => commit('SET_USER', { id, user }),
         () => this.$axios.$get(`/api/user/${id}.json`),
         Object.assign({ id, loading: true }, state.users[id])
       )
@@ -88,7 +88,7 @@ export default {
       }
     },
     SET_ITEMS: (state, { items }) => {
-      items.forEach(item => {
+      items.forEach((item) => {
         if (item) {
           Vue.set(state.items, item.id, item)
         }

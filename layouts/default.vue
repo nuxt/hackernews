@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { feeds } from "~/common/api"
+import { feeds } from '~/common/api'
 
 export default {
   head() {
@@ -29,7 +29,7 @@ export default {
     return {
       link: [
         // We use $route.path since we don't use query parameters
-        { rel: "canonical", href: `https://${host}${this.$route.path}` }
+        { rel: 'canonical', href: `https://${host}${this.$route.path}` }
       ]
     }
   },

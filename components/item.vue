@@ -29,10 +29,10 @@
 </template>
 
 <script>
-import { timeAgo } from "~/plugins/filters"
+import { timeAgo } from '~/plugins/filters'
 
 export default {
-  name: "NewsItem",
+  name: 'NewsItem',
   props: {
     item: {
       type: Object,

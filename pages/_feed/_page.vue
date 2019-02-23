@@ -12,15 +12,14 @@
       </transition>
       <item-list-nav :feed="feed" :page="page" :max-page="maxPage" />
     </lazy-wrapper>
-
   </div>
 </template>
 
 <script>
-import Item from "~/components/item.vue"
-import ItemListNav from "~/components/item-list-nav.vue"
-import LazyWrapper from "~/components/lazy-wrapper"
-import { feeds, validFeeds } from "~/common/api"
+import Item from '~/components/item.vue'
+import ItemListNav from '~/components/item-list-nav.vue'
+import LazyWrapper from '~/components/lazy-wrapper'
+import { feeds, validFeeds } from '~/common/api'
 
 export default {
   components: {
@@ -33,19 +32,9 @@ export default {
     return validFeeds.includes(feed)
   },
 
-  fetch({ store, params: { feed, page = 1 } }) {
-    return store.dispatch("FETCH_FEED", { feed, page })
-  },
-
-  head() {
-    return {
-      title: feeds[this.$route.params.feed].title
-    }
-  },
-
   data() {
     return {
-      transition: "slide-right",
+      transition: 'slide-right',
       displayedPage: Number(this.page) || 1
     }
   },
@@ -72,7 +61,17 @@ export default {
   },
 
   watch: {
-    page: "pageChanged"
+    page: 'pageChanged'
+  },
+
+  fetch({ store, params: { feed, page = 1 } }) {
+    return store.dispatch('FETCH_FEED', { feed, page })
+  },
+
+  head() {
+    return {
+      title: feeds[this.$route.params.feed].title
+    }
   },
 
   mounted() {
@@ -88,7 +87,7 @@ export default {
 
       // Prefetch next page
       this.$store
-        .dispatch("FETCH_FEED", {
+        .dispatch('FETCH_FEED', {
           feed: this.feed,
           page: this.page + 1,
           prefetch: true
@@ -96,7 +95,7 @@ export default {
         .catch(() => {})
 
       this.transition =
-        from === -1 ? null : to > from ? "slide-left" : "slide-right"
+        from === -1 ? null : to > from ? 'slide-left' : 'slide-right'
 
       this.displayedPage = to
     }

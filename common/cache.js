@@ -1,14 +1,14 @@
-import express from "express"
-import apicache from "apicache"
+import express from 'express'
+import apicache from 'apicache'
 
 const app = express()
 
 // https://github.com/kwhitley/apicache
-app.use(apicache.middleware("15 minutes"))
+app.use(apicache.middleware('15 minutes'))
 
 // apicache.options({ debug: true })
 
 export default {
-  path: "/api/",
+  path: '/api/',
   handler: app
 }
