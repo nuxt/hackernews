@@ -29,8 +29,7 @@ export default {
       type: Boolean,
       required: true
     }
-  },
-  serverCacheKey: props => props.show
+  }
 }
 </script>
 

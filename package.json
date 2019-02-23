@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "nuxt-hn",
   "description": "Nuxt Hacker News",
   "version": "1.0.0",
@@ -14,7 +15,6 @@
       "name": "Pooya Parsa (@pi0)"
     }
   ],
-  "private": true,
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
@@ -25,21 +25,15 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
-  "now": {
-    "alias": "hn.nuxtjs.org"
-  },
   "engines": {
     "node": ">=8.0"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.0",
-    "@nuxtjs/component-cache": "^1.1.1",
-    "@nuxtjs/pwa": "3.0.0-beta.8",
-    "apicache": "^1.2.1",
-    "express": "^4.16.3",
     "nuxt-edge": "^2.5.0-25848007.21b1b865"
   },
   "devDependencies": {
+    "@nuxtjs/pwa": "3.0.0-beta.8",
     "@nuxtjs/eslint-config": "^0.0.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.14.1",

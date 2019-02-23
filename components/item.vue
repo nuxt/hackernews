@@ -38,10 +38,6 @@ export default {
       type: Object,
       required: true
     }
-  },
-  // http://ssr.vuejs.org/en/caching.html#component-level-caching
-  serverCacheKey: ({ item: { id, __lastUpdated, time } }) => {
-    return `${id}::${__lastUpdated}::${timeAgo(time)}`
   }
 }
 </script>

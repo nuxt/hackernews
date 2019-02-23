@@ -52,7 +52,7 @@ export default {
           commit('SET_ITEMS', { items })
         },
         () =>
-          this.$axios.$get(`/api/${feed}/${page}.json`, {
+          this.$axios.$get(`/${feed}/${page}.json`, {
             cancelToken: this.feedCancelSource && this.feedCancelSource.token
           }),
         (state.feeds[feed][page] || []).map(id => state.items[id])
@@ -62,7 +62,7 @@ export default {
     FETCH_ITEM({ commit, state }, { id }) {
       return lazy(
         item => commit('SET_ITEM', { item }),
-        () => this.$axios.$get(`/api/item/${id}.json`),
+        () => this.$axios.$get(`/item/${id}.json`),
         Object.assign({ id, loading: true, comments: [] }, state.items[id])
       )
     },
@@ -70,7 +70,7 @@ export default {
     FETCH_USER({ state, commit }, { id }) {
       return lazy(
         user => commit('SET_USER', { id, user }),
-        () => this.$axios.$get(`/api/user/${id}.json`),
+        () => this.$axios.$get(`/user/${id}.json`),
         Object.assign({ id, loading: true }, state.users[id])
       )
     }

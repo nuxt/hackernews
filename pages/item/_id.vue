@@ -44,14 +44,14 @@ export default {
 
   computed: {
     id() {
-      return this.$route.params.id
+      return this.$route.query.id
     },
     item() {
       return this.$store.state.items[this.id]
     }
   },
 
-  fetch({ store, params: { id } }) {
+  fetch({ store, query: { id } }) {
     return store.dispatch('FETCH_ITEM', { id })
   }
 }
