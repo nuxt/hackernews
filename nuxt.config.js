@@ -24,10 +24,7 @@ export default {
     theme_color: '#188269'
   },
 
-  modules: process.env.NODE_ENV === 'production' ? [] : [
-    '@nuxtjs/pwa',
-    '@nuxtjs/axios'
-  ],
+  modules: [ '~/modules' ],
 
   axios: {
     baseURL: 'https://api.hnpwa.com/v0/'
