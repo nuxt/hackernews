@@ -21,7 +21,8 @@ export default {
     name: 'Nuxt Hacker News',
     short_name: 'Nuxt HN',
     description: 'HackerNews clone built with Nuxt.js',
-    theme_color: '#188269'
+    theme_color: '#188269',
+    start_url: '/news?stand_alone=1'
   },
 
   modules: [ '~/modules' ],
