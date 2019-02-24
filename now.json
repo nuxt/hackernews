@@ -7,7 +7,7 @@
       "use": "@nuxtjs/now-builder",
       "config": {
         "serverFiles": [
-          "common/cache.js"
+          "modules.js"
         ]
       }
     }
