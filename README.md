@@ -1,4 +1,5 @@
 # Nuxt.js Hacker News
+
 HackerNews clone built with Nuxt.js.
 
 <p align="center">
@@ -8,6 +9,11 @@ HackerNews clone built with Nuxt.js.
     Live Demo
   </a>
 </p>
+
+## Modes
+
+- Universal: https://hn.nuxtjs.org
+- Single Page: https://hn-spa.nuxtjs.org
 
 ## Performance
 
