@@ -65,6 +65,7 @@ export default {
   },
 
   fetch({ store, params: { feed, page = 1 } }) {
+    page = Number(page) || 1
     return store.dispatch('FETCH_FEED', { feed, page })
   },
 
@@ -80,7 +81,7 @@ export default {
 
   methods: {
     pageChanged(to, from = -1) {
-      if (to < 0 || to > this.maxPage) {
+      if (to <= 0 || to > this.maxPage) {
         this.$router.replace(`/${this.feed}/1`)
         return
       }

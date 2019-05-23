@@ -3,7 +3,7 @@
     <header class="header">
       <nav class="inner" role="navigation">
         <router-link to="/" exact>
-          <img class="logo" src="~assets/logo.png" alt="logo">
+          <img class="logo" src="~/assets/logo.svg" alt="logo">
         </router-link>
         <router-link v-for="(list, key) in feeds" :key="key" :to="`/${key}`">
           {{ list.title }}
@@ -46,17 +46,17 @@ body {
   background-color: lighten(#eceef1, 30%);
   margin: 0;
   padding: 0;
-  color: #34495e;
+  color: #2E495E;
   overflow-y: scroll;
 }
 
 a {
-  color: #34495e;
+  color: #2E495E;
   text-decoration: none;
 }
 
 .header {
-  background-color: #188269;
+  background-color: #2E495E;
   z-index: 999;
   height: 55px;
 
@@ -83,7 +83,7 @@ a {
 
     &.router-link-active, &.nuxt-link-active {
       color: #fff;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     &:nth-child(6) {

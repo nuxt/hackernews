@@ -29,19 +29,19 @@
     "node": ">=8.0"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.0",
-    "nuxt-edge": "^2.5.0-25848007.21b1b865"
+    "@nuxtjs/axios": "^5.5.0",
+    "nuxt": "^2.7.1"
   },
   "devDependencies": {
     "@nuxtjs/pwa": "3.0.0-beta.8",
     "@nuxtjs/eslint-config": "^0.0.1",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.14.1",
+    "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.3.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "stylus": "^0.54.5",

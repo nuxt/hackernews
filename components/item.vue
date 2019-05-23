@@ -2,7 +2,7 @@
   <li class="news-item">
     <span class="score">{{ item.points }}</span>
     <span class="title">
-      <template v-if="item.url">
+      <template v-if="isAbsolute(item.url)">
         <a :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
         <span class="host"> ({{ item.url | host }})</span>
       </template>
@@ -24,7 +24,6 @@
         <router-link :to="'/item/' + item.id">{{ item.comments_count }} comments</router-link>
       </span>
     </span>
-    <span v-if="item.type !== 'link'" class="label">{{ item.type }}</span>
   </li>
 </template>
 
@@ -37,6 +36,11 @@ export default {
     item: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    isAbsolute(url) {
+      return /^https?:\/\//.test(url)
     }
   }
 }
@@ -51,7 +55,7 @@ export default {
   line-height: 20px;
 
   .score {
-    color: #C75000;
+    color: #00C48D;
     font-size: 1.1em;
     font-weight: 700;
     position: absolute;
@@ -71,7 +75,7 @@ export default {
       text-decoration: underline;
 
       &:hover {
-        color: #C75000;
+        color: #00C48D;
       }
     }
   }

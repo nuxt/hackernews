@@ -44,14 +44,14 @@ export default {
 
   computed: {
     id() {
-      return this.$route.query.id
+      return this.$route.params.id
     },
     item() {
       return this.$store.state.items[this.id]
     }
   },
 
-  fetch({ store, query: { id } }) {
+  fetch({ store, params: { id } }) {
     return store.dispatch('FETCH_ITEM', { id })
   }
 }
@@ -72,6 +72,9 @@ export default {
 
   .host, .meta, .meta a {
     color: #595959;
+  }
+  .meta a:hover {
+    color: #00C48D;
   }
 
   .meta a {

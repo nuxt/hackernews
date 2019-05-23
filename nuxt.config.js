@@ -14,7 +14,7 @@ export default {
   },
 
   loading: {
-    color: '#59cc93'
+    color: '#00C48D'
   },
 
   manifest: {
