@@ -2,7 +2,7 @@ export default {
   head: {
     titleTemplate: 'Nuxt HN | %s',
     meta: [
-      { property: 'og:image', content: 'https://user-images.githubusercontent.com/904724/26879447-689b56a8-4b91-11e7-968f-5eea1d6c71b4.png' },
+      { property: 'og:image', content: 'https://user-images.githubusercontent.com/904724/58238637-f189ca00-7d47-11e9-8213-ae072d7cd3aa.png' },
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'twitter:site', content: '@nuxt_js' }
     ],
