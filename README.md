@@ -26,6 +26,7 @@ HackerNews clone built with Nuxt.js.
 - PWA experience using [PWA Module](https://github.com/nuxt-community/pwa-module) with almost _zero config_
 - PRPL
 - Hot reloading dev environment integrated with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
+- Hosted on [Now 2](https://zeit.co/)
 
 ## Build Setup
 
