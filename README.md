@@ -13,7 +13,12 @@ HackerNews clone built with Nuxt.js.
 ## Modes
 
 - Universal: https://hn.nuxtjs.org
+
+> Hosted on [Now 2](https://zeit.co): `npm run build` + `now.json`
+
 - Single Page: https://hn-spa.nuxtjs.org
+
+> Hosted on [Netlify](https://www.netlify.com): `npm run build-spa` + `dist/` directory
 
 ## Performance
 
@@ -23,13 +28,13 @@ HackerNews clone built with Nuxt.js.
 
 ## Features
 
-- Server Side Rendering & Caching
+- Server Side Rendering
 - Code Splitting
 - Single-file Vue Components
 - Real-time List Updates with FLIP Animation
 - Prefetch/Preload JS + DNS + Data
 - Critical Path CSS
-- PWA experience using [PWA Module](https://github.com/nuxt-community/pwa-module) with almost _zero config_
+- PWA experience using [PWA Module](https://pwa.nuxtjs.org) with almost _zero config_
 - PRPL
 - Hot reloading dev environment integrated with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 - Hosted on [Now 2](https://zeit.co/)
@@ -45,18 +50,23 @@ npm install # or yarn
 # serve in dev mode, with hot reload at localhost:3000
 npm run dev
 
-# build for production
+# build for production (universal)
 npm run build
 
-# serve in production mode
+# serve in production mode (universal)
 npm start
+
+# build for production (spa)
+npm run build-spa
+
+# serve in production mode (spa)
+npm run start-spa # or upload dist/ directory
 
 # validate code with ESLint (with Prettier)
 npm run lint
 
 # validate andf fix with ESLint (with Prettier)
 npm run lintfix
-
 ```
 
 ## Links
