@@ -1,12 +1,13 @@
 <template>
   <div class="item-view view">
     <div class="item-view-header">
-      <a :href="item.url" target="_blank">
+      <template v-if="isAbsolute(item.url)">
+        <a :href="item.url" target="_blank" rel="noopener"><h1 v-text="item.title" /></a>
+        <span class="host"> ({{ item.url | host }})</span>
+      </template>
+      <template v-else>
         <h1 v-text="item.title" />
-      </a>
-      <span v-if="item.url" class="host">
-        ({{ item.url | host }})
-      </span>
+      </template>
       <p class="meta">
         {{ item.points }} points | by
         <router-link :to="'/user/' + item.user">
@@ -53,6 +54,12 @@ export default {
 
   fetch({ store, params: { id } }) {
     return store.dispatch('FETCH_ITEM', { id })
+  },
+
+  methods: {
+    isAbsolute(url) {
+      return /^https?:\/\//.test(url)
+    }
   }
 }
 </script>
