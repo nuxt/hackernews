@@ -28,7 +28,7 @@ export default {
   modules: [ '~/modules' ],
 
   axios: {
-    baseURL: 'https://api.hnpwa.com/v0/'
+    baseURL: 'https://api.hackerwebapp.com'
   },
 
   plugins: [

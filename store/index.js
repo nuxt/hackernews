@@ -69,7 +69,6 @@ export const actions = {
       }
       this.feedCancelSource = CancelToken.source()
     }
-
     return lazy(
       (items) => {
         const ids = items.map(item => item.id)
@@ -77,7 +76,7 @@ export const actions = {
         commit('SET_ITEMS', { items })
       },
       () =>
-        this.$axios.$get(`/${feed}/${page}.json`, {
+        this.$axios.$get(`/${feed}?page=${page}`, {
           cancelToken: this.feedCancelSource && this.feedCancelSource.token
         }),
       (state.feeds[feed][page] || []).map(id => state.items[id])
@@ -87,7 +86,7 @@ export const actions = {
   FETCH_ITEM({ commit, state }, { id }) {
     return lazy(
       item => commit('SET_ITEM', { item }),
-      () => this.$axios.$get(`/item/${id}.json`),
+      () => this.$axios.$get(`/item/${id}`),
       Object.assign({ id, loading: true, comments: [] }, state.items[id])
     )
   },
@@ -95,7 +94,7 @@ export const actions = {
   FETCH_USER({ state, commit }, { id }) {
     return lazy(
       user => commit('SET_USER', { id, user }),
-      () => this.$axios.$get(`/user/${id}.json`),
+      () => this.$axios.$get(`/user/${id}`),
       Object.assign({ id, loading: true }, state.users[id])
     )
   }
