@@ -10,7 +10,7 @@
           <li>
             <span class="label">Karma:</span> {{ user.karma || '-' }}
           </li>
-          <li v-if="user.about" class="about" v-text="user.about" />
+          <li v-if="user.about" class="about" v-html="user.about" />
         </ul>
       </lazy-wrapper>
       <p class="links">
