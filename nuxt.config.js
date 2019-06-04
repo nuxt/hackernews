@@ -8,8 +8,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'dns-prefetch', href: 'https://api.hnpwa.com' },
-      { rel: 'preconnect', href: 'https://api.hnpwa.com' }
+      { rel: 'dns-prefetch', href: 'https://api.hackerwebapp.com' },
+      { rel: 'preconnect', href: 'https://api.hackerwebapp.com' }
     ]
   },
 
