@@ -1,5 +1,5 @@
 <template>
-  <li v-if="comment" class="comment">
+  <li v-if="comment && comment.user" class="comment">
     <div class="by">
       <router-link :to="'/user/' + comment.user">
         {{ comment.user }}
@@ -54,10 +54,10 @@ export default {
   }
 
   .by {
-    color: #828282;
+    color: #222;
 
     a {
-      color: #828282;
+      color: #222;
       text-decoration: underline;
     }
   }
@@ -66,7 +66,7 @@ export default {
     overflow-wrap: break-word;
 
     a:hover {
-      color: #ff6600;
+      color: #111;
     }
 
     pre {
@@ -80,7 +80,7 @@ export default {
     border-radius: 4px;
 
     a {
-      color: #828282;
+      color: #222;
       cursor: pointer;
     }
 

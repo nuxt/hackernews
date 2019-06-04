@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import Item from '~/components/item.vue'
-import ItemListNav from '~/components/item-list-nav.vue'
-import LazyWrapper from '~/components/lazy-wrapper'
+import Item from '~/components/Item.vue'
+import ItemListNav from '~/components/ItemListNav.vue'
+import LazyWrapper from '~/components/LazyWrapper'
 import { feeds, validFeeds } from '~/common/api'
 
 export default {

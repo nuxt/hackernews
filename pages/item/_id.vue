@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import Comment from '~/components/comment.vue'
-import LazyWrapper from '~/components/lazy-wrapper'
+import Comment from '~/components/Comment'
+import LazyWrapper from '~/components/LazyWrapper'
 
 export default {
   name: 'ItemView',

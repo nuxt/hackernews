@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import LazyWrapper from '~/components/lazy-wrapper'
+import LazyWrapper from '~/components/LazyWrapper'
 
 export default {
   name: 'UserView',
@@ -39,7 +39,9 @@ export default {
   },
 
   head() {
-    return this.user ? this.user.id : 'User not found'
+    return {
+      title: this.user ? this.user.id : 'User not found'
+    }
   },
 
   fetch({ store, route: { params: { id } } }) {
