@@ -1,11 +1,11 @@
 # Nuxt.js Hacker News
 
-HackerNews clone built with Nuxt.js.
+HackerNews clone built with [Nuxt.js](https://nuxtjs.org).
 
 <p align="center">
   <a href="https://hn.nuxtjs.org" target="_blank">
-    <img src="https://user-images.githubusercontent.com/5158436/27347011-428833aa-5604-11e7-9f43-a12e576e9b18.png" width="256px"
-    ><br>
+    <img width="1090" alt="Screenshot 2019-06-04 at 13 27 51" src="https://user-images.githubusercontent.com/904724/58875721-97382400-86cc-11e9-94c6-af21544817bb.png">
+    <br>
     Live Demo
   </a>
 </p>
