@@ -6,7 +6,7 @@
       </router-link>
       {{ comment.time | timeAgo }} ago
     </div>
-    <div class="text" v-text="comment.content" />
+    <div class="text" v-html="comment.content" />
     <div v-if="comment.comments && comment.comments.length" :class="{ open }" class="toggle">
       <a @click="open = !open">{{ open ? '[-]' : '[+] ' + pluralize(comment.comments.length) + ' collapsed' }}
       </a>
