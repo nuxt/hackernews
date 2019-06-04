@@ -4,12 +4,7 @@
   "builds": [
     {
       "src": "nuxt.config.js",
-      "use": "@nuxtjs/now-builder",
-      "config": {
-        "serverFiles": [
-          "modules.js"
-        ]
-      }
+      "use": "@nuxtjs/now-builder"
     }
   ],
   "routes": [

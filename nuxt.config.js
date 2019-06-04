@@ -25,7 +25,10 @@ export default {
     start_url: '/news'
   },
 
-  modules: [ '~/modules' ],
+  devModules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/axios'
+  ],
 
   axios: {
     baseURL: 'https://api.hackerwebapp.com'
