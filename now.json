@@ -8,7 +8,10 @@
     }
   ],
   "routes": [
-    { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
+    {
+      "src": "/_nuxt/.+",
+      "headers": { "Cache-Control": "s-maxage=31536000" }
+    },
     { "src": "/(.*)", "dest": "/" }
   ]
 }
