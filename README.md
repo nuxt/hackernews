@@ -77,4 +77,6 @@ For the communiy typescript fork please see [nuxt-community/hackernews-nuxt-ts](
 
 MIT
 
+## Credits 
+
 This repository is originally ported from [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0)
