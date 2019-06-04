@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/_nuxt/.+",
-      "headers": { "Cache-Control": "s-maxage=31536000" }
+      "headers": { "Cache-Control": "max-age=31557600" }
     },
     { "src": "/(.*)", "dest": "/" }
   ]
