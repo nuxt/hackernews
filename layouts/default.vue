@@ -21,7 +21,7 @@
 import { feeds } from '~/common/api'
 
 export default {
-  head() {
+  head () {
     const host = process.server
       ? this.$ssrContext.req.headers.host
       : window.location.host

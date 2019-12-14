@@ -37,27 +37,27 @@ export default {
   name: 'ItemView',
   components: { Comment, LazyWrapper },
 
-  head() {
+  head () {
     return {
       title: this.item.title
     }
   },
 
   computed: {
-    id() {
+    id () {
       return this.$route.params.id
     },
-    item() {
+    item () {
       return this.$store.state.items[this.id]
     }
   },
 
-  fetch({ store, params: { id } }) {
+  fetch ({ store, params: { id } }) {
     return store.dispatch('FETCH_ITEM', { id })
   },
 
   methods: {
-    isAbsolute(url) {
+    isAbsolute (url) {
       return /^https?:\/\//.test(url)
     }
   }
