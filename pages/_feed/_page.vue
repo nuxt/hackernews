@@ -28,11 +28,11 @@ export default {
     LazyWrapper
   },
 
-  validate({ params: { feed } }) {
+  validate ({ params: { feed } }) {
     return validFeeds.includes(feed)
   },
 
-  data() {
+  data () {
     return {
       transition: 'slide-right',
       displayedPage: Number(this.page) || 1
@@ -40,22 +40,22 @@ export default {
   },
 
   computed: {
-    feed() {
+    feed () {
       return this.$route.params.feed
     },
-    page() {
+    page () {
       return Number(this.$route.params.page) || 1
     },
-    maxPage() {
+    maxPage () {
       return feeds[this.feed].pages
     },
-    pageData() {
+    pageData () {
       return this.$store.state.feeds[this.feed][this.page]
     },
-    displayedItems() {
+    displayedItems () {
       return this.pageData.map(id => this.$store.state.items[id])
     },
-    loading() {
+    loading () {
       return this.displayedItems.length === 0
     }
   },
@@ -64,23 +64,23 @@ export default {
     page: 'pageChanged'
   },
 
-  fetch({ store, params: { feed, page = 1 } }) {
+  fetch ({ store, params: { feed, page = 1 } }) {
     page = Number(page) || 1
     return store.dispatch('FETCH_FEED', { feed, page })
   },
 
-  head() {
+  head () {
     return {
       title: feeds[this.$route.params.feed].title
     }
   },
 
-  mounted() {
+  mounted () {
     this.pageChanged(this.page)
   },
 
   methods: {
-    pageChanged(to, from = -1) {
+    pageChanged (to, from = -1) {
       if (to <= 0 || to > this.maxPage) {
         this.$router.replace(`/${this.feed}/1`)
         return

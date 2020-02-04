@@ -1,8 +1,8 @@
 import Vue from 'vue'
 
+import { CancelToken } from 'axios'
 import { validFeeds } from '~/common/api'
 import { lazy } from '~/common/utils'
-import { CancelToken } from 'axios'
 
 // Learn more on https://nuxtjs.org/guide/vuex-store
 
@@ -56,7 +56,7 @@ export const mutations = {
 // Actions
 // =================================================
 export const actions = {
-  FETCH_FEED({ commit, state }, { feed, page, prefetch }) {
+  FETCH_FEED ({ commit, state }, { feed, page, prefetch }) {
     // Don't priorotize already fetched feeds
     if (state.feeds[feed][page] && state.feeds[feed][page].length) {
       prefetch = true
@@ -83,7 +83,7 @@ export const actions = {
     )
   },
 
-  FETCH_ITEM({ commit, state }, { id }) {
+  FETCH_ITEM ({ commit, state }, { id }) {
     return lazy(
       item => commit('SET_ITEM', { item }),
       () => this.$axios.$get(`/item/${id}`),
@@ -91,7 +91,7 @@ export const actions = {
     )
   },
 
-  FETCH_USER({ state, commit }, { id }) {
+  FETCH_USER ({ state, commit }, { id }) {
     return lazy(
       user => commit('SET_USER', { id, user }),
       () => this.$axios.$get(`/user/${id}`),

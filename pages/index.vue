@@ -2,7 +2,7 @@
 import { validFeeds } from '~/common/api'
 
 export default {
-  fetch({ redirect }) {
+  fetch ({ redirect }) {
     redirect('/' + validFeeds[0])
   }
 }

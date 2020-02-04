@@ -29,7 +29,7 @@ export default {
     }
   },
   computed: {
-    hasMore() {
+    hasMore () {
       return this.page < this.maxPage
     }
   }

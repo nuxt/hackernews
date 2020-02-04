@@ -44,7 +44,7 @@ export default {
     },
     static: {
       maxAge: '1y',
-      setHeaders(res, path) {
+      setHeaders (res, path) {
         if (path.includes('sw.js')) {
           res.setHeader('Cache-Control', `public, max-age=${15 * 60}`)
         }

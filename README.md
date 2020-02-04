@@ -65,7 +65,7 @@ npm run start-spa # or upload dist/ directory
 # validate code with ESLint (with Prettier)
 npm run lint
 
-# validate andf fix with ESLint (with Prettier)
+# validate and fix with ESLint (with Prettier)
 npm run lintfix
 ```
 

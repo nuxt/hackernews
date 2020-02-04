@@ -28,8 +28,6 @@
 </template>
 
 <script>
-import { timeAgo } from '~/plugins/filters'
-
 export default {
   name: 'NewsItem',
   props: {
@@ -39,7 +37,7 @@ export default {
     }
   },
   methods: {
-    isAbsolute(url) {
+    isAbsolute (url) {
       return /^https?:\/\//.test(url)
     }
   }
