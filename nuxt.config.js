@@ -35,6 +35,7 @@ export default {
   },
 
   plugins: [
+    '~/plugins/swr',
     '~/plugins/filters'
   ],
 
