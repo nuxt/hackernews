@@ -17,7 +17,7 @@ Vue.mixin({
 export default function ({ store }) {
   store.registerModule('swr', {
     state: () => ({
-      time: currentTime
+      time: new Date().getTime()
     })
   })
 }
