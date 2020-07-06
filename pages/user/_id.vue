@@ -32,8 +32,9 @@ export default {
 
   components: { LazyWrapper },
 
-  fetch ({ store, route: { params: { id } } }) {
-    return store.dispatch('FETCH_USER', { id })
+  fetch () {
+    const { id } = this.$route.params
+    return this.$store.dispatch('FETCH_USER', { id })
   },
 
   computed: {

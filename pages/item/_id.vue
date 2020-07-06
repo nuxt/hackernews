@@ -37,8 +37,9 @@ export default {
   name: 'ItemView',
   components: { Comment, LazyWrapper },
 
-  fetch ({ store, params: { id } }) {
-    return store.dispatch('FETCH_ITEM', { id })
+  fetch () {
+    const { id } = this.$route.params
+    return this.$store.dispatch('FETCH_ITEM', { id })
   },
 
   computed: {

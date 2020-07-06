@@ -32,9 +32,10 @@ export default {
     return validFeeds.includes(feed)
   },
 
-  fetch ({ store, params: { feed, page = 1 } }) {
-    page = Number(page) || 1
-    return store.dispatch('FETCH_FEED', { feed, page })
+  fetch () {
+    const { feed, page = 1 } = this.$route.params
+
+    return this.$store.dispatch('FETCH_FEED', { page: Number(page) || 1, feed })
   },
 
   data () {
