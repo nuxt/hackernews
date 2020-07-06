@@ -37,10 +37,8 @@ export default {
   name: 'ItemView',
   components: { Comment, LazyWrapper },
 
-  head () {
-    return {
-      title: this.item.title
-    }
+  fetch ({ store, params: { id } }) {
+    return store.dispatch('FETCH_ITEM', { id })
   },
 
   computed: {
@@ -52,13 +50,15 @@ export default {
     }
   },
 
-  fetch ({ store, params: { id } }) {
-    return store.dispatch('FETCH_ITEM', { id })
-  },
-
   methods: {
     isAbsolute (url) {
       return /^https?:\/\//.test(url)
+    }
+  },
+
+  head () {
+    return {
+      title: this.item.title
     }
   }
 }

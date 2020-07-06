@@ -32,6 +32,10 @@ export default {
 
   components: { LazyWrapper },
 
+  fetch ({ store, route: { params: { id } } }) {
+    return store.dispatch('FETCH_USER', { id })
+  },
+
   computed: {
     user () {
       return this.$store.state.users[this.$route.params.id]
@@ -42,10 +46,6 @@ export default {
     return {
       title: this.user ? this.user.id : 'User not found'
     }
-  },
-
-  fetch ({ store, route: { params: { id } } }) {
-    return store.dispatch('FETCH_USER', { id })
   }
 }
 </script>

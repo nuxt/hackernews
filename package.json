@@ -30,20 +30,20 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
-    "nuxt": "^2.10.2"
+    "nuxt": "^2.13.3"
   },
   "devDependencies": {
-    "@nuxtjs/pwa": "3.0.0-beta.8",
-    "@nuxtjs/eslint-config": "^1.1.2",
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/pwa": "3.0.0-beta.20",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.6.0",
+    "eslint": "^7.4.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^23.0.2",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^5.2.3",
+    "eslint-plugin-vue": "^6.2.2",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2"
   }

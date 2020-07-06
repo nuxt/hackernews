@@ -32,6 +32,11 @@ export default {
     return validFeeds.includes(feed)
   },
 
+  fetch ({ store, params: { feed, page = 1 } }) {
+    page = Number(page) || 1
+    return store.dispatch('FETCH_FEED', { feed, page })
+  },
+
   data () {
     return {
       transition: 'slide-right',
@@ -64,17 +69,6 @@ export default {
     page: 'pageChanged'
   },
 
-  fetch ({ store, params: { feed, page = 1 } }) {
-    page = Number(page) || 1
-    return store.dispatch('FETCH_FEED', { feed, page })
-  },
-
-  head () {
-    return {
-      title: feeds[this.$route.params.feed].title
-    }
-  },
-
   mounted () {
     this.pageChanged(this.page)
   },
@@ -99,6 +93,12 @@ export default {
         from === -1 ? null : to > from ? 'slide-left' : 'slide-right'
 
       this.displayedPage = to
+    }
+  },
+
+  head () {
+    return {
+      title: feeds[this.$route.params.feed].title
     }
   }
 }
