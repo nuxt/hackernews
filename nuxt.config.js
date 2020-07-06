@@ -41,7 +41,7 @@ export default {
 
   serverMiddleware: [
     (req, res, next) => {
-      res.setHeader('Cache-Control', 's-maxage=31557600, stale-while-revalidate')
+      res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
       next()
     }
   ],
