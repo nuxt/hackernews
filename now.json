@@ -1,17 +1,8 @@
 {
-  "version": 2,
-  "alias": "hn.nuxtjs.org",
   "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/now-builder"
     }
-  ],
-  "routes": [
-    {
-      "src": "/_nuxt/.+",
-      "headers": { "Cache-Control": "max-age=31557600" }
-    },
-    { "src": "/(.*)", "dest": "/" }
   ]
 }
