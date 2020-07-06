@@ -35,12 +35,13 @@ export default {
   },
 
   plugins: [
+    '~/plugins/swr',
     '~/plugins/filters'
   ],
 
   serverMiddleware: [
     (req, res, next) => {
-      res.setHeader('Cache-Control', 's-maxage=30, stale-while-revalidate')
+      res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
       next()
     }
   ],
