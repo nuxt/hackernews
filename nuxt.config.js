@@ -25,7 +25,7 @@ export default {
     start_url: '/news'
   },
 
-  devModules: [
+  buildModules: [
     '@nuxtjs/pwa',
     '@nuxtjs/axios'
   ],
@@ -36,6 +36,13 @@ export default {
 
   plugins: [
     '~/plugins/filters'
+  ],
+
+  serverMiddleware: [
+    (req, res, next) => {
+      res.setHeader('Cache-Control', 's-maxage=30, stale-while-revalidate')
+      next()
+    }
   ],
 
   render: {
