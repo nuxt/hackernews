@@ -67,7 +67,13 @@ export default {
   },
 
   watch: {
-    page: 'pageChanged'
+    '$route.params' (newParams, oldParams) {
+      if (newParams.feed !== oldParams.feed) {
+        this.$fetch()
+      }
+
+      this.pageChanged(newParams.page)
+    }
   },
 
   mounted () {
