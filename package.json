@@ -33,7 +33,7 @@
     "nuxt": "^2.13.3"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/eslint-config": "^4.0.0",
     "@nuxtjs/pwa": "3.0.0-beta.20",
     "babel-eslint": "^10.0.3",
     "eslint": "^7.4.0",
