@@ -29,22 +29,22 @@
     "node": ">=8.0"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.8.0",
-    "nuxt": "^2.13.3"
+    "@nuxtjs/axios": "^5.12.5",
+    "nuxt": "^2.14.12"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^3.0.0",
-    "@nuxtjs/pwa": "3.0.0-beta.20",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^7.4.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^23.0.2",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/pwa": "3.3.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^7.2.0",
-    "stylus": "^0.54.7",
+    "eslint-plugin-standard": "^4.1.0",
+    "eslint-plugin-vue": "^7.5.0",
+    "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2"
   }
 }
