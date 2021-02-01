@@ -31,13 +31,12 @@ HackerNews clone built with [Nuxt.js](https://nuxtjs.org).
 - Server Side Rendering
 - Code Splitting
 - Single-file Vue Components
-- Real-time List Updates with FLIP Animation
 - Prefetch/Preload JS + DNS + Data
 - Critical Path CSS
 - PWA experience using [PWA Module](https://pwa.nuxtjs.org) with almost _zero config_
 - PRPL
 - Hot reloading dev environment integrated with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
-- Hosted on [Now 2](https://zeit.co/)
+- Hosted on [Vercel](https://vercel.com)
 
 ## Build Setup
 
