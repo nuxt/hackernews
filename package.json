@@ -29,14 +29,14 @@
     "node": ">=8.0"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/axios": "^5.13.0",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/pwa": "3.3.5",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^23.20.0",
