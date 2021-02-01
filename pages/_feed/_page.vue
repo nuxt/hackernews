@@ -5,9 +5,9 @@
     <lazy-wrapper :loading="loading">
       <transition :name="transition" mode="out-in">
         <div :key="displayedPage" class="news-list">
-          <transition-group tag="ul" name="item">
+          <ul>
             <item v-for="item in displayedItems" :key="item.id" :item="item" />
-          </transition-group>
+          </ul>
         </div>
       </transition>
       <item-list-nav :feed="feed" :page="page" :max-page="maxPage" />
@@ -32,16 +32,22 @@ export default {
     return validFeeds.includes(feed)
   },
 
+  data () {
+    return {
+      transition: 'slide-right',
+      displayedPage: Number(this.page) || 1
+    }
+  },
+
   fetch () {
     const { feed, page = 1 } = this.$route.params
 
     return this.$store.dispatch('FETCH_FEED', { page: Number(page) || 1, feed })
   },
 
-  data () {
+  head () {
     return {
-      transition: 'slide-right',
-      displayedPage: Number(this.page) || 1
+      title: feeds[this.$route.params.feed].title
     }
   },
 
@@ -56,7 +62,7 @@ export default {
       return feeds[this.feed].pages
     },
     pageData () {
-      return this.$store.state.feeds[this.feed][this.page]
+      return this.$store.state.feeds[this.feed][this.page] || []
     },
     displayedItems () {
       return this.pageData.map(id => this.$store.state.items[id])
@@ -67,6 +73,7 @@ export default {
   },
 
   watch: {
+    feed: '$fetch',
     page: 'pageChanged'
   },
 
@@ -94,12 +101,6 @@ export default {
         from === -1 ? null : to > from ? 'slide-left' : 'slide-right'
 
       this.displayedPage = to
-    }
-  },
-
-  head () {
-    return {
-      title: feeds[this.$route.params.feed].title
     }
   }
 }

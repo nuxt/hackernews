@@ -21,9 +21,6 @@
 import { feeds } from '~/common/api'
 
 export default {
-  computed: {
-    feeds: () => feeds
-  },
   head () {
     const host = process.server
       ? this.$ssrContext.req.headers.host
@@ -35,6 +32,9 @@ export default {
         { rel: 'canonical', href: `https://${host}${this.$route.path}` }
       ]
     }
+  },
+  computed: {
+    feeds: () => feeds
   }
 }
 </script>
