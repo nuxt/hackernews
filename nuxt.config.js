@@ -13,26 +13,11 @@ export default {
     ]
   },
 
-  loading: {
-    color: '#00C48D'
-  },
-
-  manifest: {
-    name: 'Nuxt Hacker News',
-    short_name: 'Nuxt HN',
-    description: 'HackerNews clone built with Nuxt.js',
-    theme_color: '#2F495E',
-    start_url: '/news'
-  },
-
   buildModules: [
+    '@nuxt/nitro/compat',
     '@nuxtjs/pwa',
     '@nuxtjs/axios'
   ],
-
-  axios: {
-    baseURL: 'https://api.hackerwebapp.com'
-  },
 
   plugins: [
     '~/plugins/swr',
@@ -40,23 +25,21 @@ export default {
   ],
 
   serverMiddleware: [
-    (_, res, next) => {
-      res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
-      next()
-    }
+    'server/swr.js'
   ],
 
-  render: {
-    http2: {
-      push: true
-    },
-    static: {
-      maxAge: '1y',
-      setHeaders (res, path) {
-        if (path.includes('sw.js')) {
-          res.setHeader('Cache-Control', `public, max-age=${15 * 60}`)
-        }
-      }
-    }
+  loading: {
+    color: '#00C48D'
+  },
+
+  axios: {
+    baseURL: 'https://api.hackerwebapp.com'
+  },
+  manifest: {
+    name: 'Nuxt Hacker News',
+    short_name: 'Nuxt HN',
+    description: 'HackerNews clone built with Nuxt.js',
+    theme_color: '#2F495E',
+    start_url: '/news'
   }
 }
