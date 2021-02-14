@@ -12,3 +12,6 @@ package-lock.json
 static/manifest*.json
 static/sw.js
 static/workbox-sw*.js*
+
+.vercel
+.output
