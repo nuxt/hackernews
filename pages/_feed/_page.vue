@@ -78,6 +78,9 @@ export default {
   },
 
   mounted () {
+    if (!this.pageData.length) {
+      this.$fetch()
+    }
     this.pageChanged(this.page)
   },
 
