@@ -6,7 +6,7 @@ export const lazy = (commit, task, optimistic, enabled) => {
 
   // Non lazy mode
   if (!enabled) {
-    return task().then(commit)
+    return task().then(commit).catch(console.error) // eslint-disable-line no-console
   }
 
   // Do real task in background
