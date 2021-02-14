@@ -25,6 +25,7 @@ export default {
   ],
 
   serverMiddleware: [
+    'server/redirect.js',
     'server/swr.js'
   ],
 
