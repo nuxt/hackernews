@@ -26,24 +26,24 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "engines": {
-    "node": ">=8.0"
+    "node": ">=v8.17.0"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.0",
-    "nuxt": "^2.14.12"
+    "@nuxtjs/axios": "^5.13.1",
+    "nuxt": "^2.15.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/pwa": "3.3.5",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.19.0",
+    "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.3",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-standard": "^4.1.0",
-    "eslint-plugin-vue": "^7.5.0",
+    "eslint-plugin-vue": "^7.6.0",
     "stylus": "^0.54.8",
     "stylus-loader": "^4.3.3"
   }
