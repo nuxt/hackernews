@@ -1218,10 +1218,10 @@
     node-res "^5.0.1"
     serve-static "^1.14.1"
 
-"@nuxt/nitro@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@nuxt/nitro/-/nitro-0.1.4.tgz#522c724e0b36878ab765e40cb648e4ee19e1748c"
-  integrity sha512-1uHpqxpBtG8UB+N6z1Q2vUmYVqI581fbuDcBX1XvoPNZZGYBQK97dQEkdBH0rdLU6arR8PWwBfe3kgvATxZ3FQ==
+"@nuxt/nitro@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@nuxt/nitro/-/nitro-0.1.5.tgz#c67ddf3855fc7d519489a7e672a17f91dc35e171"
+  integrity sha512-4deXk27rgrQz/sn4WsvL2cKQ1OER1af5ky+Fv3gRRTwE4FNADZC49clstH8r1Kd37VioaZFJdqQj29GS/wH7IA==
   dependencies:
     "@cloudflare/kv-asset-handler" "^0.1.0"
     "@nuxt/devalue" "^1.2.5"
