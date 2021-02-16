@@ -120,7 +120,7 @@
     "@babel/helper-regex" "^7.10.4"
     regexpu-core "^4.7.0"
 
-"@babel/helper-create-regexp-features-plugin@^7.12.13":
+"@babel/helper-create-regexp-features-plugin@^7.12.1", "@babel/helper-create-regexp-features-plugin@^7.12.13":
   version "7.12.16"
   resolved "https://registry.yarnpkg.com/@babel/helper-create-regexp-features-plugin/-/helper-create-regexp-features-plugin-7.12.16.tgz#3b31d13f39f930fad975e151163b7df7d4ffe9d3"
   integrity sha512-jAcQ1biDYZBdaAxB4yg46/XirgX7jBDiMHDbwYQOgtViLBXGxJpZQ24jutmBqAIB/q+AwB6j+NbBXjKxEY8vqg==
@@ -1218,10 +1218,10 @@
     node-res "^5.0.1"
     serve-static "^1.14.1"
 
-"@nuxt/nitro@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@nuxt/nitro/-/nitro-0.1.3.tgz#5a10b543c5f50ede160ba5165b535a8e76990e66"
-  integrity sha512-VHcef/NFJnIUJKB0e2mw9W1UrbnNQldFhsC2xDKfMxjCOsIqhLy0lXUInlh5Kf98dwOIp46u3ZgQ1vyLZw4xPQ==
+"@nuxt/nitro@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@nuxt/nitro/-/nitro-0.1.4.tgz#522c724e0b36878ab765e40cb648e4ee19e1748c"
+  integrity sha512-1uHpqxpBtG8UB+N6z1Q2vUmYVqI581fbuDcBX1XvoPNZZGYBQK97dQEkdBH0rdLU6arR8PWwBfe3kgvATxZ3FQ==
   dependencies:
     "@cloudflare/kv-asset-handler" "^0.1.0"
     "@nuxt/devalue" "^1.2.5"
@@ -1230,7 +1230,7 @@
     "@rollup/plugin-commonjs" "^17.1.0"
     "@rollup/plugin-inject" "^4.0.2"
     "@rollup/plugin-json" "^4.1.0"
-    "@rollup/plugin-node-resolve" "^11.1.1"
+    "@rollup/plugin-node-resolve" "^11.2.0"
     "@rollup/plugin-replace" "^2.3.4"
     "@rollup/plugin-virtual" "^2.0.3"
     "@rollup/pluginutils" "^4.1.0"
@@ -1246,7 +1246,7 @@
     defu "^3.2.2"
     destr "^1.1.0"
     dot-prop "^6.0.1"
-    esbuild "^0.8.43"
+    esbuild "^0.8.46"
     etag "^1.8.1"
     events "^3.2.0"
     fs-extra "^9.1.0"
@@ -1268,13 +1268,13 @@
     p-timeout "^4.1.0"
     pretty-bytes "^5.5.0"
     process "^0.11.10"
-    rollup "^2.38.5"
+    rollup "^2.39.0"
     rollup-plugin-analyzer "^4.0.0"
     rollup-plugin-terser "^7.0.2"
     serve-placeholder "^1.2.3"
     serve-static "^1.14.1"
     source-map-support "^0.5.19"
-    terser "^5.5.1"
+    terser "^5.6.0"
     upath "^2.0.1"
     util "^0.12.3"
     vue-bundle-renderer "^0.2.3"
@@ -1553,10 +1553,10 @@
   dependencies:
     "@rollup/pluginutils" "^3.0.8"
 
-"@rollup/plugin-node-resolve@^11.1.1":
-  version "11.1.1"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-11.1.1.tgz#47bc34252914794a1b06fb50371d7520a03f91f3"
-  integrity sha512-zlBXR4eRS+2m79TsUZWhsd0slrHUYdRx4JF+aVQm+MI0wsKdlpC2vlDVjmlGvtZY1vsefOT9w3JxvmWSBei+Lg==
+"@rollup/plugin-node-resolve@^11.2.0":
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-11.2.0.tgz#a5ab88c35bb7622d115f44984dee305112b6f714"
+  integrity sha512-qHjNIKYt5pCcn+5RUBQxK8krhRvf1HnyVgUCcFFcweDS7fhkOLZeYh0mhHK6Ery8/bb9tvN/ubPzmfF0qjDCTA==
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     "@types/resolve" "1.17.1"
@@ -4005,7 +4005,7 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-esbuild@^0.8.43:
+esbuild@^0.8.46:
   version "0.8.46"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.46.tgz#8fc7230ce3019b12e2553399f0c03875a729c26b"
   integrity sha512-xck9sXNCNmjDHCCfxTCyhKTiFuEBweh+IDAhMLOJI990v1Fzii6MyIkT1LbkvjgoVgPX2SK1kpi5eZVGNrl8yg==
@@ -8295,7 +8295,7 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.38.5:
+rollup@^2.39.0:
   version "2.39.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.39.0.tgz#be4f98c9e421793a8fec82c854fb567c35e22ab6"
   integrity sha512-+WR3bttcq7zE+BntH09UxaW3bQo3vItuYeLsyk4dL2tuwbeSKJuvwiawyhEnvRdRgrII0Uzk00FpctHO/zB1kw==
@@ -9114,7 +9114,7 @@ terser@^4.1.2, terser@^4.6.3:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-terser@^5.0.0, terser@^5.5.1:
+terser@^5.0.0:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.5.1.tgz#540caa25139d6f496fdea056e414284886fb2289"
   integrity sha512-6VGWZNVP2KTUcltUQJ25TtNjx/XgdDsBDKGt8nN0MpydU36LmbPPcMBd2kmtZNNGVVDLg44k7GKeHHj+4zPIBQ==
@@ -9123,7 +9123,7 @@ terser@^5.0.0, terser@^5.5.1:
     source-map "~0.7.2"
     source-map-support "~0.5.19"
 
-terser@^5.3.4:
+terser@^5.3.4, terser@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.6.0.tgz#138cdf21c5e3100b1b3ddfddf720962f88badcd2"
   integrity sha512-vyqLMoqadC1uR0vywqOZzriDYzgEkNJFK4q9GeyOBHIbiECHiWLKcWfbQWAUaPfxkjDhapSlZB9f7fkMrvkVjA==
