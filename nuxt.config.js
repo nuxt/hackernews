@@ -7,9 +7,7 @@ export default {
       { property: 'twitter:site', content: '@nuxt_js' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'dns-prefetch', href: 'https://api.hackerwebapp.com' },
-      { rel: 'preconnect', href: 'https://api.hackerwebapp.com' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -25,8 +23,12 @@ export default {
   ],
 
   serverMiddleware: [
-    'server/redirect.js',
-    'server/swr.js'
+    {
+      handler: 'server/api/hn/index.ts',
+      path: '/api/hn'
+    },
+    'server/api/swr.ts',
+    'server/redirect.js'
   ],
 
   loading: {
@@ -34,8 +36,10 @@ export default {
   },
 
   axios: {
-    baseURL: 'https://api.hackerwebapp.com'
+    baseURL: 'http://localhost:3000/api/hn',
+    browserBaseURL: '/api/hn'
   },
+
   manifest: {
     name: 'Nuxt Hacker News',
     short_name: 'Nuxt HN',
