@@ -27,7 +27,9 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
-    "nuxt": "^2.15.0"
+    "h3": "^0.2.4",
+    "nuxt": "^2.15.0",
+    "ohmyfetch": "^0.1.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",

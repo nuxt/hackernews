@@ -7,9 +7,7 @@ export default {
       { property: 'twitter:site', content: '@nuxt_js' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'dns-prefetch', href: 'https://api.hackerwebapp.com' },
-      { rel: 'preconnect', href: 'https://api.hackerwebapp.com' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -31,7 +29,8 @@ export default {
   ],
 
   axios: {
-    baseURL: 'https://api.hackerwebapp.com'
+    baseURL: 'http://localhost:3000/api/hn',
+    browserBaseURL: '/api/hn'
   },
 
   plugins: [
@@ -40,10 +39,11 @@ export default {
   ],
 
   serverMiddleware: [
-    (_, res, next) => {
-      res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
-      next()
-    }
+    {
+      handler: '~/server/api/hn/index.ts',
+      path: '/api/hn'
+    },
+    '~/server/api/swr.ts'
   ],
 
   render: {

@@ -4424,6 +4424,11 @@ gzip-size@^6.0.0:
   dependencies:
     duplexer "^0.1.2"
 
+h3@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/h3/-/h3-0.2.4.tgz#14884b6413a4a0bdcf5e003b7fc5b410be6c87ce"
+  integrity sha512-xiV5nMp5MsmJgzHIDo5IAuc2V9uhCsXnDs5wPcWOtyJ/zBjohqvpjUb94/ZFGmMkh4fjz05HWvuXUZDuwS210Q==
+
 hable@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/hable/-/hable-3.0.0.tgz#6de089b2df946635cf8134b9e4859f1b62de255f"
@@ -6013,6 +6018,13 @@ object.values@^1.1.0, object.values@^1.1.1:
     es-abstract "^1.17.0-next.1"
     function-bind "^1.1.1"
     has "^1.0.3"
+
+ohmyfetch@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/ohmyfetch/-/ohmyfetch-0.1.6.tgz#fe137b46ee5b5598815f988315bb4254e2b5cb12"
+  integrity sha512-pUPZmTCtLdxqGefAhkdTbOVLQmbwt0wydZj21T5u+vmH3UcZ63lN0m5tJE7luHN+9deDG78XI1rFVULhzNUBww==
+  dependencies:
+    node-fetch "^2.6.1"
 
 on-finished@^2.3.0, on-finished@~2.3.0:
   version "2.3.0"
