@@ -2,7 +2,11 @@ import { createApp } from 'h3'
 
 export const baseURL = 'https://hacker-news.firebaseio.com/v0'
 
-const app = createApp()
+const app = createApp({
+  onError: (error) => {
+    console.log(error)
+  }
+})
 
 app.use((_req, res, next) => {
   res.setHeader('Cache-Control', 's-maxage=100, stale-while-revalidate')
