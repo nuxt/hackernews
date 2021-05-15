@@ -44,6 +44,6 @@
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.6.0",
     "stylus": "^0.54.8",
-    "stylus-loader": "^4.3.3"
+    "stylus-loader": "^6.0.0"
   }
 }
