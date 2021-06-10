@@ -32,7 +32,7 @@
     "ohmyfetch": "^0.2.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/pwa": "3.3.5",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.28.0",
