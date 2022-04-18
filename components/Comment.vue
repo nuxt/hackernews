@@ -1,10 +1,27 @@
+<script setup lang="ts">
+import { timeAgo } from '~/plugins/filters'
+
+defineProps({
+  comment: {
+    type: Object,
+    required: true,
+  },
+})
+
+const open = ref(true)
+
+function pluralize(n: number) {
+  return n + (n === 1 ? ' reply' : ' replies')
+}
+</script>
+
 <template>
   <li v-if="comment && comment.user" class="comment">
     <div class="by">
       <router-link :to="'/user/' + comment.user">
         {{ comment.user }}
       </router-link>
-      {{ comment.time | timeAgo }} ago
+      {{ timeAgo(comment.time) }} ago
     </div>
     <div class="text" v-html="comment.content" />
     <div v-if="comment.comments && comment.comments.length" :class="{ open }" class="toggle">
@@ -16,26 +33,6 @@
     </ul>
   </li>
 </template>
-
-<script>
-export default {
-  name: 'Comment',
-  props: {
-    comment: {
-      type: Object,
-      required: true
-    }
-  },
-  data () {
-    return {
-      open: true
-    }
-  },
-  methods: {
-    pluralize: n => n + (n === 1 ? ' reply' : ' replies')
-  }
-}
-</script>
 
 <style lang="stylus">
 .comment-children {

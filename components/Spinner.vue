@@ -1,3 +1,15 @@
+<script>
+export default {
+  name: 'Spinner',
+  props: {
+    show: {
+      type: Boolean,
+      required: true,
+    },
+  },
+}
+</script>
+
 <template>
   <transition>
     <svg
@@ -20,18 +32,6 @@
     </svg>
   </transition>
 </template>
-
-<script>
-export default {
-  name: 'Spinner',
-  props: {
-    show: {
-      type: Boolean,
-      required: true
-    }
-  }
-}
-</script>
 
 <style lang="stylus">
 $offset = 126;

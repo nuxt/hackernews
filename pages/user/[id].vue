@@ -1,3 +1,19 @@
+<script setup lang="ts">
+import LazyWrapper from '~/components/LazyWrapper'
+import { timeAgo } from '~/plugins/filters'
+
+const route = useRoute()
+const store = useStore()
+const id = $computed(() => route.params.id as string)
+const user = $computed(() => store.users[id])
+
+useHead({
+  title: user ? user.id : 'User not found',
+})
+
+store.fetchUser(id)
+</script>
+
 <template>
   <div class="user-view view">
     <template v-if="user">
@@ -5,7 +21,7 @@
       <lazy-wrapper :loading="user.loading">
         <ul class="meta">
           <li>
-            <span class="label">Created:</span> {{ user.created_time | timeAgo }} ago
+            <span class="label">Created:</span> {{ timeAgo(user.created_time) }} ago
           </li>
           <li>
             <span class="label">Karma:</span> {{ user.karma || '-' }}
@@ -23,33 +39,6 @@
     </template>
   </div>
 </template>
-
-<script>
-import LazyWrapper from '~/components/LazyWrapper'
-
-export default {
-  name: 'UserView',
-
-  components: { LazyWrapper },
-
-  fetch () {
-    const { id } = this.$route.params
-    return this.$store.dispatch('FETCH_USER', { id })
-  },
-
-  computed: {
-    user () {
-      return this.$store.state.users[this.$route.params.id]
-    }
-  },
-
-  head () {
-    return {
-      title: this.user ? this.user.id : 'User not found'
-    }
-  }
-}
-</script>
 
 <style lang="stylus">
 .user-view {

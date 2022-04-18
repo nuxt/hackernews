@@ -1,9 +1,9 @@
 <script>
-import { validFeeds } from '~/common/api'
+import { validFeeds } from '~/composables/api'
 
 export default {
-  fetch ({ redirect }) {
-    redirect('/' + validFeeds[0])
-  }
+  fetch({ redirect }) {
+    redirect(`/${validFeeds[0]}`)
+  },
 }
 </script>

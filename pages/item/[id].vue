@@ -1,9 +1,29 @@
+<script setup lang="ts">
+import LazyWrapper from '~/components/LazyWrapper'
+import { host, timeAgo } from '~/plugins/filters'
+
+const route = useRoute()
+const store = useStore()
+const id = $computed(() => route.params.id as string)
+const item = $computed(() => store.items[id])
+
+useHead({
+  title: item?.title,
+})
+
+store.fetchItem(id)
+
+function isAbsolute(url: string) {
+  return /^https?:\/\//.test(url)
+}
+</script>
+
 <template>
   <div class="item-view view">
     <div class="item-view-header">
       <template v-if="isAbsolute(item.url)">
         <a :href="item.url" target="_blank" rel="noopener"><h1 v-text="item.title" /></a>
-        <span class="host"> ({{ item.url | host }})</span>
+        <span class="host"> ({{ host(item.url) }})</span>
       </template>
       <template v-else>
         <h1 v-text="item.title" />
@@ -13,7 +33,7 @@
         <router-link :to="'/user/' + item.user">
           {{ item.user }}
         </router-link>
-        {{ item.time | timeAgo }} ago
+        {{ timeAgo(item.time ) }} ago
       </p>
     </div>
     <div class="item-view-comments">
@@ -28,42 +48,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import Comment from '~/components/Comment'
-import LazyWrapper from '~/components/LazyWrapper'
-
-export default {
-  name: 'ItemView',
-  components: { Comment, LazyWrapper },
-
-  fetch () {
-    const { id } = this.$route.params
-    return this.$store.dispatch('FETCH_ITEM', { id })
-  },
-
-  computed: {
-    id () {
-      return this.$route.params.id
-    },
-    item () {
-      return this.$store.state.items[this.id]
-    }
-  },
-
-  methods: {
-    isAbsolute (url) {
-      return /^https?:\/\//.test(url)
-    }
-  },
-
-  head () {
-    return {
-      title: this.item.title
-    }
-  }
-}
-</script>
 
 <style lang="stylus">
 .item-view-header {

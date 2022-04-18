@@ -1,10 +1,25 @@
+<script setup lang="ts">
+import { timeAgo } from '~/plugins/filters'
+
+defineProps({
+  item: {
+    type: Object,
+    required: true,
+  },
+})
+
+function isAbsolute(url: string) {
+  return /^https?:\/\//.test(url)
+}
+</script>
+
 <template>
   <li class="news-item">
     <span class="score">{{ item.points }}</span>
     <span class="title">
       <template v-if="isAbsolute(item.url)">
         <a :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
-        <span class="host"> ({{ item.url | host }})</span>
+        <span class="host"> ({{ timeAgo(item.url) }})</span>
       </template>
       <template v-else>
         <router-link :to="'/item/' + item.id">{{ item.title }}</router-link>
@@ -17,7 +32,7 @@
         <router-link :to="'/user/' + item.user">{{ item.user }}</router-link>
       </span>
       <span class="time">
-        {{ item.time | timeAgo }} ago
+        {{ timeAgo(item.time) }} ago
       </span>
       <span v-if="item.type !== 'job'" class="comments-link">
         |
@@ -26,23 +41,6 @@
     </span>
   </li>
 </template>
-
-<script>
-export default {
-  name: 'NewsItem',
-  props: {
-    item: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    isAbsolute (url) {
-      return /^https?:\/\//.test(url)
-    }
-  }
-}
-</script>
 
 <style lang="stylus">
 .news-item {

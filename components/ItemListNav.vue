@@ -1,3 +1,22 @@
+<script setup lang="ts">
+const props = defineProps({
+  feed: {
+    type: String,
+    required: true,
+  },
+  page: {
+    type: Number,
+    required: true,
+  },
+  maxPage: {
+    type: Number,
+    required: true,
+  },
+})
+
+const hasMore = $computed(() => props.page < props.maxPage)
+</script>
+
 <template>
   <div class="news-list-nav">
     <router-link v-if="page > 1" :to="`/${feed}/${page - 1}`">
@@ -11,30 +30,6 @@
     <a v-else class="disabled">more &gt;</a>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    feed: {
-      type: String,
-      required: true
-    },
-    page: {
-      type: Number,
-      required: true
-    },
-    maxPage: {
-      type: Number,
-      required: true
-    }
-  },
-  computed: {
-    hasMore () {
-      return this.page < this.maxPage
-    }
-  }
-}
-</script>
 
 <style lang="stylus">
 .news-list-nav, .news-list {
