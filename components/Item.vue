@@ -1,16 +1,9 @@
 <script setup lang="ts">
-import { timeAgo } from '~/plugins/filters'
+import { timeAgo, isAbsolute } from '~/composables/utils'
 
-defineProps({
-  item: {
-    type: Object,
-    required: true
-  }
-})
-
-function isAbsolute (url: string) {
-  return /^https?:\/\//.test(url)
-}
+defineProps<{
+  item: any
+}>()
 </script>
 
 <template>

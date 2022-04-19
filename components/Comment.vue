@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { timeAgo } from '~/plugins/filters'
+import { timeAgo } from '~/composables/utils'
 
 defineProps({
   comment: {

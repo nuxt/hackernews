@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { host, timeAgo } from '~/plugins/filters'
+import { host, timeAgo, isAbsolute } from '~/composables/utils'
 
 const route = useRoute()
 const store = useStore()
@@ -11,10 +11,6 @@ useHead({
 })
 
 store.fetchItem(id)
-
-function isAbsolute (url: string) {
-  return /^https?:\/\//.test(url)
-}
 </script>
 
 <template>

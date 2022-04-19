@@ -1,18 +1,9 @@
 <script setup lang="ts">
-const props = defineProps({
-  feed: {
-    type: String,
-    required: true
-  },
-  page: {
-    type: Number,
-    required: true
-  },
-  maxPage: {
-    type: Number,
-    required: true
-  }
-})
+const props = defineProps<{
+  feed: string,
+  page: number,
+  maxPage: number
+}>()
 
 const hasMore = $computed(() => props.page < props.maxPage)
 </script>
