@@ -1,8 +1,7 @@
 {
-  "private": true,
   "name": "nuxt-hn",
+  "private": true,
   "description": "Nuxt Hacker News",
-  "version": "1.0.0",
   "author": "Evan You <yyx990803@gmail.com>",
   "contributors": [
     {
@@ -13,6 +12,9 @@
     },
     {
       "name": "Pooya Parsa (@pi0)"
+    },
+    {
+      "name": "Anthony Fu (@antfu)"
     }
   ],
   "scripts": {
@@ -22,23 +24,20 @@
     "dev-spa": "nuxi dev --spa",
     "build-spa": "nuxi build --spa",
     "start-spa": "nuxi start --spa",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint . --ignore-path .gitignore ."
   },
   "engines": {
-    "node": ">=8.0"
+    "node": ">=14.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "@antfu/eslint-config": "^0.20.6",
     "@nuxtjs/pwa": "3.3.5",
+    "@pinia/nuxt": "^0.1.8",
     "eslint": "^8.13.0",
     "nuxt3": "^3.0.0-27501460.04a72f8",
+    "pinia": "^2.0.13",
     "postcss-nested": "^5.0.6",
     "stylus": "^0.57.0",
     "typescript": "^4.6.3"
-  },
-  "dependencies": {
-    "@pinia/nuxt": "^0.1.8",
-    "pinia": "^2.0.13"
   }
 }
