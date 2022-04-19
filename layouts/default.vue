@@ -75,7 +75,7 @@ a {
       color: #fff;
     }
 
-    &.RouterLink-active, &.nuxt-link-active {
+    &.router-link-active, &.nuxt-link-active {
       color: #fff;
       font-weight: 600;
     }
