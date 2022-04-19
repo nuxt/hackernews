@@ -42,20 +42,8 @@ export default defineNuxtConfig({
     '~/serverMiddleware/cacheHeader'
   ],
 
-  // render: {
-  //   http2: {
-  //     push: true,
-  //   },
-  //   static: {
-  //     maxAge: '1y',
-  //     setHeaders(res, path) {
-  //       if (path.includes('sw.js'))
-  //         res.setHeader('Cache-Control', `public, max-age=${15 * 60}`)
-  //     },
-  //   },
-  // },
-
   experimental: {
-    reactivityTransform: true
+    reactivityTransform: true,
+    viteNode: true
   }
 })
