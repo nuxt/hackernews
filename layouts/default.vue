@@ -9,8 +9,8 @@ const host = process.server
 useHead({
   link: [
     // We use $route.path since we don't use query parameters
-    { rel: 'canonical', href: `https://${host}${route.path}` },
-  ],
+    { rel: 'canonical', href: `https://${host}${route.path}` }
+  ]
 })
 </script>
 

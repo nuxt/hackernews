@@ -8,12 +8,12 @@ const id = $computed(() => route.params.id as string)
 const item = $computed(() => store.items[id])
 
 useHead({
-  title: item?.title,
+  title: item?.title
 })
 
 store.fetchItem(id)
 
-function isAbsolute(url: string) {
+function isAbsolute (url: string) {
   return /^https?:\/\//.test(url)
 }
 </script>

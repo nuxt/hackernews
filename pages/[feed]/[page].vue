@@ -3,7 +3,7 @@ import LazyWrapper from '~/components/LazyWrapper'
 import { feedsInfo } from '~/composables/api'
 
 definePageMeta({
-  middleware: 'feed',
+  middleware: 'feed'
 })
 
 const route = useRoute()
@@ -20,11 +20,10 @@ const store = useStore()
 const displayedPage = ref(pageNo)
 
 useHead({
-  title: feedsInfo[feed]?.title,
+  title: feedsInfo[feed]?.title
 })
 
-if (isValidFeed)
-  store.fetchFeed({ page: pageNo, feed })
+if (isValidFeed) { store.fetchFeed({ page: pageNo, feed }) }
 
 // TODO:
 // validate({ params: { feed } }) {
@@ -44,9 +43,8 @@ const loading = $computed(() => {
   return displayedItems.length === 0
 })
 
-function pageChanged(to: number, from = -1) {
-  if (!isValidFeed)
-    return
+function pageChanged (to: number, from = -1) {
+  if (!isValidFeed) { return }
 
   if (to <= 0 || to > maxPage) {
     router.replace(`/${feed}/1`)
@@ -58,7 +56,7 @@ function pageChanged(to: number, from = -1) {
     .fetchFeed({
       feed,
       page: page + 1,
-      prefetch: true,
+      prefetch: true
     })
     .catch(() => {})
 

@@ -30,7 +30,7 @@
     "node": ">=14.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^0.20.6",
+    "@nuxtjs/eslint-config-typescript": "^9.0.0",
     "@nuxtjs/pwa": "3.3.5",
     "@pinia/nuxt": "^0.1.8",
     "eslint": "^8.13.0",

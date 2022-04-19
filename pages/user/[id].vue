@@ -8,7 +8,7 @@ const id = $computed(() => route.params.id as string)
 const user = $computed(() => store.users[id])
 
 useHead({
-  title: user ? user.id : 'User not found',
+  title: user ? user.id : 'User not found'
 })
 
 store.fetchUser(id)
