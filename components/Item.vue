@@ -22,21 +22,21 @@ function isAbsolute(url: string) {
         <span class="host"> ({{ timeAgo(item.url) }})</span>
       </template>
       <template v-else>
-        <router-link :to="'/item/' + item.id">{{ item.title }}</router-link>
+        <RouterLink :to="'/item/' + item.id">{{ item.title }}</RouterLink>
       </template>
     </span>
     <br>
     <span class="meta">
       <span v-if="item.type !== 'job'" class="by">
         by
-        <router-link :to="'/user/' + item.user">{{ item.user }}</router-link>
+        <RouterLink :to="'/user/' + item.user">{{ item.user }}</RouterLink>
       </span>
       <span class="time">
         {{ timeAgo(item.time) }} ago
       </span>
       <span v-if="item.type !== 'job'" class="comments-link">
         |
-        <router-link :to="'/item/' + item.id">{{ item.comments_count }} comments</router-link>
+        <RouterLink :to="'/item/' + item.id">{{ item.comments_count }} comments</RouterLink>
       </span>
     </span>
   </li>

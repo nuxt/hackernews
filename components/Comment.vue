@@ -18,9 +18,9 @@ function pluralize(n: number) {
 <template>
   <li v-if="comment && comment.user" class="comment">
     <div class="by">
-      <router-link :to="'/user/' + comment.user">
+      <RouterLink :to="'/user/' + comment.user">
         {{ comment.user }}
-      </router-link>
+      </RouterLink>
       {{ timeAgo(comment.time) }} ago
     </div>
     <div class="text" v-html="comment.content" />

@@ -22,15 +22,14 @@ export default defineNuxtConfig({
   manifest: {
     name: 'Nuxt Hacker News',
     short_name: 'Nuxt HN',
-    description: 'HackerNews clone built with Nuxt.js',
+    description: 'HackerNews clone built with Nuxt3',
     theme_color: '#2F495E',
     start_url: '/news',
   },
 
   modules: [
     '@pinia/nuxt',
-    // '@nuxtjs/pwa',
-    // '@nuxtjs/axios'
+    '@nuxtjs/pwa',
   ],
 
   postcss: {
@@ -39,21 +38,9 @@ export default defineNuxtConfig({
     },
   },
 
-  // axios: {
-  //   baseURL: 'https://api.hackerwebapp.com',
-  // },
-
-  // plugins: [
-  //   '~/plugins/swr',
-  //   '~/plugins/filters'
-  // ],
-
-  // serverMiddleware: [
-  //   (_, res, next) => {
-  //     res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
-  //     next()
-  //   },
-  // ],
+  serverMiddleware: [
+    '~/serverMiddleware/cacheHeader',
+  ],
 
   // render: {
   //   http2: {

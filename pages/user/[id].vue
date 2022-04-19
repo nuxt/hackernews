@@ -18,7 +18,7 @@ store.fetchUser(id)
   <div class="user-view view">
     <template v-if="user">
       <h1>User : {{ user.id }}</h1>
-      <lazy-wrapper :loading="user.loading">
+      <LazyWrapper :loading="user.loading">
         <ul class="meta">
           <li>
             <span class="label">Created:</span> {{ timeAgo(user.created_time) }} ago
@@ -28,7 +28,7 @@ store.fetchUser(id)
           </li>
           <li v-if="user.about" class="about" v-html="user.about" />
         </ul>
-      </lazy-wrapper>
+      </LazyWrapper>
       <p class="links">
         <a :href="'https://news.ycombinator.com/submitted?id=' + user.id">submissions</a> |
         <a :href="'https://news.ycombinator.com/threads?id=' + user.id">comments</a>

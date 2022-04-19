@@ -2,6 +2,10 @@
 import LazyWrapper from '~/components/LazyWrapper'
 import { feedsInfo } from '~/composables/api'
 
+definePageMeta({
+  middleware: 'feed',
+})
+
 const route = useRoute()
 const router = useRouter()
 const page = $computed(() => +route.params.page || 1)
@@ -87,7 +91,7 @@ watch(() => page, (to, old) => pageChanged(to, old))
   <div class="view">
     <item-list-nav :feed="feed" :page="page" :max-page="maxPage" />
 
-    <lazy-wrapper :loading="loading">
+    <LazyWrapper :loading="loading">
       <transition :name="transition" mode="out-in">
         <div :key="displayedPage" class="news-list">
           <ul>
@@ -96,7 +100,7 @@ watch(() => page, (to, old) => pageChanged(to, old))
         </div>
       </transition>
       <item-list-nav :feed="feed" :page="page" :max-page="maxPage" />
-    </lazy-wrapper>
+    </LazyWrapper>
   </div>
 </template>
 

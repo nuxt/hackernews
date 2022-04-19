@@ -30,21 +30,21 @@ function isAbsolute(url: string) {
       </template>
       <p class="meta">
         {{ item.points }} points | by
-        <router-link :to="'/user/' + item.user">
+        <RouterLink :to="'/user/' + item.user">
           {{ item.user }}
-        </router-link>
+        </RouterLink>
         {{ timeAgo(item.time ) }} ago
       </p>
     </div>
     <div class="item-view-comments">
-      <lazy-wrapper :loading="item.loading">
+      <LazyWrapper :loading="item.loading">
         <p class="item-view-comments-header">
           {{ item.comments ? item.comments.length + ' comments' : 'No comments yet.' }}
         </p>
         <ul class="comment-children">
           <comment v-for="comment in item.comments" :key="comment.id" :comment="comment" />
         </ul>
-      </lazy-wrapper>
+      </LazyWrapper>
     </div>
   </div>
 </template>

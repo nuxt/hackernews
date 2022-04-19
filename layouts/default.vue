@@ -18,14 +18,14 @@ useHead({
   <div id="app">
     <header class="header">
       <nav class="inner" role="navigation">
-        <router-link to="/" exact>
+        <RouterLink to="/" exact>
           <img class="logo" src="/logo.svg" alt="logo">
-        </router-link>
-        <router-link v-for="(list, key) in feedsInfo" :key="key" :to="`/${key}`">
+        </RouterLink>
+        <RouterLink v-for="(list, key) in feedsInfo" :key="key" :to="`/${key}`">
           {{ list.title }}
-        </router-link>
+        </RouterLink>
         <a class="github" href="https://github.com/nuxt/hackernews" target="_blank" rel="noopener banner">
-          Built with Nuxt.js
+          Built with Nuxt3
         </a>
       </nav>
     </header>
@@ -58,7 +58,7 @@ a {
     max-width: 800px;
     box-sizing: border-box;
     margin: 0px auto;
-    padding: 15px 5px;
+    padding: 12px 5px;
   }
 
   a {
@@ -75,7 +75,7 @@ a {
       color: #fff;
     }
 
-    &.router-link-active, &.nuxt-link-active {
+    &.RouterLink-active, &.nuxt-link-active {
       color: #fff;
       font-weight: 600;
     }
@@ -88,13 +88,13 @@ a {
   .github {
     color: #fff;
     font-size: 0.9em;
-    margin: 0;
+    margin: auto;
     float: right;
   }
 }
 
 .logo {
-  width: 24px;
+  width: 30px;
   margin-right: 10px;
   display: inline-block;
   vertical-align: middle;
