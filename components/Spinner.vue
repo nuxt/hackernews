@@ -1,13 +1,10 @@
-<script>
-export default {
-  name: 'Spinner',
-  props: {
-    show: {
-      type: Boolean,
-      required: true,
-    },
-  },
-}
+<script setup lang="ts">
+defineProps({
+  show: {
+    type: Boolean,
+    required: true
+  }
+})
 </script>
 
 <template>

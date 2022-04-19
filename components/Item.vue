@@ -4,11 +4,11 @@ import { timeAgo } from '~/plugins/filters'
 defineProps({
   item: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 })
 
-function isAbsolute(url: string) {
+function isAbsolute (url: string) {
   return /^https?:\/\//.test(url)
 }
 </script>

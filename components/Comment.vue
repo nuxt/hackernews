@@ -4,13 +4,13 @@ import { timeAgo } from '~/plugins/filters'
 defineProps({
   comment: {
     type: Object,
-    required: true,
-  },
+    required: true
+  }
 })
 
 const open = ref(true)
 
-function pluralize(n: number) {
+function pluralize (n: number) {
   return n + (n === 1 ? ' reply' : ' replies')
 }
 </script>

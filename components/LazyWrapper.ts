@@ -5,16 +5,16 @@ export default defineComponent({
   props: {
     loading: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
-  setup(props, { slots }) {
+  setup (props, { slots }) {
     return () => {
       return props.loading
         ? h('div', { style: { 'text-align': 'center' } }, [
-          h(Spinner, { show: true }),
+          h(Spinner, { show: true })
         ])
         : slots.default?.()
     }
-  },
+  }
 })

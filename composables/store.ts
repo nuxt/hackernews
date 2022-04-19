@@ -5,7 +5,7 @@ interface Item {
   id: number
 }
 interface User {
-
+  id: number
 }
 
 interface StoreState {
@@ -20,17 +20,18 @@ export const useStore = defineStore('main', () => {
   const state: StoreState = reactive({
     items: {},
     users: {},
-    feeds: {},
+    feeds: {}
   })
 
   validFeeds.forEach((feed) => {
     state.feeds[feed] = {}
   })
 
-  function fetchFeed({ feed, page, prefetch }: { feed: string; page: number; prefetch?: boolean }) {
+  function fetchFeed ({ feed, page, prefetch }: { feed: string; page: number; prefetch?: boolean }) {
     // Don't prioritize already fetched feeds
-    if (state.feeds[feed][page] && state.feeds[feed][page].length)
+    if (state.feeds[feed][page] && state.feeds[feed][page].length) {
       prefetch = true
+    }
 
     if (!prefetch) {
       // if (state.feedCancelSource) {
@@ -45,31 +46,30 @@ export const useStore = defineStore('main', () => {
         state.feeds[feed][page] = ids
         items
           .filter(Boolean)
-          .forEach(item => state.items[item.id] = item)
+          .forEach((item) => { state.items[item.id] = item })
       },
       () => $fetch(`https://api.hackerwebapp.com/${feed}?page=${page}`),
-      (state.feeds[feed][page] || []).map(id => state.items[id]),
+      (state.feeds[feed][page] || []).map(id => state.items[id])
     )
   }
 
-  function fetchItem(id: string) {
+  function fetchItem (id: string) {
     return lazy(
       (item) => {
-        if (item)
-          state.items[item.id] = item
+        if (item) { state.items[item.id] = item }
       },
       () => $fetch(`https://api.hackerwebapp.com/item/${id}`),
-      Object.assign({ id, loading: true, comments: [] }, state.items[id]),
+      Object.assign({ id, loading: true, comments: [] }, state.items[id])
     )
   }
 
-  function fetchUser(id: string) {
+  function fetchUser (id: string) {
     return lazy(
       (user) => {
         state.users[id] = user || false
       },
       () => $fetch(`https://api.hackerwebapp.com/user/${id}`),
-      Object.assign({ id, loading: true }, state.users[id]),
+      Object.assign({ id, loading: true }, state.users[id])
     )
   }
 
@@ -77,6 +77,6 @@ export const useStore = defineStore('main', () => {
     ...toRefs(state),
     fetchFeed,
     fetchItem,
-    fetchUser,
+    fetchUser
   }
 })

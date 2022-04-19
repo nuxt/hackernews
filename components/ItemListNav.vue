@@ -2,16 +2,16 @@
 const props = defineProps({
   feed: {
     type: String,
-    required: true,
+    required: true
   },
   page: {
     type: Number,
-    required: true,
+    required: true
   },
   maxPage: {
     type: Number,
-    required: true,
-  },
+    required: true
+  }
 })
 
 const hasMore = $computed(() => props.page < props.maxPage)
