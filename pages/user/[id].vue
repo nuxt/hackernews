@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import LazyWrapper from '~/components/LazyWrapper'
 import { timeAgo } from '~/plugins/filters'
 
 const route = useRoute()
@@ -18,7 +17,7 @@ store.fetchUser(id)
   <div class="user-view view">
     <template v-if="user">
       <h1>User : {{ user.id }}</h1>
-      <LazyWrapper :loading="user.loading">
+      <LoadingWrapper :loading="user.loading">
         <ul class="meta">
           <li>
             <span class="label">Created:</span> {{ timeAgo(user.created_time) }} ago
@@ -28,7 +27,7 @@ store.fetchUser(id)
           </li>
           <li v-if="user.about" class="about" v-html="user.about" />
         </ul>
-      </LazyWrapper>
+      </LoadingWrapper>
       <p class="links">
         <a :href="'https://news.ycombinator.com/submitted?id=' + user.id">submissions</a> |
         <a :href="'https://news.ycombinator.com/threads?id=' + user.id">comments</a>

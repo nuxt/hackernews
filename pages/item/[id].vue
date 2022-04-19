@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import LazyWrapper from '~/components/LazyWrapper'
 import { host, timeAgo } from '~/plugins/filters'
 
 const route = useRoute()
@@ -37,14 +36,14 @@ function isAbsolute (url: string) {
       </p>
     </div>
     <div class="item-view-comments">
-      <LazyWrapper :loading="item.loading">
+      <LoadingWrapper :loading="item.loading">
         <p class="item-view-comments-header">
           {{ item.comments ? item.comments.length + ' comments' : 'No comments yet.' }}
         </p>
         <ul class="comment-children">
           <comment v-for="comment in item.comments" :key="comment.id" :comment="comment" />
         </ul>
-      </LazyWrapper>
+      </LoadingWrapper>
     </div>
   </div>
 </template>

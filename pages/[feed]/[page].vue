@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import LazyWrapper from '~/components/LazyWrapper'
 import { feedsInfo } from '~/composables/api'
 
 definePageMeta({
@@ -89,7 +88,7 @@ watch(() => page, (to, old) => pageChanged(to, old))
   <div class="view">
     <item-list-nav :feed="feed" :page="page" :max-page="maxPage" />
 
-    <LazyWrapper :loading="loading">
+    <LoadingWrapper :loading="loading">
       <transition :name="transition" mode="out-in">
         <div :key="displayedPage" class="news-list">
           <ul>
@@ -98,7 +97,7 @@ watch(() => page, (to, old) => pageChanged(to, old))
         </div>
       </transition>
       <item-list-nav :feed="feed" :page="page" :max-page="maxPage" />
-    </LazyWrapper>
+    </LoadingWrapper>
   </div>
 </template>
 

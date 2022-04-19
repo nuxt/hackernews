@@ -40,7 +40,7 @@ export const useStore = defineStore('main', () => {
       //   )
       // }
     }
-    return lazy(
+    return lazyLoad(
       (items) => {
         const ids = items.map(item => item.id)
         state.feeds[feed][page] = ids
@@ -54,7 +54,7 @@ export const useStore = defineStore('main', () => {
   }
 
   function fetchItem (id: string) {
-    return lazy(
+    return lazyLoad(
       (item) => {
         if (item) { state.items[item.id] = item }
       },
@@ -64,7 +64,7 @@ export const useStore = defineStore('main', () => {
   }
 
   function fetchUser (id: string) {
-    return lazy(
+    return lazyLoad(
       (user) => {
         state.users[id] = user || false
       },
