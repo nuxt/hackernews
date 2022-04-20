@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { timeAgo, isAbsolute } from '~/composables/utils'
+import { timeAgo, isAbsolute, host } from '~/composables/utils'
 
 defineProps<{
   item: any
@@ -12,7 +12,7 @@ defineProps<{
     <span class="title">
       <template v-if="isAbsolute(item.url)">
         <a :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
-        <span class="host"> ({{ timeAgo(item.url) }})</span>
+        <span class="host"> ({{ host(item.url) }})</span>
       </template>
       <template v-else>
         <RouterLink :to="'/item/' + item.id">{{ item.title }}</RouterLink>
@@ -27,8 +27,8 @@ defineProps<{
       <span class="time">
         {{ timeAgo(item.time) }} ago
       </span>
+      |
       <span v-if="item.type !== 'job'" class="comments-link">
-        |
         <RouterLink :to="'/item/' + item.id">{{ item.comments_count }} comments</RouterLink>
       </span>
     </span>
@@ -58,6 +58,10 @@ defineProps<{
   .meta, .host {
     font-size: 0.85em;
     color: #595959;
+
+    span {
+      margin: 0 0.2rem;
+    }
 
     a {
       color: #595959;
