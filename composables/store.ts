@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { $fetch } from 'ohmyfetch'
 
 interface Item {
   id: number
