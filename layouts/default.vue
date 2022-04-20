@@ -59,6 +59,8 @@ a {
     box-sizing: border-box;
     margin: 0px auto;
     padding: 12px 5px;
+    display: flex;
+    place-items: center;
   }
 
   a {
@@ -89,7 +91,8 @@ a {
     color: #fff;
     font-size: 0.9em;
     margin: auto;
-    float: right;
+    text-align: right;
+    flex-grow: 1;
   }
 }
 
