@@ -4,7 +4,7 @@ HackerNews clone built with [Nuxt3](https://v3.nuxtjs.org).
 
 <p align="center">
   <a href="https://hn.nuxtjs.org" target="_blank">
-    <img width="1090" alt="Screenshot 2019-06-04 at 13 27 51" src="https://user-images.githubusercontent.com/904724/58875721-97382400-86cc-11e9-94c6-af21544817bb.png">
+    <img width="1090" src="https://user-images.githubusercontent.com/904724/58875721-97382400-86cc-11e9-94c6-af21544817bb.png">
     <br>
     Live Demo
   </a>
@@ -12,9 +12,13 @@ HackerNews clone built with [Nuxt3](https://v3.nuxtjs.org).
 
 ## Deploy
 
-- https://hn.nuxtjs.org
+- Universal: https://hn.nuxtjs.org
 
 > Hosted on [Vercel](https://vercel.com/): `npm run build`
+
+- Single Page: https://hn-spa.nuxtjs.org
+
+> Hosted on [Netlify](https://www.netlify.com): `npm run build-spa`
 
 <!-- TODO: need to update -->
 <!-- ## Performance
@@ -54,7 +58,7 @@ npm start
 npm run build-spa
 
 # serve in production mode (spa)
-npm run start-spa # or upload dist/ directory
+npm run start-spa # or upload .output/public/ directory
 
 # validate code with ESLint (with Prettier)
 npm run lint
