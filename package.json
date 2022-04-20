@@ -34,7 +34,7 @@
     "@nuxtjs/pwa": "3.3.5",
     "@pinia/nuxt": "^0.1.8",
     "eslint": "^8.13.0",
-    "nuxt3": "^3.0.0-27501460.04a72f8",
+    "nuxt": "^3.0.0-rc.0",
     "pinia": "^2.0.13",
     "postcss-nested": "^5.0.6",
     "stylus": "^0.57.0",
