@@ -34,7 +34,7 @@ function pluralize (n: number) {
   </li>
 </template>
 
-<style lang="stylus">
+<style lang="postcss">
 .comment-children {
   .comment-children {
     margin-left: 1.5em;

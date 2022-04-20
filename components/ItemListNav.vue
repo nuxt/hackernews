@@ -22,7 +22,7 @@ const hasMore = $computed(() => props.page < props.maxPage)
   </div>
 </template>
 
-<style lang="stylus">
+<style lang="postcss">
 .news-list-nav, .news-list {
   background-color: #fff;
   border-radius: 2px;

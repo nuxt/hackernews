@@ -39,7 +39,7 @@ store.fetchUser(id)
   </div>
 </template>
 
-<style lang="stylus">
+<style lang="postcss">
 .user-view {
   background-color: #fff;
   box-sizing: border-box;

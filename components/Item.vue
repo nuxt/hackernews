@@ -35,7 +35,7 @@ defineProps<{
   </li>
 </template>
 
-<style lang="stylus">
+<style lang="postcss">
 .news-item {
   background-color: #fff;
   padding: 20px 30px 20px 80px;

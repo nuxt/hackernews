@@ -44,7 +44,7 @@ store.fetchItem(id)
   </div>
 </template>
 
-<style lang="stylus">
+<style lang="postcss">
 .item-view-header {
   background-color: #fff;
   padding: 1.8em 2em 1em;

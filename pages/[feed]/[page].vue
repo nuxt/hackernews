@@ -101,7 +101,7 @@ watch(() => page, (to, old) => pageChanged(to, old))
   </div>
 </template>
 
-<style lang="stylus">
+<style lang="postcss">
 .news-list {
   background-color: #fff;
   border-radius: 2px;

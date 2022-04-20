@@ -27,13 +27,10 @@ defineProps<{
   </transition>
 </template>
 
-<style lang="stylus">
-$offset = 126;
-$duration = 1.4s;
-
+<style lang="postcss">
 .spinner {
   transition: opacity 0.15s ease;
-  animation: rotator $duration linear infinite;
+  animation: rotator 1.4s linear infinite;
   animation-play-state: paused;
 
   &.show {
@@ -61,24 +58,24 @@ $duration = 1.4s;
 
 .spinner .path {
   stroke: #ff6600;
-  stroke-dasharray: $offset;
+  stroke-dasharray: 126;
   stroke-dashoffset: 0;
   transform-origin: center;
-  animation: dash $duration ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite;
 }
 
 @keyframes dash {
   0% {
-    stroke-dashoffset: $offset;
+    stroke-dashoffset: 126;
   }
 
   50% {
-    stroke-dashoffset: ($offset / 2);
+    stroke-dashoffset: (126 / 2);
     transform: rotate(135deg);
   }
 
   100% {
-    stroke-dashoffset: $offset;
+    stroke-dashoffset: 126;
     transform: rotate(450deg);
   }
 }
