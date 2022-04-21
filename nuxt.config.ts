@@ -9,9 +9,7 @@ export default defineNuxtConfig({
       { property: 'twitter:site', content: '@nuxt_js' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/icon.png' },
-      { rel: 'dns-prefetch', href: 'https://api.hackerwebapp.com' },
-      { rel: 'preconnect', href: 'https://api.hackerwebapp.com' }
+      { rel: 'icon', type: 'image/png', href: '/icon.png' }
     ]
   },
 
@@ -39,7 +37,11 @@ export default defineNuxtConfig({
   },
 
   serverMiddleware: [
-    '~/serverMiddleware/cacheHeader'
+    {
+      handler: '~/server/api/hn/index.ts',
+      path: '/api/hn'
+    },
+    '~/server/api/swr.ts'
   ],
 
   experimental: {
