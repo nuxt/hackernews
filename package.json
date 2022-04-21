@@ -29,7 +29,7 @@
   "engines": {
     "node": ">=14.0"
   },
-  "dependencies": {
+  "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^9.0.0",
     "@nuxtjs/pwa": "3.3.5",
     "@pinia/nuxt": "^0.1.8",
