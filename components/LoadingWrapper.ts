@@ -12,7 +12,7 @@ export default defineComponent({
     return () => {
       return props.loading
         ? h('div', { style: { 'text-align': 'center' } }, [
-          h(Spinner, { show: true })
+          h(Spinner)
         ])
         : slots.default?.()
     }
