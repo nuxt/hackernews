@@ -22,7 +22,9 @@ useHead({
   title: feedsInfo[feed]?.title
 })
 
-if (isValidFeed) { store.fetchFeed({ page: pageNo, feed }) }
+if (isValidFeed) {
+  await store.fetchFeed({ page: pageNo, feed })
+}
 
 // TODO:
 // validate({ params: { feed } }) {
