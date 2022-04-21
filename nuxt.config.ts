@@ -37,11 +37,7 @@ export default defineNuxtConfig({
   },
 
   serverMiddleware: [
-    {
-      handler: '~/server/api/hn/index.ts',
-      path: '/api/hn'
-    },
-    '~/server/api/swr.ts'
+    '~/server/swr.ts'
   ],
 
   experimental: {

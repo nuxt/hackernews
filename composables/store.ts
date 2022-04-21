@@ -1,11 +1,5 @@
 import { defineStore } from 'pinia'
-
-interface Item {
-  id: number
-}
-interface User {
-  id: number
-}
+import { Item, User } from '~/types'
 
 interface StoreState {
   items: Record<number, Item>
@@ -47,7 +41,7 @@ export const useStore = defineStore('main', () => {
           .filter(Boolean)
           .forEach((item) => { state.items[item.id] = item })
       },
-      () => $fetch(`https://api.hackerwebapp.com/${feed}?page=${page}`),
+      () => $fetch('/api/hn/feeds', { params: { feed, page } }),
       (state.feeds[feed][page] || []).map(id => state.items[id])
     )
   }
@@ -57,7 +51,7 @@ export const useStore = defineStore('main', () => {
       (item) => {
         if (item) { state.items[item.id] = item }
       },
-      () => $fetch(`https://api.hackerwebapp.com/item/${id}`),
+      () => $fetch('/api/hn/item', { params: { id } }),
       Object.assign({ id, loading: true, comments: [] }, state.items[id])
     )
   }
@@ -67,7 +61,7 @@ export const useStore = defineStore('main', () => {
       (user) => {
         state.users[id] = user || false
       },
-      () => $fetch(`https://api.hackerwebapp.com/user/${id}`),
+      () => $fetch('/api/hn/user', { params: { id } }),
       Object.assign({ id, loading: true }, state.users[id])
     )
   }

@@ -1,35 +1,26 @@
-import { createError, PHandle } from 'h3'
-import { $fetch } from 'ohmyfetch/node'
+import { createError } from 'h3'
+import { $fetch } from 'ohmyfetch'
 import { withoutLeadingSlash } from 'ufo'
+import { baseURL } from '../../constants'
+import { User } from '~/types'
 
-import { baseURL } from '.'
-
-export interface User {
-  id: string
-  created_time: string
-  karma: number
-  about: string
-}
-
-async function fetchUser(id: string): Promise<User> {
+async function fetchUser (id: string): Promise<User> {
   const user = await $fetch(`${baseURL}/user/${id}.json`)
   return {
     id: user.id,
     karma: user.karma,
     created_time: user.created,
-    about: user.about,
+    about: user.about
   }
 }
 
-const handler: PHandle = async req => {
+export default defineEventHandler(({ req }) => {
   const userId = withoutLeadingSlash(req.url)
   if (!userId) {
     throw createError({
       statusCode: 422,
-      statusMessage: 'Must provide a user ID.',
+      statusMessage: 'Must provide a user ID.'
     })
   }
   return fetchUser(userId)
-}
-
-export default handler
+})
