@@ -26,11 +26,6 @@ if (isValidFeed) {
   await store.fetchFeed({ page: pageNo, feed })
 }
 
-// TODO:
-// validate({ params: { feed } }) {
-//   return validFeeds.includes(feed)
-// },
-
 const maxPage = $computed(() => {
   return feedsInfo[feed]?.pages
 })
