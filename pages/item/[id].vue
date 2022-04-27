@@ -37,7 +37,7 @@ fetchItem(id)
           {{ item.comments ? item.comments.length + ' comments' : 'No comments yet.' }}
         </p>
         <ul class="comment-children">
-          <comment v-for="comment in item.comments" :key="comment.id" :comment="comment" />
+          <Comment v-for="comment in item.comments" :key="comment.id" :comment="comment" />
         </ul>
       </LoadingWrapper>
     </div>

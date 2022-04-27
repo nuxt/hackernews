@@ -69,17 +69,17 @@ watch(() => page, (to, old) => pageChanged(to, old))
 
 <template>
   <div class="view">
-    <item-list-nav :feed="feed" :page="page" :max-page="maxPage" />
+    <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
 
     <LoadingWrapper :loading="loading">
-      <transition :name="transition" mode="out-in">
+      <Transition :name="transition" mode="out-in">
         <div :key="displayedPage" class="news-list">
           <ul>
-            <item v-for="item in displayedItems" :key="item.id" :item="item" />
+            <Item v-for="item in displayedItems" :key="item.id" :item="item" />
           </ul>
         </div>
-      </transition>
-      <item-list-nav :feed="feed" :page="page" :max-page="maxPage" />
+      </Transition>
+      <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
     </LoadingWrapper>
   </div>
 </template>
