@@ -15,20 +15,22 @@ useHead({
 </script>
 
 <template>
-  <header class="header">
-    <nav class="inner" role="navigation">
-      <RouterLink to="/" exact>
-        <img class="logo" src="/logo.svg" alt="logo">
-      </RouterLink>
-      <RouterLink v-for="(list, key) in feedsInfo" :key="key" :to="`/${key}`">
-        {{ list.title }}
-      </RouterLink>
-      <a class="github" href="https://github.com/nuxt/hackernews" target="_blank" rel="noopener banner">
-        Built with Nuxt3
-      </a>
-    </nav>
-  </header>
-  <slot role="main" />
+  <div>
+    <header class="header">
+      <nav class="inner" role="navigation">
+        <RouterLink to="/" exact>
+          <img class="logo" src="/logo.svg" alt="logo">
+        </RouterLink>
+        <RouterLink v-for="(list, key) in feedsInfo" :key="key" :to="`/${key}`">
+          {{ list.title }}
+        </RouterLink>
+        <a class="github" href="https://github.com/nuxt/hackernews" target="_blank" rel="noopener banner">
+          Built with Nuxt3
+        </a>
+      </nav>
+    </header>
+    <slot role="main" />
+  </div>
 </template>
 
 <style lang="postcss">
