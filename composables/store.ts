@@ -6,13 +6,11 @@ export interface StoreState {
   feeds: Record<string, Record<number, number[]>>
 }
 
-export const useStore = () => useState<StoreState>('store', () => {
-  return {
-    items: {},
-    users: {},
-    feeds: Object.fromEntries(validFeeds.map(i => [i, {}]))
-  }
-})
+export const useStore = () => useState<StoreState>('store', () => ({
+  items: {},
+  users: {},
+  feeds: Object.fromEntries(validFeeds.map(i => [i, {}]))
+}))
 
 export function fetchFeed ({ feed, page, prefetch }: { feed: string; page: number; prefetch?: boolean }) {
   const state = $(useStore())
