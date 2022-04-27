@@ -3,20 +3,16 @@ lockfileVersion: 5.3
 specifiers:
   '@nuxtjs/eslint-config-typescript': ^9.0.0
   '@nuxtjs/pwa': 3.3.5
-  '@pinia/nuxt': ^0.1.8
   eslint: ^8.14.0
   nuxt: ^3.0.0-rc.1
-  pinia: ^2.0.13
   postcss-nested: ^5.0.6
   typescript: ^4.6.3
 
 devDependencies:
   '@nuxtjs/eslint-config-typescript': 9.0.0_eslint@8.14.0+typescript@4.6.3
   '@nuxtjs/pwa': 3.3.5
-  '@pinia/nuxt': 0.1.8_pinia@2.0.13
   eslint: 8.14.0
   nuxt: 3.0.0-rc.1
-  pinia: 2.0.13_typescript@4.6.3
   postcss-nested: 5.0.6
   typescript: 4.6.3
 
@@ -706,18 +702,6 @@ packages:
       lodash.template: 4.5.0
       serve-static: 1.15.0
       workbox-cdn: 5.1.4
-    dev: true
-
-  /@pinia/nuxt/0.1.8_pinia@2.0.13:
-    resolution: {integrity: sha512-+M1GH/4XQdooOulPL7aYzli6UE1R5rWJtgcPhx2/97yYRLhKZvuIT33OauUCjYZ+tQVs8lyKfzt6S2agqzcmWg==}
-    peerDependencies:
-      pinia: ~2.0.9
-    dependencies:
-      pinia: 2.0.13_typescript@4.6.3
-      vue-demi: 0.12.5
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
     dev: true
 
   /@rollup/plugin-alias/3.1.9_rollup@2.70.2:
@@ -4718,23 +4702,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /pinia/2.0.13_typescript@4.6.3:
-    resolution: {integrity: sha512-B7rSqm1xNpwcPMnqns8/gVBfbbi7lWTByzS6aPZ4JOXSJD4Y531rZHDCoYWBwLyHY/8hWnXljgiXp6rRyrofcw==}
-    peerDependencies:
-      '@vue/composition-api': ^1.4.0
-      typescript: '>=4.4.4'
-      vue: ^2.6.14 || ^3.2.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      '@vue/devtools-api': 6.1.4
-      typescript: 4.6.3
-      vue-demi: 0.12.5
-    dev: true
-
   /pkg-types/0.3.2:
     resolution: {integrity: sha512-eBYzX/7NYsQEOR2alWY4rnQB49G62oHzFpoi9Som56aUr8vB8UGcmcIia9v8fpBeuhH3Ltentuk2OGpp4IQV3Q==}
     dependencies:
@@ -6301,19 +6268,6 @@ packages:
     resolution: {integrity: sha512-B/B+BaCLxfHuJcfs02V5WQlUiGXE+zyXDF+6Zvj7dRiGhWO0X3nkHKPIyYiCm71V7mhlAS1s+Qb8M02iTzPLGQ==}
     dependencies:
       bundle-runner: 0.0.1
-    dev: true
-
-  /vue-demi/0.12.5:
-    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
     dev: true
 
   /vue-eslint-parser/8.3.0_eslint@8.14.0:

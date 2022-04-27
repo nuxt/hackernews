@@ -15,7 +15,7 @@ let transition = $ref('slide-right')
 const pageNo = $computed(() => {
   return Number(page) || 1
 })
-const store = useStore()
+const store = $(useStore())
 const displayedPage = ref(pageNo)
 
 useHead({
@@ -23,7 +23,7 @@ useHead({
 })
 
 if (isValidFeed) {
-  await store.fetchFeed({ page: pageNo, feed })
+  await fetchFeed({ page: pageNo, feed })
 }
 
 const maxPage = $computed(() => {
@@ -48,13 +48,11 @@ function pageChanged (to: number, from = -1) {
   }
 
   // Prefetch next page
-  store
-    .fetchFeed({
-      feed,
-      page: page + 1,
-      prefetch: true
-    })
-    .catch(() => {})
+  fetchFeed({
+    feed,
+    page: page + 1,
+    prefetch: true
+  }).catch(() => {})
 
   transition = from === -1
     ? null
@@ -65,19 +63,7 @@ function pageChanged (to: number, from = -1) {
   displayedPage.value = to
 }
 
-// watch: {
-//   feed: '$fetch',
-//   page: 'pageChanged',
-// },
-
-onMounted(() => {
-  // TODO:
-  // if (!pageData.length)
-  //   this.$fetch()
-
-  pageChanged(page)
-})
-
+onMounted(() => pageChanged(page))
 watch(() => page, (to, old) => pageChanged(to, old))
 </script>
 

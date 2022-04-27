@@ -32,10 +32,8 @@
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^9.0.0",
     "@nuxtjs/pwa": "3.3.5",
-    "@pinia/nuxt": "^0.1.8",
     "eslint": "^8.14.0",
     "nuxt": "^3.0.0-rc.1",
-    "pinia": "^2.0.13",
     "postcss-nested": "^5.0.6",
     "typescript": "^4.6.3"
   }

@@ -2,7 +2,7 @@
 import { timeAgo } from '~/composables/utils'
 
 const route = useRoute()
-const store = useStore()
+const store = $(useStore())
 const id = $computed(() => route.params.id as string)
 const user = $computed(() => store.users[id])
 
@@ -10,7 +10,7 @@ useHead({
   title: user ? user.id : 'User not found'
 })
 
-store.fetchUser(id)
+fetchUser(id)
 </script>
 
 <template>

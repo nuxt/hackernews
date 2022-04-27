@@ -26,7 +26,6 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@pinia/nuxt',
     '@nuxtjs/pwa'
   ],
 

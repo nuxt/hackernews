@@ -2,7 +2,7 @@
 import { host, timeAgo, isAbsolute } from '~/composables/utils'
 
 const route = useRoute()
-const store = useStore()
+const store = $(useStore())
 const id = $computed(() => route.params.id as string)
 const item = $computed(() => store.items[id])
 
@@ -10,7 +10,7 @@ useHead({
   title: item?.title
 })
 
-store.fetchItem(id)
+fetchItem(id)
 </script>
 
 <template>
