@@ -1,8 +1,9 @@
 import { createError } from 'h3'
 import { $fetch } from 'ohmyfetch'
 import { withoutLeadingSlash } from 'ufo'
-import { baseURL } from '../../constants'
 import { User } from '~/types'
+import { baseURL } from '~/server/constants'
+import { configureSWRHeaders } from '~/server/swr'
 
 async function fetchUser (id: string): Promise<User> {
   const user = await $fetch(`${baseURL}/user/${id}.json`)
@@ -14,7 +15,8 @@ async function fetchUser (id: string): Promise<User> {
   }
 }
 
-export default defineEventHandler(({ req }) => {
+export default defineEventHandler(({ req, res }) => {
+  configureSWRHeaders(res)
   const userId = withoutLeadingSlash(req.url)
   if (!userId) {
     throw createError({

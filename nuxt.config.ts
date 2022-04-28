@@ -19,10 +19,6 @@ export default defineNuxtConfig({
     }
   },
 
-  serverMiddleware: [
-    '~/server/swr.ts'
-  ],
-
   experimental: {
     reactivityTransform: true,
     viteNode: true

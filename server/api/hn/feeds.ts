@@ -2,9 +2,10 @@ import { createError } from 'h3'
 import { $fetch } from 'ohmyfetch'
 import { getQuery, parseURL } from 'ufo'
 
-import { feedsInfo, validFeeds } from '../../../composables/api'
+import { feedsInfo, validFeeds } from '~/composables/api'
 
-import { baseURL } from '../../constants'
+import { baseURL } from '~/server/constants'
+import { configureSWRHeaders } from '~/server/swr'
 
 const feedUrls: Record<keyof typeof feedsInfo, string> = {
   ask: 'askstories',
@@ -22,7 +23,8 @@ async function fetchFeed (feed: string, page = '1') {
   return Promise.all(entries.map(id => fetchItem(id)))
 }
 
-export default defineEventHandler(({ req }) => {
+export default defineEventHandler(({ req, res }) => {
+  configureSWRHeaders(res)
   const { search } = parseURL(req.url)
   const { page = '1', feed = 'news' } = getQuery(search) as { page: string, feed: string }
 
