@@ -20,12 +20,11 @@ HackerNews clone built with [Nuxt3](https://v3.nuxtjs.org).
 
 > Hosted on [Netlify](https://www.netlify.com): `npm run build-spa`
 
-<!-- TODO: need to update -->
-<!-- ## Performance
+## Performance
 
-- Lighthouse [100/100](https://cdn.rawgit.com/Atinux/e2f424e6794babc00d2158406b0ab37d/raw/4de834145881697ea83292b381df5f591f1ed2f5/lighthouse-result-nuxt.html) - [Webpagetest](https://www.webpagetest.org/lighthouse.php?test=170620_PG_a2a9feaf4ace07a61b2c6c2a171b1c79&run=1)
-- Interactive (Faster 3G) [3.5s](https://www.webpagetest.org/result/170620_PG_a2a9feaf4ace07a61b2c6c2a171b1c79)
-- Interactive (Emerging Markets) [3.8s](https://www.webpagetest.org/result/170620_B1_0b83d61272c77c16c3f3f1f16fb72d2e) -->
+- Lighthouse [100/100](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhackernews-git-nuxt3-nuxt-js.vercel.app%2Fnews%2F1) (Slow 4G / Mobile Moto G4)
+  - Interactive: 1.4s
+  - Total Blocking Time: 30ms
 
 ## Features
 
