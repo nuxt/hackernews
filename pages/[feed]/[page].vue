@@ -71,17 +71,15 @@ watch(() => page, (to, old) => pageChanged(to, old))
   <div class="view">
     <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
 
-    <Transition :name="transition">
-      <div :key="displayedPage" class="news-list">
-        <Spinner v-if="loading" />
-        <template v-else>
-          <ul>
-            <Item v-for="item in displayedItems" :key="item.id" :item="item" />
-          </ul>
-          <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
-        </template>
-      </div>
-    </Transition>
+    <div :key="displayedPage" class="news-list">
+      <Spinner v-if="loading" />
+      <template v-else>
+        <ul>
+          <Item v-for="item in displayedItems" :key="item.id" :item="item" />
+        </ul>
+        <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
+      </template>
+    </div>
   </div>
 </template>
 
