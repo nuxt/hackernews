@@ -1,6 +1,6 @@
 import { createError } from 'h3'
 import { $fetch } from 'ohmyfetch'
-import { withoutLeadingSlash } from 'ufo'
+import { parseURL, getQuery } from 'ufo'
 import { User } from '~/types'
 import { baseURL } from '~/server/constants'
 import { configureSWRHeaders } from '~/server/swr'
@@ -17,12 +17,14 @@ async function fetchUser (id: string): Promise<User> {
 
 export default defineEventHandler(({ req, res }) => {
   configureSWRHeaders(res)
-  const userId = withoutLeadingSlash(req.url)
-  if (!userId) {
+  const { search } = parseURL(req.url)
+  const { id } = getQuery(search) as { id: string }
+
+  if (!id) {
     throw createError({
       statusCode: 422,
       statusMessage: 'Must provide a user ID.'
     })
   }
-  return fetchUser(userId)
+  return fetchUser(id)
 })

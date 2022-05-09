@@ -1,6 +1,6 @@
 import { createError } from 'h3'
 import { $fetch } from 'ohmyfetch'
-import { withoutLeadingSlash } from 'ufo'
+import { parseURL, getQuery } from 'ufo'
 import { baseURL } from '~/server/constants'
 import { Item } from '~/types'
 import { configureSWRHeaders } from '~/server/swr'
@@ -33,12 +33,21 @@ export async function fetchItem (
 
 export default defineEventHandler(({ req, res }) => {
   configureSWRHeaders(res)
-  const itemId = withoutLeadingSlash(req.url)
-  if (!itemId) {
+  const { search } = parseURL(req.url)
+  const { id } = getQuery(search) as { id: string }
+
+  if (!id) {
     throw createError({
       statusCode: 422,
-      statusMessage: 'Must provide a user ID.'
+      statusMessage: 'Must provide a item ID.'
     })
   }
-  return fetchItem(itemId, true)
+  if (Number.isNaN(+id)) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Item ID mush a number but got ' + id
+    })
+  }
+
+  return fetchItem(id, true)
 })

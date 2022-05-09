@@ -2,22 +2,22 @@
 import { timeAgo } from '~/composables/utils'
 
 const route = useRoute()
-const store = $(useStore())
 const id = $computed(() => route.params.id as string)
-const user = $computed(() => store.users[id])
+
+const result = await fetchUser(id)
+const user = $computed(() => result.data)
+const loading = $computed(() => result.loading)
 
 useHead({
   title: user ? user.id : 'User not found'
 })
-
-fetchUser(id)
 </script>
 
 <template>
   <div class="user-view view">
     <template v-if="user">
       <h1>User : {{ user.id }}</h1>
-      <LoadingWrapper :loading="user.loading">
+      <LoadingWrapper :loading="loading">
         <ul class="meta">
           <li>
             <span class="label">Created:</span> {{ timeAgo(user.created_time) }} ago

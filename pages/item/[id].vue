@@ -2,19 +2,20 @@
 import { host, timeAgo, isAbsolute } from '~/composables/utils'
 
 const route = useRoute()
-const store = $(useStore())
 const id = $computed(() => route.params.id as string)
-const item = $computed(() => store.items[id])
+
+const resultItem = await fetchItem(id)
+const resultComments = await fetchComments(id)
+const { data: item } = $(resultItem)
+const { data: comments, loading: commentsLoading } = $(resultComments)
 
 useHead({
   title: item?.title
 })
-
-fetchItem(id)
 </script>
 
 <template>
-  <div class="item-view view">
+  <div v-if="item" class="item-view view">
     <div class="item-view-header">
       <template v-if="isAbsolute(item.url)">
         <a :href="item.url" target="_blank" rel="noopener"><h1 v-text="item.title" /></a>
@@ -32,12 +33,12 @@ fetchItem(id)
       </p>
     </div>
     <div class="item-view-comments">
-      <LoadingWrapper :loading="item.loading">
+      <LoadingWrapper :loading="commentsLoading">
         <p class="item-view-comments-header">
-          {{ item.comments ? item.comments.length + ' comments' : 'No comments yet.' }}
+          {{ comments ? comments.length + ' comments' : 'No comments yet.' }}
         </p>
         <ul class="comment-children">
-          <Comment v-for="comment in item.comments" :key="comment.id" :comment="comment" />
+          <Comment v-for="comment in comments" :key="comment.id" :comment="comment" />
         </ul>
       </LoadingWrapper>
     </div>

@@ -11,32 +11,24 @@ const page = $computed(() => +route.params.page || 1)
 const feed = $computed(() => route.params.feed as string)
 const isValidFeed = $computed(() => !!feedsInfo[feed])
 
-let transition = $ref('slide-right')
-const pageNo = $computed(() => {
-  return Number(page) || 1
-})
-const store = $(useStore())
+// const transition = $ref('slide-right')
+const pageNo = $computed(() => Number(page) || 1)
 const displayedPage = ref(pageNo)
 
 useHead({
   title: feedsInfo[feed]?.title
 })
 
+const state = $(useStore())
+
 if (isValidFeed) {
   await fetchFeed({ page: pageNo, feed })
 }
+const items = $computed(() => getFeed(state, { page: pageNo, feed }) || [])
+const loading = $computed(() => items.length === 0)
 
 const maxPage = $computed(() => {
-  return feedsInfo[feed]?.pages
-})
-const pageData = $computed(() => {
-  return store.feeds[feed][pageNo] || []
-})
-const displayedItems = $computed(() => {
-  return pageData.map(id => store.items[id])
-})
-const loading = $computed(() => {
-  return displayedItems.length === 0
+  return +(feedsInfo[feed]?.pages) || 0
 })
 
 function pageChanged (to: number, from = -1) {
@@ -50,15 +42,14 @@ function pageChanged (to: number, from = -1) {
   // Prefetch next page
   fetchFeed({
     feed,
-    page: page + 1,
-    prefetch: true
+    page: page + 1
   }).catch(() => {})
 
-  transition = from === -1
-    ? null
-    : to > from
-      ? 'slide-left'
-      : 'slide-right'
+  // transition = from === -1
+  //   ? null
+  //   : to > from
+  //     ? 'slide-left'
+  //     : 'slide-right'
 
   displayedPage.value = to
 }
@@ -75,7 +66,7 @@ watch(() => page, (to, old) => pageChanged(to, old))
       <Spinner v-if="loading" />
       <template v-else>
         <ul>
-          <Item v-for="item in displayedItems" :key="item.id" :item="item" />
+          <Item v-for="item in items" :key="item.id" :item="item" />
         </ul>
         <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
       </template>

@@ -9,6 +9,7 @@ export interface Item {
   time: string
   comments_count?: number
   comments?: Item[]
+  loading?: boolean
 }
 
 export interface User {
@@ -16,4 +17,5 @@ export interface User {
   created_time: string
   karma: number
   about: string
+  loading?: boolean
 }
