@@ -14,7 +14,7 @@ const hasMore = $computed(() => props.page < props.maxPage)
       &lt; prev
     </RouterLink>
     <a v-else class="disabled">&lt; prev</a>
-    <span>{{ page }}/{{ maxPage }}</span>
+    <span class="page">{{ page }}/{{ maxPage }}</span>
     <RouterLink v-if="hasMore" :to="`/${feed}/${page + 1}`">
       more &gt;
     </RouterLink>
@@ -38,7 +38,13 @@ const hasMore = $computed(() => props.page < props.maxPage)
   }
 
   .disabled {
-    opacity: 0.8;
+    opacity: 0.5;
+  }
+
+  .page {
+    width: 100px;
+    display: inline-block;
+    text-align: center;
   }
 }
 </style>

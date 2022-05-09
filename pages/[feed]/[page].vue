@@ -77,9 +77,9 @@ watch(() => page, (to, old) => pageChanged(to, old))
           <ul>
             <Item v-for="item in displayedItems" :key="item.id" :item="item" />
           </ul>
+          <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
         </div>
       </Transition>
-      <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
     </LoadingWrapper>
   </div>
 </template>
