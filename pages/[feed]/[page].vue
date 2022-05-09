@@ -71,13 +71,15 @@ watch(() => page, (to, old) => pageChanged(to, old))
   <div class="view">
     <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
 
-    <Transition :name="transition" mode="out-in">
+    <Transition :name="transition">
       <div :key="displayedPage" class="news-list">
         <Spinner v-if="loading" />
-        <ul v-else>
-          <Item v-for="item in displayedItems" :key="item.id" :item="item" />
-        </ul>
-        <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
+        <template v-else>
+          <ul>
+            <Item v-for="item in displayedItems" :key="item.id" :item="item" />
+          </ul>
+          <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
+        </template>
       </div>
     </Transition>
   </div>
@@ -87,9 +89,9 @@ watch(() => page, (to, old) => pageChanged(to, old))
 .news-list {
   background-color: #fff;
   border-radius: 2px;
-}
-
-.news-list {
+  position: absolute;
+  top: 40px;
+  left: 0;
   margin: 10px 0;
   width: 100%;
   transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);

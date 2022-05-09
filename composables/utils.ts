@@ -1,4 +1,4 @@
-export function lazyLoad (commit, task, optimistic, enabled = false) {
+export function lazyLoad (commit, task, optimistic, enabled?: boolean) {
   // By default, do lazy operations only in client
   if (enabled === undefined) {
     enabled = process.client
