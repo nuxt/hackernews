@@ -15,33 +15,38 @@ useHead({
 </script>
 
 <template>
-  <div v-if="item" class="item-view view">
-    <div class="item-view-header">
-      <template v-if="isAbsolute(item.url)">
-        <a :href="item.url" target="_blank" rel="noopener"><h1 v-text="item.title" /></a>
-        <span class="host"> ({{ host(item.url) }})</span>
-      </template>
-      <template v-else>
-        <h1 v-text="item.title" />
-      </template>
-      <p class="meta">
-        {{ item.points }} points | by
-        <RouterLink :to="'/user/' + item.user">
-          {{ item.user }}
-        </RouterLink>
-        {{ timeAgo(item.time ) }} ago
-      </p>
+  <div class="item-view view">
+    <div v-if="!item" class="item-view-header">
+      <h1>Page not found</h1>
     </div>
-    <div class="item-view-comments">
-      <LoadingWrapper :loading="commentsLoading">
-        <p class="item-view-comments-header">
-          {{ comments ? comments.length + ' comments' : 'No comments yet.' }}
+    <template v-else>
+      <div class="item-view-header">
+        <template v-if="isAbsolute(item.url)">
+          <a :href="item.url" target="_blank" rel="noopener"><h1 v-text="item.title" /></a>
+          <span class="host"> ({{ host(item.url) }})</span>
+        </template>
+        <template v-else>
+          <h1 v-text="item.title" />
+        </template>
+        <p class="meta">
+          {{ item.points }} points | by
+          <RouterLink :to="'/user/' + item.user">
+            {{ item.user }}
+          </RouterLink>
+          {{ timeAgo(item.time ) }} ago
         </p>
-        <ul class="comment-children">
-          <Comment v-for="comment in comments" :key="comment.id" :comment="comment" />
-        </ul>
-      </LoadingWrapper>
-    </div>
+      </div>
+      <div class="item-view-comments">
+        <LoadingWrapper :loading="commentsLoading">
+          <p class="item-view-comments-header">
+            {{ comments ? comments.length + ' comments' : 'No comments yet.' }}
+          </p>
+          <ul class="comment-children">
+            <Comment v-for="comment in comments" :key="comment.id" :comment="comment" />
+          </ul>
+        </LoadingWrapper>
+      </div>
+    </template>
   </div>
 </template>
 

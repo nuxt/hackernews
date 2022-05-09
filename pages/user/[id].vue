@@ -5,29 +5,31 @@ const route = useRoute()
 const id = $computed(() => route.params.id as string)
 
 const result = await fetchUser(id)
-const user = $computed(() => result.data)
-const loading = $computed(() => result.loading)
+const { data: user, loading } = $(result)
 
 useHead({
-  title: user ? user.id : 'User not found'
+  title: loading
+    ? 'Loading'
+    : user
+      ? user.id
+      : 'User not found'
 })
 </script>
 
 <template>
   <div class="user-view view">
-    <template v-if="user">
-      <h1>User : {{ user.id }}</h1>
-      <LoadingWrapper :loading="loading">
-        <ul class="meta">
-          <li>
-            <span class="label">Created:</span> {{ timeAgo(user.created_time) }} ago
-          </li>
-          <li>
-            <span class="label">Karma:</span> {{ user.karma || '-' }}
-          </li>
-          <li v-if="user.about" class="about" v-html="user.about" />
-        </ul>
-      </LoadingWrapper>
+    <Spinner v-if="loading" />
+    <template v-else-if="user">
+      <h1>User: {{ user.id }}</h1>
+      <ul class="meta">
+        <li>
+          <span class="label">Created:</span> {{ timeAgo(user.created_time) }} ago
+        </li>
+        <li>
+          <span class="label">Karma:</span> {{ user.karma || '-' }}
+        </li>
+        <li v-if="user.about" class="about" v-html="user.about" />
+      </ul>
       <p class="links">
         <a :href="'https://news.ycombinator.com/submitted?id=' + user.id">submissions</a> |
         <a :href="'https://news.ycombinator.com/threads?id=' + user.id">comments</a>
