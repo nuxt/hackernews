@@ -33,7 +33,7 @@ useHead({
           <RouterLink :to="'/user/' + item.user">
             {{ item.user }}
           </RouterLink>
-          {{ timeAgo(item.time ) }} ago
+          {{ timeAgo(+item.time) }} ago
         </p>
       </div>
       <div class="item-view-comments">
