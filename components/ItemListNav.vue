@@ -10,14 +10,14 @@ const hasMore = $computed(() => props.page < props.maxPage)
 
 <template>
   <div class="news-list-nav">
-    <RouterLink v-if="page > 1" :to="`/${feed}/${page - 1}`">
+    <NuxtLink v-if="page > 1" :to="`/${feed}/${page - 1}`">
       &lt; prev
-    </RouterLink>
+    </NuxtLink>
     <a v-else class="disabled">&lt; prev</a>
     <span class="page">{{ page }}/{{ maxPage }}</span>
-    <RouterLink v-if="hasMore" :to="`/${feed}/${page + 1}`">
+    <NuxtLink v-if="hasMore" :to="`/${feed}/${page + 1}`">
       more &gt;
-    </RouterLink>
+    </NuxtLink>
     <a v-else class="disabled">more &gt;</a>
   </div>
 </template>

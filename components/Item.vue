@@ -15,21 +15,21 @@ defineProps<{
         <span class="host"> ({{ host(item.url) }})</span>
       </template>
       <template v-else>
-        <RouterLink :to="'/item/' + item.id">{{ item.title }}</RouterLink>
+        <NuxtLink :to="'/item/' + item.id">{{ item.title }}</NuxtLink>
       </template>
     </span>
     <br>
     <span class="meta">
       <span v-if="item.type !== 'job'" class="by">
         by
-        <RouterLink :to="'/user/' + item.user">{{ item.user }}</RouterLink>
+        <NuxtLink :to="'/user/' + item.user">{{ item.user }}</NuxtLink>
       </span>
       <span class="time">
         {{ timeAgo(item.time) }} ago
       </span>
       |
       <span v-if="item.type !== 'job'" class="comments-link">
-        <RouterLink :to="'/item/' + item.id">{{ item.comments_count }} comments</RouterLink>
+        <NuxtLink :to="'/item/' + item.id">{{ item.comments_count }} comments</NuxtLink>
       </span>
     </span>
   </li>

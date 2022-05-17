@@ -18,12 +18,12 @@ useHead({
   <div>
     <header class="header">
       <nav class="inner" role="navigation">
-        <RouterLink to="/" exact>
+        <NuxtLink to="/" exact>
           <img class="logo" src="/logo.svg" alt="logo">
-        </RouterLink>
-        <RouterLink v-for="(list, key) in feedsInfo" :key="key" :to="`/${key}`">
+        </NuxtLink>
+        <NuxtLink v-for="(list, key) in feedsInfo" :key="key" :to="`/${key}`">
           {{ list.title }}
-        </RouterLink>
+        </NuxtLink>
         <a class="github" href="https://github.com/nuxt/hackernews" target="_blank" rel="noopener banner">
           Built with Nuxt3
         </a>

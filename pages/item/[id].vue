@@ -30,9 +30,9 @@ useHead({
         </template>
         <p class="meta">
           {{ item.points }} points | by
-          <RouterLink :to="'/user/' + item.user">
+          <NuxtLink :to="'/user/' + item.user">
             {{ item.user }}
-          </RouterLink>
+          </NuxtLink>
           {{ timeAgo(+item.time) }} ago
         </p>
       </div>
