@@ -1,6 +1,6 @@
 # Nuxt3 Hacker News
 
-HackerNews clone built with [Nuxt3](https://v3.nuxtjs.org).
+Hacker News clone built with [Nuxt3](https://v3.nuxtjs.org).
 
 <p align="center">
   <a href="https://hn.nuxtjs.org" target="_blank">
