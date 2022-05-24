@@ -13,12 +13,12 @@ const hasMore = $computed(() => props.page < props.maxPage)
     <NuxtLink v-if="page > 1" :to="`/${feed}/${page - 1}`">
       &lt; prev
     </NuxtLink>
-    <a v-else class="disabled">&lt; prev</a>
+    <span v-else class="disabled">&lt; prev</span>
     <span class="page">{{ page }}/{{ maxPage }}</span>
     <NuxtLink v-if="hasMore" :to="`/${feed}/${page + 1}`">
       more &gt;
     </NuxtLink>
-    <a v-else class="disabled">more &gt;</a>
+    <span v-else class="disabled">more &gt;</span>
   </div>
 </template>
 
