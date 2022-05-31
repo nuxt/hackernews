@@ -33,8 +33,6 @@ Hacker News clone built with [Nuxt3](https://v3.nuxtjs.org).
 - Deploys anywhere with zero config (Vercel, Netlify, Cloudflare, etc.) powered by [Nitro](https://github.com/unjs/nitro)
 - Code Splitting
 - Prefetch/Preload JS + DNS + Data
-- Critical Path CSS
-- PWA experience using [PWA Module](https://pwa.nuxtjs.org) with almost _zero config_
 
 ## Build Setup
 
