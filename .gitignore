@@ -8,7 +8,8 @@ package-lock.json
 *.iml
 .nuxt
 .vscode
+.output
 
-static/manifest*.json
-static/sw.js
-static/workbox-sw*.js*
+public/manifest*.json
+public/sw.js
+public/workbox-sw*.js*

@@ -1,45 +1,39 @@
+<script setup lang="ts">
+import { feedsInfo } from '~/composables/api'
+
+const route = useRoute()
+const host = process.server
+  ? useNuxtApp().ssrContext.req.headers.host
+  : window.location.host
+
+useHead({
+  link: [
+    // We use route.path since we don't use query parameters
+    { rel: 'canonical', href: `https://${host}${route.path}` }
+  ]
+})
+</script>
+
 <template>
-  <div id="app">
+  <div>
     <header class="header">
       <nav class="inner" role="navigation">
-        <router-link to="/" exact>
-          <img class="logo" src="~/assets/logo.svg" alt="logo">
-        </router-link>
-        <router-link v-for="(list, key) in feeds" :key="key" :to="`/${key}`">
+        <NuxtLink to="/" exact>
+          <img class="logo" src="/logo.svg" alt="logo">
+        </NuxtLink>
+        <NuxtLink v-for="(list, key) in feedsInfo" :key="key" :to="`/${key}`">
           {{ list.title }}
-        </router-link>
+        </NuxtLink>
         <a class="github" href="https://github.com/nuxt/hackernews" target="_blank" rel="noopener banner">
-          Built with Nuxt.js
+          Built with Nuxt3
         </a>
       </nav>
     </header>
-    <nuxt nuxt-child-key="none" role="main" />
+    <slot role="main" />
   </div>
 </template>
 
-<script>
-import { feeds } from '~/common/api'
-
-export default {
-  head () {
-    const host = process.server
-      ? this.$ssrContext.req.headers.host
-      : window.location.host
-
-    return {
-      link: [
-        // We use $route.path since we don't use query parameters
-        { rel: 'canonical', href: `https://${host}${this.$route.path}` }
-      ]
-    }
-  },
-  computed: {
-    feeds: () => feeds
-  }
-}
-</script>
-
-<style lang="stylus">
+<style lang="postcss">
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
@@ -64,7 +58,9 @@ a {
     max-width: 800px;
     box-sizing: border-box;
     margin: 0px auto;
-    padding: 15px 5px;
+    padding: 12px 5px;
+    display: flex;
+    place-items: center;
   }
 
   a {
@@ -94,13 +90,15 @@ a {
   .github {
     color: #fff;
     font-size: 0.9em;
-    margin: 0;
-    float: right;
+    margin: auto;
+    text-align: right;
+    flex-grow: 1;
   }
 }
 
 .logo {
-  width: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -116,11 +114,7 @@ a {
   transition: opacity 0.4s ease;
 }
 
-.page-enter-active, .page-leave-active {
-  transition: all 0.2s ease;
-}
-
-.appear, .page-enter, .page-leave-active {
+.appear {
   opacity: 0;
 }
 

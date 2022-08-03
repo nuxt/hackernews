@@ -1,23 +1,11 @@
-import { createError, PHandle } from 'h3'
-import { $fetch } from 'ohmyfetch/node'
-import { withoutLeadingSlash } from 'ufo'
+import { createError } from 'h3'
+import { $fetch } from 'ohmyfetch'
+import { parseURL, getQuery } from 'ufo'
+import { baseURL } from '~/server/constants'
+import { Item } from '~/types'
+import { configureSWRHeaders } from '~/server/swr'
 
-import { baseURL } from '.'
-
-export interface Item {
-  id: number
-  url?: string
-  title?: string
-  type: 'job' | 'story' | 'comment' | 'poll'
-  points: number
-  user: string
-  content?: string
-  time: string
-  comments_count?: number
-  comments?: Item[]
-}
-
-export async function fetchItem(
+export async function fetchItem (
   id: string,
   withComments = false
 ): Promise<Item> {
@@ -35,23 +23,31 @@ export async function fetchItem(
     comments_count: Object.values(item.kids).length,
     comments: withComments
       ? await Promise.all(
-          Object.values(item.kids as string[]).map(id =>
-            fetchItem(id, withComments)
-          )
+        Object.values(item.kids as string[]).map(id =>
+          fetchItem(id, withComments)
         )
-      : [],
+      )
+      : []
   }
 }
 
-const handler: PHandle = async req => {
-  const itemId = withoutLeadingSlash(req.url)
-  if (!itemId) {
+export default defineEventHandler(({ req, res }) => {
+  configureSWRHeaders(res)
+  const { search } = parseURL(req.url)
+  const { id } = getQuery(search) as { id: string }
+
+  if (!id) {
     throw createError({
       statusCode: 422,
-      statusMessage: 'Must provide a user ID.',
+      statusMessage: 'Must provide a item ID.'
     })
   }
-  return fetchItem(itemId, true)
-}
+  if (Number.isNaN(+id)) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Item ID mush a number but got ' + id
+    })
+  }
 
-export default handler
+  return fetchItem(id, true)
+})

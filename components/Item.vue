@@ -1,50 +1,41 @@
+<script setup lang="ts">
+import { timeAgo, isAbsolute, host } from '~/composables/utils'
+
+defineProps<{
+  item: any
+}>()
+</script>
+
 <template>
   <li class="news-item">
     <span class="score">{{ item.points }}</span>
     <span class="title">
       <template v-if="isAbsolute(item.url)">
         <a :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
-        <span class="host"> ({{ item.url | host }})</span>
+        <span class="host"> ({{ host(item.url) }})</span>
       </template>
       <template v-else>
-        <router-link :to="'/item/' + item.id">{{ item.title }}</router-link>
+        <NuxtLink :to="'/item/' + item.id">{{ item.title }}</NuxtLink>
       </template>
     </span>
     <br>
     <span class="meta">
       <span v-if="item.type !== 'job'" class="by">
         by
-        <router-link :to="'/user/' + item.user">{{ item.user }}</router-link>
+        <NuxtLink :to="'/user/' + item.user">{{ item.user }}</NuxtLink>
       </span>
       <span class="time">
-        {{ item.time | timeAgo }} ago
+        {{ timeAgo(item.time) }} ago
       </span>
+      |
       <span v-if="item.type !== 'job'" class="comments-link">
-        |
-        <router-link :to="'/item/' + item.id">{{ item.comments_count }} comments</router-link>
+        <NuxtLink :to="'/item/' + item.id">{{ item.comments_count }} comments</NuxtLink>
       </span>
     </span>
   </li>
 </template>
 
-<script>
-export default {
-  name: 'NewsItem',
-  props: {
-    item: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    isAbsolute (url) {
-      return /^https?:\/\//.test(url)
-    }
-  }
-}
-</script>
-
-<style lang="stylus">
+<style lang="postcss">
 .news-item {
   background-color: #fff;
   padding: 20px 30px 20px 80px;
@@ -67,6 +58,10 @@ export default {
   .meta, .host {
     font-size: 0.85em;
     color: #595959;
+
+    span {
+      margin: 0 0.2rem;
+    }
 
     a {
       color: #595959;

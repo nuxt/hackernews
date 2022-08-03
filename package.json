@@ -1,8 +1,8 @@
 {
-  "private": true,
   "name": "nuxt-hn",
+  "private": true,
+  "packageManager": "pnpm@7.0.1",
   "description": "Nuxt Hacker News",
-  "version": "1.0.0",
   "author": "Evan You <yyx990803@gmail.com>",
   "contributors": [
     {
@@ -13,37 +13,29 @@
     },
     {
       "name": "Pooya Parsa (@pi0)"
+    },
+    {
+      "name": "Anthony Fu (@antfu)"
     }
   ],
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "dev-spa": "nuxt dev --spa",
-    "build-spa": "nuxt build --spa",
-    "start-spa": "nuxt start --spa",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi start",
+    "dev-spa": "nuxi dev --spa",
+    "build-spa": "nuxi build --spa",
+    "start-spa": "nuxi start --spa",
+    "lint": "eslint --ext .vue,.js,.ts --ignore-path .gitignore ."
   },
-  "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "h3": "^0.2.10",
-    "nuxt": "^2.15.6",
-    "ohmyfetch": "^0.2.0"
+  "engines": {
+    "node": ">=14.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "@nuxtjs/pwa": "3.3.5",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.28.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-vue": "^7.10.0",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^4.3.3"
+    "eslint": "^8.15.0",
+    "nuxt": "^3.0.0-rc.3",
+    "postcss-nested": "^5.0.6",
+    "typescript": "^4.6.4"
   }
 }

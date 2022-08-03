@@ -1,46 +1,42 @@
-# Nuxt.js Hacker News
+# Nuxt3 Hacker News
 
-HackerNews clone built with [Nuxt.js](https://nuxtjs.org).
+Hacker News clone built with [Nuxt3](https://v3.nuxtjs.org).
 
 <p align="center">
   <a href="https://hn.nuxtjs.org" target="_blank">
-    <img width="1090" alt="Screenshot 2019-06-04 at 13 27 51" src="https://user-images.githubusercontent.com/904724/58875721-97382400-86cc-11e9-94c6-af21544817bb.png">
+    <img width="1090" src="https://user-images.githubusercontent.com/904724/58875721-97382400-86cc-11e9-94c6-af21544817bb.png">
     <br>
     Live Demo
   </a>
 </p>
 
-## Modes
+## Deploy
 
 - Universal: https://hn.nuxtjs.org
 
-> Hosted on [Now 2](https://zeit.co): `npm run build` + `now.json`
+> Hosted on [Vercel](https://vercel.com/): `npm run build`
 
 - Single Page: https://hn-spa.nuxtjs.org
 
-> Hosted on [Netlify](https://www.netlify.com): `npm run build-spa` + `dist/` directory
+> Hosted on [Netlify](https://www.netlify.com): `npm run build-spa`
 
 ## Performance
 
-- Lighthouse [100/100](https://cdn.rawgit.com/Atinux/e2f424e6794babc00d2158406b0ab37d/raw/4de834145881697ea83292b381df5f591f1ed2f5/lighthouse-result-nuxt.html) - [Webpagetest](https://www.webpagetest.org/lighthouse.php?test=170620_PG_a2a9feaf4ace07a61b2c6c2a171b1c79&run=1)
-- Interactive (Faster 3G) [3.5s](https://www.webpagetest.org/result/170620_PG_a2a9feaf4ace07a61b2c6c2a171b1c79)
-- Interactive (Emerging Markets) [3.8s](https://www.webpagetest.org/result/170620_B1_0b83d61272c77c16c3f3f1f16fb72d2e)
+- Lighthouse [100/100](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhackernews-git-nuxt3-nuxt-js.vercel.app%2Fnews%2F1) (Slow 4G / Mobile Moto G4)
+  - Interactive: 1.4s
+  - Total Blocking Time: 30ms
 
 ## Features
 
 - Server Side Rendering
+- Vite-based hot module replacement (HMR) dev environment
+- Deploys anywhere with zero config (Vercel, Netlify, Cloudflare, etc.) powered by [Nitro](https://github.com/unjs/nitro)
 - Code Splitting
-- Single-file Vue Components
 - Prefetch/Preload JS + DNS + Data
-- Critical Path CSS
-- PWA experience using [PWA Module](https://pwa.nuxtjs.org) with almost _zero config_
-- PRPL
-- Hot reloading dev environment integrated with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
-- Hosted on [Vercel](https://vercel.com)
 
 ## Build Setup
 
-**Requires Node.js 8+**
+**Requires Node.js 14+**
 
 ``` bash
 # install dependencies
@@ -59,7 +55,7 @@ npm start
 npm run build-spa
 
 # serve in production mode (spa)
-npm run start-spa # or upload dist/ directory
+npm run start-spa # or upload .output/public/ directory
 
 # validate code with ESLint (with Prettier)
 npm run lint
@@ -70,7 +66,7 @@ npm run lintfix
 
 ## Links
 
-For the communiy typescript fork please see [nuxt-community/hackernews-nuxt-ts](https://github.com/nuxt-community/hackernews-nuxt-ts)
+For the Nuxt 2 version, check out the [`nuxt2` branch](https://github.com/nuxt/hackernews/tree/nuxt2)
 
 ## License
 

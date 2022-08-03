@@ -1,9 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
-  middleware: 'index'
+  middleware: 'feed'
 })
 </script>
 
 <template>
-  <div>Index</div>
+  <div>
+    <slot />
+  </div>
 </template>

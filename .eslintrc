@@ -1,0 +1,7 @@
+{
+  "extends": "@nuxtjs/eslint-config-typescript",
+  "rules": {
+    "vue/no-v-html": "off",
+    "vue/no-multiple-template-root": "off"
+  }
+}

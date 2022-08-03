@@ -1,35 +1,30 @@
-import { createError, PHandle } from 'h3'
-import { $fetch } from 'ohmyfetch/node'
-import { withoutLeadingSlash } from 'ufo'
+import { createError } from 'h3'
+import { $fetch } from 'ohmyfetch'
+import { parseURL, getQuery } from 'ufo'
+import { User } from '~/types'
+import { baseURL } from '~/server/constants'
+import { configureSWRHeaders } from '~/server/swr'
 
-import { baseURL } from '.'
-
-export interface User {
-  id: string
-  created_time: string
-  karma: number
-  about: string
-}
-
-async function fetchUser(id: string): Promise<User> {
+async function fetchUser (id: string): Promise<User> {
   const user = await $fetch(`${baseURL}/user/${id}.json`)
   return {
     id: user.id,
     karma: user.karma,
     created_time: user.created,
-    about: user.about,
+    about: user.about
   }
 }
 
-const handler: PHandle = async req => {
-  const userId = withoutLeadingSlash(req.url)
-  if (!userId) {
+export default defineEventHandler(({ req, res }) => {
+  configureSWRHeaders(res)
+  const { search } = parseURL(req.url)
+  const { id } = getQuery(search) as { id: string }
+
+  if (!id) {
     throw createError({
       statusCode: 422,
-      statusMessage: 'Must provide a user ID.',
+      statusMessage: 'Must provide a user ID.'
     })
   }
-  return fetchUser(userId)
-}
-
-export default handler
+  return fetchUser(id)
+})

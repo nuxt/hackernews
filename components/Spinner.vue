@@ -1,91 +1,47 @@
 <template>
-  <transition>
-    <svg
-      v-show="show"
-      :class="{ show: show }"
-      class="spinner"
-      width="44px"
-      height="44px"
-      viewBox="0 0 44 44"
-    >
-      <circle
-        class="path"
-        fill="none"
-        stroke-width="4"
-        stroke-linecap="round"
-        cx="22"
-        cy="22"
-        r="20"
-      />
-    </svg>
-  </transition>
+  <div class="spinner" />
 </template>
 
-<script>
-export default {
-  name: 'Spinner',
-  props: {
-    show: {
-      type: Boolean,
-      required: true
-    }
-  }
+<style scoped>
+.spinner,
+.spinner:after {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
 }
-</script>
-
-<style lang="stylus">
-$offset = 126;
-$duration = 1.4s;
-
 .spinner {
-  transition: opacity 0.15s ease;
-  animation: rotator $duration linear infinite;
-  animation-play-state: paused;
-
-  &.show {
-    animation-play-state: running;
-  }
-
-  &.v-enter, &.v-leave-active {
-    opacity: 0;
-  }
-
-  &.v-enter-active, &.v-leave {
-    opacity: 1;
-  }
+  margin: 30px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid rgba(0, 196, 141, 0.2);
+  border-right: 0.2em solid rgba(0, 196, 141, 0.2);
+  border-bottom: 0.2em solid rgba(0, 196, 141, 0.2);
+  border-left: 0.2em solid #00C48D;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: loading 1.1s infinite linear;
+  animation: loading 1.1s infinite linear;
 }
-
-@keyframes rotator {
+@-webkit-keyframes loading {
   0% {
-    transform: scale(0.5) rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-
   100% {
-    transform: scale(0.5) rotate(270deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
-.spinner .path {
-  stroke: #ff6600;
-  stroke-dasharray: $offset;
-  stroke-dashoffset: 0;
-  transform-origin: center;
-  animation: dash $duration ease-in-out infinite;
-}
-
-@keyframes dash {
+@keyframes loading {
   0% {
-    stroke-dashoffset: $offset;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-
-  50% {
-    stroke-dashoffset: ($offset / 2);
-    transform: rotate(135deg);
-  }
-
   100% {
-    stroke-dashoffset: $offset;
-    transform: rotate(450deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 </style>
