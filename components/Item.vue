@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <li class="news-item">
-    <span class="score">{{ item.points }}</span>
+    <span class="score" title="Score">{{ item.points }}</span>
     <span class="title">
       <template v-if="isAbsolute(item.url)">
         <a :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
