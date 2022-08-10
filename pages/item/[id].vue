@@ -4,8 +4,7 @@ import { host, timeAgo, isAbsolute } from '~/composables/utils'
 const route = useRoute()
 const id = $computed(() => route.params.id as string)
 
-const resultItem = await fetchItem(id)
-const resultComments = await fetchComments(id)
+const [resultItem, resultComments] = await Promise.all([fetchItem(id), fetchComments(id)])
 const { data: item } = $(resultItem)
 const { data: comments, loading: commentsLoading } = $(resultComments)
 
