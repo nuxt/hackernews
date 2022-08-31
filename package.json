@@ -31,7 +31,7 @@
     "node": ">=v14.20.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^10.0.0",
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "@nuxtjs/pwa": "3.3.5",
     "eslint": "^8.22.0",
     "nuxt": "^3.0.0-rc.8",
