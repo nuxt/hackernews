@@ -22,20 +22,16 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi start",
-    "dev-spa": "nuxi dev --spa",
-    "build-spa": "nuxi build --spa",
-    "start-spa": "nuxi start --spa",
     "lint": "eslint --ext .vue,.js,.ts --ignore-path .gitignore ."
   },
   "engines": {
     "node": ">=v14.20.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^10.0.0",
-    "@nuxtjs/pwa": "3.3.5",
-    "eslint": "^8.22.0",
-    "nuxt": "^3.0.0-rc.8",
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.24.0",
+    "nuxt": "^3.0.0-rc.11",
     "postcss-nested": "^5.0.6",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.4"
   }
 }
