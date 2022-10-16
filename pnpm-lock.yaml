@@ -4,14 +4,14 @@ specifiers:
   '@nuxtjs/eslint-config-typescript': ^11.0.0
   eslint: ^8.25.0
   nuxt: ^3.0.0-rc.11
-  postcss-nested: ^5.0.6
+  postcss-nested: ^6.0.0
   typescript: ^4.8.4
 
 devDependencies:
   '@nuxtjs/eslint-config-typescript': 11.0.0_z4bbprzjrhnsfa24uvmcbu7f5q
   eslint: 8.25.0
   nuxt: 3.0.0-rc.11_z4bbprzjrhnsfa24uvmcbu7f5q
-  postcss-nested: 5.0.6_postcss@8.4.16
+  postcss-nested: 6.0.0_postcss@8.4.16
   typescript: 4.8.4
 
 packages:
@@ -4577,8 +4577,8 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
-  /postcss-nested/5.0.6_postcss@8.4.16:
-    resolution: {integrity: sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==}
+  /postcss-nested/6.0.0_postcss@8.4.16:
+    resolution: {integrity: sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
@@ -5657,7 +5657,7 @@ packages:
     dev: true
 
   /util-deprecate/1.0.2:
-    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
   /validate-npm-package-license/3.0.4:
