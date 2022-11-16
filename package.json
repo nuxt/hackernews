@@ -30,7 +30,7 @@
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "eslint": "^8.27.0",
-    "nuxt": "^3.0.0-rc.14",
+    "nuxt": "^3.0.0",
     "postcss-nested": "^6.0.0",
     "typescript": "^4.9.3"
   }
