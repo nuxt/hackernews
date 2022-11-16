@@ -3,7 +3,7 @@ import { feedsInfo } from '~/composables/api'
 
 const route = useRoute()
 const host = process.server
-  ? useNuxtApp().ssrContext.req.headers.host
+  ? useRequestHeaders().host
   : window.location.host
 
 useHead({
