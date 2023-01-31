@@ -1,5 +1,5 @@
 import { createError } from 'h3'
-import { $fetch } from 'ohmyfetch'
+import { $fetch } from 'ofetch'
 import { getQuery, parseURL } from 'ufo'
 
 import { feedsInfo, validFeeds } from '~/composables/api'

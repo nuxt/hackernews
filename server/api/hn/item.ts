@@ -1,5 +1,5 @@
 import { createError } from 'h3'
-import { $fetch } from 'ohmyfetch'
+import { $fetch } from 'ofetch'
 import { parseURL, getQuery } from 'ufo'
 import { baseURL } from '~/server/constants'
 import { Item } from '~/types'
