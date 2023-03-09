@@ -15,13 +15,20 @@ useHead({
 
 <template>
   <div class="item-view view">
-    <div v-if="!item?.url" class="item-view-header">
+    <div
+      v-if="!item?.url"
+      class="item-view-header"
+    >
       <h1>Page not found</h1>
     </div>
     <template v-else>
       <div class="item-view-header">
         <template v-if="isAbsolute(item.url)">
-          <a :href="item.url" target="_blank" rel="noopener"><h1 v-text="item.title" /></a>
+          <a
+            :href="item.url"
+            target="_blank"
+            rel="noopener"
+          ><h1 v-text="item.title" /></a>
           <span class="host"> ({{ host(item.url) }})</span>
         </template>
         <template v-else>
@@ -41,7 +48,11 @@ useHead({
             {{ comments ? comments.length + ' comments' : 'No comments yet.' }}
           </p>
           <ul class="comment-children">
-            <PostComment v-for="comment in comments" :key="comment.id" :comment="comment" />
+            <PostComment
+              v-for="comment in comments"
+              :key="comment.id"
+              :comment="comment"
+            />
           </ul>
         </LoadingWrapper>
       </div>

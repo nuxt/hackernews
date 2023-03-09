@@ -28,7 +28,11 @@ useHead({
         <li>
           <span class="label">Karma:</span> {{ user.karma || '-' }}
         </li>
-        <li v-if="user.about" class="about" v-html="user.about" />
+        <li
+          v-if="user.about"
+          class="about"
+          v-html="user.about"
+        />
       </ul>
       <p class="links">
         <a :href="'https://news.ycombinator.com/submitted?id=' + user.id">submissions</a> |

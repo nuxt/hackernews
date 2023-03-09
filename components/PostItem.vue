@@ -8,10 +8,17 @@ defineProps<{
 
 <template>
   <li class="news-item">
-    <span class="score" title="Score">{{ item.points }}</span>
+    <span
+      class="score"
+      title="Score"
+    >{{ item.points }}</span>
     <span class="title">
       <template v-if="isAbsolute(item.url)">
-        <a :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
+        <a
+          :href="item.url"
+          target="_blank"
+          rel="noopener"
+        >{{ item.title }}</a>
         <span class="host"> ({{ host(item.url) }})</span>
       </template>
       <template v-else>
@@ -20,7 +27,10 @@ defineProps<{
     </span>
     <br>
     <span class="meta">
-      <span v-if="item.type !== 'job'" class="by">
+      <span
+        v-if="item.type !== 'job'"
+        class="by"
+      >
         by
         <NuxtLink :to="'/user/' + item.user">{{ item.user }}</NuxtLink>
       </span>
@@ -28,7 +38,10 @@ defineProps<{
         {{ timeAgo(item.time) }} ago
       </span>
       |
-      <span v-if="item.type !== 'job'" class="comments-link">
+      <span
+        v-if="item.type !== 'job'"
+        class="comments-link"
+      >
         <NuxtLink :to="'/item/' + item.id">{{ item.comments_count }} comments</NuxtLink>
       </span>
     </span>

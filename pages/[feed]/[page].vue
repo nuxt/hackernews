@@ -31,7 +31,7 @@ const maxPage = computed(() => {
   return +(feedsInfo[feed.value]?.pages) || 0
 })
 
-function pageChanged (to: number, _from = -1) {
+function pageChanged (to: number) {
   if (!isValidFeed.value) { return }
 
   if (to <= 0 || to > maxPage.value) {
@@ -55,20 +55,35 @@ function pageChanged (to: number, _from = -1) {
 }
 
 onMounted(() => pageChanged(page.value))
-watch(page, (to, old) => pageChanged(to, old))
+watch(page, to => pageChanged(to))
 </script>
 
 <template>
   <div class="view">
-    <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
+    <ItemListNav
+      :feed="feed"
+      :page="page"
+      :max-page="maxPage"
+    />
 
-    <div :key="displayedPage" class="news-list">
+    <div
+      :key="displayedPage"
+      class="news-list"
+    >
       <LoadSpinner v-if="loading" />
       <template v-else>
         <ul>
-          <PostItem v-for="item in items" :key="item.id" :item="item" />
+          <PostItem
+            v-for="item in items"
+            :key="item.id"
+            :item="item"
+          />
         </ul>
-        <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
+        <ItemListNav
+          :feed="feed"
+          :page="page"
+          :max-page="maxPage"
+        />
       </template>
     </div>
   </div>

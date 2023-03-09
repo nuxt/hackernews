@@ -28,7 +28,7 @@
     "node": ">=v18.13.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxt/eslint-config": "^0.1.1",
     "@types/node": "^18.14.6",
     "eslint": "^8.35.0",
     "nuxt": "^3.2.3",

@@ -17,14 +17,33 @@ useHead({
 <template>
   <div>
     <header class="header">
-      <nav class="inner" role="navigation">
-        <NuxtLink to="/" exact>
-          <img class="logo" src="/logo.svg" alt="logo">
+      <nav
+        class="inner"
+        role="navigation"
+      >
+        <NuxtLink
+          to="/"
+          exact
+        >
+          <img
+            class="logo"
+            src="/logo.svg"
+            alt="logo"
+          >
         </NuxtLink>
-        <NuxtLink v-for="(list, key) in feedsInfo" :key="key" :to="`/${key}`">
+        <NuxtLink
+          v-for="(list, key) in feedsInfo"
+          :key="key"
+          :to="`/${key}`"
+        >
           {{ list.title }}
         </NuxtLink>
-        <a class="github" href="https://github.com/nuxt/hackernews" target="_blank" rel="noopener banner">
+        <a
+          class="github"
+          href="https://github.com/nuxt/hackernews"
+          target="_blank"
+          rel="noopener banner"
+        >
           Built with Nuxt3
         </a>
       </nav>

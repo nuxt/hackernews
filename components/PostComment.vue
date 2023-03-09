@@ -16,20 +16,37 @@ function pluralize (n: number) {
 </script>
 
 <template>
-  <li v-if="comment && comment.user" class="comment">
+  <li
+    v-if="comment && comment.user"
+    class="comment"
+  >
     <div class="by">
       <NuxtLink :to="'/user/' + comment.user">
         {{ comment.user }}
       </NuxtLink>
       {{ timeAgo(comment.time) }} ago
     </div>
-    <div class="text" v-html="comment.content" />
-    <div v-if="comment.comments && comment.comments.length" :class="{ open }" class="toggle">
+    <div
+      class="text"
+      v-html="comment.content"
+    />
+    <div
+      v-if="comment.comments && comment.comments.length"
+      :class="{ open }"
+      class="toggle"
+    >
       <a @click="open = !open">{{ open ? '[-]' : '[+] ' + pluralize(comment.comments.length) + ' collapsed' }}
       </a>
     </div>
-    <ul v-show="open" class="comment-children">
-      <PostComment v-for="childComment in comment.comments" :key="childComment.id" :comment="childComment" />
+    <ul
+      v-show="open"
+      class="comment-children"
+    >
+      <PostComment
+        v-for="childComment in comment.comments"
+        :key="childComment.id"
+        :comment="childComment"
+      />
     </ul>
   </li>
 </template>

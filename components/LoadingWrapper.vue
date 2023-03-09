@@ -5,7 +5,10 @@ defineProps<{
 </script>
 
 <template>
-  <div v-if="loading" style="text-align:center">
+  <div
+    v-if="loading"
+    style="text-align:center"
+  >
     <LoadSpinner />
   </div>
   <slot v-else />
