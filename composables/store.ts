@@ -1,3 +1,4 @@
+import { WritableComputedOptions } from 'vue'
 import { Item, User } from '~/types'
 
 export interface StoreState {
@@ -52,7 +53,7 @@ export function fetchFeed (query: FeedQuery) {
   )
 }
 
-export function fetchItem (id: string) {
+export function fetchItem (id: number) {
   const state = useStore()
 
   return reactiveLoad<Item>(
@@ -62,17 +63,17 @@ export function fetchItem (id: string) {
   )
 }
 
-export function fetchComments (id: string) {
+export function fetchComments (id: number) {
   const state = useStore()
 
   return reactiveLoad<Item[]>(
     () => state.value.comments[id],
     (comments) => { state.value.comments[id] = comments },
-    () => $fetch('/api/hn/item', { params: { id } }).then(i => i.comments)
+    () => $fetch('/api/hn/item', { params: { id } }).then(i => i.comments!)
   )
 }
 
-export function fetchUser (id: string) {
+export function fetchUser (id: number) {
   const state = useStore()
 
   return reactiveLoad<User>(
@@ -96,7 +97,7 @@ export async function reactiveLoad<T> (
   const data = computed({
     get,
     set
-  })
+  } as WritableComputedOptions<T | undefined>)
   const loading = ref(false)
 
   if (data.value == null) {
