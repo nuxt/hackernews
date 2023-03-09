@@ -5,7 +5,7 @@ const props = defineProps<{
   maxPage: number
 }>()
 
-const hasMore = $computed(() => props.page < props.maxPage)
+const hasMore = computed(() => props.page < props.maxPage)
 </script>
 
 <template>

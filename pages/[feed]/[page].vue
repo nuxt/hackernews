@@ -7,45 +7,45 @@ definePageMeta({
 
 const route = useRoute()
 const router = useRouter()
-const page = $computed(() => +route.params.page || 1)
-const feed = $computed(() => route.params.feed as string)
-const isValidFeed = $computed(() => !!feedsInfo[feed])
+const page = computed(() => +route.params.page || 1)
+const feed = computed(() => route.params.feed as keyof typeof feedsInfo)
+const isValidFeed = computed(() => !!feedsInfo[feed.value])
 
-// const transition = $ref('slide-right')
-const pageNo = $computed(() => Number(page) || 1)
-const displayedPage = ref(pageNo)
+// const transition = ref('slide-right')
+const pageNo = computed(() => Number(page.value) || 1)
+const displayedPage = ref(pageNo.value)
 
 useHead({
-  title: feedsInfo[feed]?.title
+  title: feedsInfo[feed.value]?.title
 })
 
-const state = $(useStore())
+const state = useStore()
 
-if (isValidFeed) {
-  await fetchFeed({ page: pageNo, feed })
+if (isValidFeed.value) {
+  await fetchFeed({ page: pageNo.value, feed: feed.value })
 }
-const items = $computed(() => getFeed(state, { page: pageNo, feed }) || [])
-const loading = $computed(() => items.length === 0)
+const items = computed(() => getFeed(state.value, { page: pageNo.value, feed: feed.value }) || [])
+const loading = computed(() => items.value.length === 0)
 
-const maxPage = $computed(() => {
-  return +(feedsInfo[feed]?.pages) || 0
+const maxPage = computed(() => {
+  return +(feedsInfo[feed.value]?.pages) || 0
 })
 
-function pageChanged (to: number, from = -1) {
-  if (!isValidFeed) { return }
+function pageChanged (to: number, _from = -1) {
+  if (!isValidFeed.value) { return }
 
-  if (to <= 0 || to > maxPage) {
-    router.replace(`/${feed}/1`)
+  if (to <= 0 || to > maxPage.value) {
+    router.replace(`/${feed.value}/1`)
     return
   }
 
   // Prefetch next page
   fetchFeed({
-    feed,
-    page: page + 1
+    feed: feed.value,
+    page: page.value + 1
   }).catch(() => {})
 
-  // transition = from === -1
+  // transition.value = from === -1
   //   ? null
   //   : to > from
   //     ? 'slide-left'
@@ -54,8 +54,8 @@ function pageChanged (to: number, from = -1) {
   displayedPage.value = to
 }
 
-onMounted(() => pageChanged(page))
-watch(() => page, (to, old) => pageChanged(to, old))
+onMounted(() => pageChanged(page.value))
+watch(page, (to, old) => pageChanged(to, old))
 </script>
 
 <template>
