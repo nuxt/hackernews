@@ -1,9 +1,6 @@
-import { createError } from 'h3'
 import { $fetch } from 'ofetch'
-import { parseURL, getQuery } from 'ufo'
 import { User } from '~/types'
 import { baseURL } from '~/server/constants'
-import { configureSWRHeaders } from '~/server/swr'
 
 async function fetchUser (id: string): Promise<User> {
   const user = await $fetch(`${baseURL}/user/${id}.json`)
@@ -15,10 +12,9 @@ async function fetchUser (id: string): Promise<User> {
   }
 }
 
-export default defineEventHandler(({ req, res }) => {
-  configureSWRHeaders(res)
-  const { search } = parseURL(req.url)
-  const { id } = getQuery(search) as { id: string }
+export default defineEventHandler((event) => {
+  configureSWRHeaders(event)
+  const { id } = getQuery(event) as { id?: string }
 
   if (!id) {
     throw createError({
