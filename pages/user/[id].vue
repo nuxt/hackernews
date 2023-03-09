@@ -4,7 +4,7 @@ import { timeAgo } from '~/composables/utils'
 const route = useRoute()
 const id = computed(() => route.params.id as string)
 
-const result = await fetchUser(+id.value)
+const result = await fetchUser(id.value)
 const { data: user, loading } = toRefs(result)
 
 useHead({

@@ -4,7 +4,7 @@ import { Item, User } from '~/types'
 export interface StoreState {
   items: Record<number, Item>
   comments: Record<number, Item[]>
-  users: Record<number, User>
+  users: Record<string, User>
   feeds: Record<string, Record<number, number[]>>
 }
 
@@ -73,7 +73,7 @@ export function fetchComments (id: number) {
   )
 }
 
-export function fetchUser (id: number) {
+export function fetchUser (id: string) {
   const state = useStore()
 
   return reactiveLoad<User>(
