@@ -1,10 +1,10 @@
-# Nuxt3 Hacker News
+# Nuxt Hacker News
 
-Hacker News clone built with [Nuxt3](https://v3.nuxtjs.org).
+Hacker News clone built with [Nuxt](https://nuxt.com).
 
 <p align="center">
   <a href="https://hn.nuxt.space" target="_blank">
-    <img width="1090" src="https://user-images.githubusercontent.com/904724/58875721-97382400-86cc-11e9-94c6-af21544817bb.png">
+    <img width="1090" src="https://hn.nuxt.space/cover.jpg">
     <br>
     Live Demo
   </a>

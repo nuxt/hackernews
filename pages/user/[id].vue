@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { timeAgo } from '~/composables/utils'
-
 const route = useRoute()
 const id = computed(() => route.params.id as string)
 

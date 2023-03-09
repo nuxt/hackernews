@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { feedsInfo } from '~/composables/api'
-
 const route = useRoute()
 const host = process.server
   ? useRequestHeaders().host
@@ -23,7 +21,6 @@ useHead({
       >
         <NuxtLink
           to="/"
-          exact
         >
           <img
             class="logo"
@@ -35,17 +32,19 @@ useHead({
           v-for="(list, key) in feedsInfo"
           :key="key"
           :to="`/${key}`"
+          :class="{ active: $route.path.startsWith(`/${key}`)}"
         >
           {{ list.title }}
         </NuxtLink>
-        <a
-          class="github"
-          href="https://github.com/nuxt/hackernews"
-          target="_blank"
-          rel="noopener banner"
-        >
-          Built with Nuxt3
-        </a>
+        <span class="github">
+          <a
+            href="https://github.com/nuxt/hackernews"
+            target="_blank"
+            rel="noopener banner"
+          >
+            Open on GitHub
+          </a>
+        </span>
       </nav>
     </header>
     <slot role="main" />
@@ -56,20 +55,19 @@ useHead({
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
-  background-color: lighten(#eceef1, 30%);
+  background-color: #F4F4F5;
   margin: 0;
   padding: 0;
-  color: #2E495E;
+  color: #18181B;
   overflow-y: scroll;
 }
 
 a {
-  color: #2E495E;
+  color: #18181B;
   text-decoration: none;
 }
-
 .header {
-  background-color: #2E495E;
+  background-color: #18181B;
   z-index: 999;
   height: 55px;
 
@@ -93,12 +91,11 @@ a {
     margin-right: 1.8em;
 
     &:hover {
-      color: #fff;
+      color: #00DC82;
     }
 
-    &.router-link-active, &.nuxt-link-active {
-      color: #fff;
-      font-weight: 600;
+    &.active {
+      color: #00DC82;
     }
 
     &:nth-child(6) {
@@ -112,6 +109,9 @@ a {
     margin: auto;
     text-align: right;
     flex-grow: 1;
+    a {
+      margin-right: 0;
+    }
   }
 }
 

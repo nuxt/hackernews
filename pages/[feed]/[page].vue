@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { feedsInfo } from '~/composables/api'
-
 definePageMeta({
   middleware: 'feed'
 })

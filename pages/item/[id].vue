@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { host, timeAgo, isAbsolute } from '~/composables/utils'
-
 const route = useRoute()
 const id = computed(() => +route.params.id)
 

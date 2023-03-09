@@ -20,7 +20,7 @@ const hasMore = computed(() => props.page < props.maxPage)
       v-else
       class="disabled"
     >&lt; prev</span>
-    <span class="page">{{ page }}/{{ maxPage }}</span>
+    <span class="page">{{ page }} / {{ maxPage }}</span>
     <NuxtLink
       v-if="hasMore"
       :to="`/${feed}/${page + 1}`"
@@ -37,13 +37,11 @@ const hasMore = computed(() => props.page < props.maxPage)
 <style lang="postcss">
 .news-list-nav, .news-list {
   background-color: #fff;
-  border-radius: 2px;
 }
 
 .news-list-nav {
   padding: 15px 30px;
   text-align: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   user-select: none;
 
   a {
@@ -52,6 +50,7 @@ const hasMore = computed(() => props.page < props.maxPage)
 
   .disabled {
     opacity: 0.5;
+    margin: 0 1em;
   }
 
   .page {

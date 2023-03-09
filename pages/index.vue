@@ -1,6 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
-  middleware: 'index'
+  middleware: (from) => {
+    if (from.path === '/') {
+      return navigateTo(`/${validFeeds[0]}/1`)
+    }
+  }
 })
 </script>
 
