@@ -63,10 +63,10 @@ watch(page, (to, old) => pageChanged(to, old))
     <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
 
     <div :key="displayedPage" class="news-list">
-      <Spinner v-if="loading" />
+      <LoadSpinner v-if="loading" />
       <template v-else>
         <ul>
-          <Item v-for="item in items" :key="item.id" :item="item" />
+          <PostItem v-for="item in items" :key="item.id" :item="item" />
         </ul>
         <ItemListNav :feed="feed" :page="page" :max-page="maxPage" />
       </template>

@@ -18,12 +18,12 @@ useHead({
 
 <template>
   <div class="user-view view">
-    <Spinner v-if="loading" />
+    <LoadSpinner v-if="loading" />
     <template v-else-if="user">
       <h1>User: {{ user.id }}</h1>
       <ul class="meta">
         <li>
-          <span class="label">Created:</span> {{ timeAgo(user.created_time) }} ago
+          <span class="label">Created:</span> {{ timeAgo(new Date(user.created_time)) }} ago
         </li>
         <li>
           <span class="label">Karma:</span> {{ user.karma || '-' }}

@@ -115,6 +115,7 @@ export async function reactiveLoad<T> (
           data.value = fetched
         }
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e)
         data.value = undefined
       } finally {

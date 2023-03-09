@@ -29,7 +29,7 @@ function pluralize (n: number) {
       </a>
     </div>
     <ul v-show="open" class="comment-children">
-      <comment v-for="childComment in comment.comments" :key="childComment.id" :comment="childComment" />
+      <PostComment v-for="childComment in comment.comments" :key="childComment.id" :comment="childComment" />
     </ul>
   </li>
 </template>

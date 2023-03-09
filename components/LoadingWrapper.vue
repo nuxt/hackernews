@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div v-if="loading" style="text-align:center">
-    <Spinner />
+    <LoadSpinner />
   </div>
   <slot v-else />
 </template>
