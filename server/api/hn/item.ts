@@ -1,9 +1,6 @@
-import { createError } from 'h3'
 import { $fetch } from 'ofetch'
-import { parseURL, getQuery } from 'ufo'
 import { baseURL } from '~/server/constants'
 import { Item } from '~/types'
-import { configureSWRHeaders } from '~/server/swr'
 
 export async function fetchItem (
   id: string,
@@ -31,10 +28,9 @@ export async function fetchItem (
   }
 }
 
-export default defineEventHandler(({ req, res }) => {
-  configureSWRHeaders(res)
-  const { search } = parseURL(req.url)
-  const { id } = getQuery(search) as { id: string }
+export default defineEventHandler((event) => {
+  configureSWRHeaders(event)
+  const { id } = getQuery(event) as { id?: string }
 
   if (!id) {
     throw createError({

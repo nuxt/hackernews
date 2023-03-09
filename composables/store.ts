@@ -1,9 +1,10 @@
+import { WritableComputedOptions } from 'vue'
 import { Item, User } from '~/types'
 
 export interface StoreState {
   items: Record<number, Item>
   comments: Record<number, Item[]>
-  users: Record<number, User>
+  users: Record<string, User>
   feeds: Record<string, Record<number, number[]>>
 }
 
@@ -28,56 +29,56 @@ export function getFeed (state:StoreState, { feed, page }: FeedQuery) {
 }
 
 export function fetchFeed (query: FeedQuery) {
-  const state = $(useStore())
+  const state = useStore()
 
   const { feed, page } = query
 
   return reactiveLoad<Item[]>(
-    () => getFeed(state, query),
+    () => getFeed(state.value, query),
     (items) => {
       const ids = items.map(item => item.id)
-      state.feeds[feed][page] = ids
+      state.value.feeds[feed][page] = ids
       items
         .filter(Boolean)
         .forEach((item) => {
-          if (state.items[item.id]) {
-            Object.assign(state.items[item.id], item)
+          if (state.value.items[item.id]) {
+            Object.assign(state.value.items[item.id], item)
           } else {
-            state.items[item.id] = item
+            state.value.items[item.id] = item
           }
         })
     },
     () => $fetch('/api/hn/feeds', { params: { feed, page } }),
-    (state.feeds[feed][page] || []).map(id => state.items[id])
+    (state.value.feeds[feed][page] || []).map(id => state.value.items[id])
   )
 }
 
-export function fetchItem (id: string) {
-  const state = $(useStore())
+export function fetchItem (id: number) {
+  const state = useStore()
 
   return reactiveLoad<Item>(
-    () => state.items[id],
-    (item) => { state.items[id] = item },
+    () => state.value.items[id],
+    (item) => { state.value.items[id] = item },
     () => $fetch('/api/hn/item', { params: { id } })
   )
 }
 
-export function fetchComments (id: string) {
-  const state = $(useStore())
+export function fetchComments (id: number) {
+  const state = useStore()
 
   return reactiveLoad<Item[]>(
-    () => state.comments[id],
-    (comments) => { state.comments[id] = comments },
-    () => $fetch('/api/hn/item', { params: { id } }).then(i => i.comments)
+    () => state.value.comments[id],
+    (comments) => { state.value.comments[id] = comments },
+    () => $fetch('/api/hn/item', { params: { id } }).then(i => i.comments!)
   )
 }
 
 export function fetchUser (id: string) {
-  const state = $(useStore())
+  const state = useStore()
 
   return reactiveLoad<User>(
-    () => state.users[id],
-    (user) => { state.users[id] = user },
+    () => state.value.users[id],
+    (user) => { state.value.users[id] = user },
     () => $fetch('/api/hn/user', { params: { id } })
   )
 }
@@ -96,7 +97,7 @@ export async function reactiveLoad<T> (
   const data = computed({
     get,
     set
-  })
+  } as WritableComputedOptions<T | undefined>)
   const loading = ref(false)
 
   if (data.value == null) {

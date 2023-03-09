@@ -3,8 +3,5 @@ export default defineNuxtConfig({
     plugins: {
       'postcss-nested': {}
     }
-  },
-  experimental: {
-    reactivityTransform: true
   }
 })

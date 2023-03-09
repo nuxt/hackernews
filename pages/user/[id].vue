@@ -2,16 +2,16 @@
 import { timeAgo } from '~/composables/utils'
 
 const route = useRoute()
-const id = $computed(() => route.params.id as string)
+const id = computed(() => route.params.id as string)
 
-const result = await fetchUser(id)
-const { data: user, loading } = $(result)
+const result = await fetchUser(id.value)
+const { data: user, loading } = toRefs(result)
 
 useHead({
-  title: loading
+  title: loading.value
     ? 'Loading'
-    : user
-      ? user.id
+    : user.value
+      ? user.value.id
       : 'User not found'
 })
 </script>

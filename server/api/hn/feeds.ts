@@ -1,11 +1,8 @@
-import { createError } from 'h3'
 import { $fetch } from 'ofetch'
-import { getQuery, parseURL } from 'ufo'
 
 import { feedsInfo, validFeeds } from '~/composables/api'
 
 import { baseURL } from '~/server/constants'
-import { configureSWRHeaders } from '~/server/swr'
 
 const feedUrls: Record<keyof typeof feedsInfo, string> = {
   ask: 'askstories',
@@ -15,7 +12,7 @@ const feedUrls: Record<keyof typeof feedsInfo, string> = {
   news: 'topstories'
 }
 
-async function fetchFeed (feed: string, page = '1') {
+async function fetchFeed (feed: keyof typeof feedsInfo, page = '1') {
   const { fetchItem } = await import('./item')
   const entries = Object.values(
     await $fetch(`${baseURL}/${feedUrls[feed]}.json`)
@@ -23,10 +20,9 @@ async function fetchFeed (feed: string, page = '1') {
   return Promise.all(entries.map(id => fetchItem(id)))
 }
 
-export default defineEventHandler(({ req, res }) => {
-  configureSWRHeaders(res)
-  const { search } = parseURL(req.url)
-  const { page = '1', feed = 'news' } = getQuery(search) as { page: string, feed: string }
+export default defineEventHandler((event) => {
+  configureSWRHeaders(event)
+  const { page = '1', feed = 'news' } = getQuery(event) as { page: string, feed: keyof typeof feedsInfo }
 
   if (!validFeeds.includes(feed) || String(Number(page)) !== page) {
     throw createError({

@@ -2,14 +2,14 @@
 import { host, timeAgo, isAbsolute } from '~/composables/utils'
 
 const route = useRoute()
-const id = $computed(() => route.params.id as string)
+const id = computed(() => +route.params.id)
 
-const [resultItem, resultComments] = await Promise.all([fetchItem(id), fetchComments(id)])
-const { data: item } = $(resultItem)
-const { data: comments, loading: commentsLoading } = $(resultComments)
+const [resultItem, resultComments] = await Promise.all([fetchItem(id.value), fetchComments(id.value)])
+const { data: item } = toRefs(resultItem)
+const { data: comments, loading: commentsLoading } = toRefs(resultComments)
 
 useHead({
-  title: item?.title
+  title: item.value?.title
 })
 </script>
 
