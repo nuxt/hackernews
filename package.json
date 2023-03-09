@@ -25,7 +25,7 @@
     "lint": "eslint --ext .vue,.js,.ts --ignore-path .gitignore ."
   },
   "engines": {
-    "node": ">=v18.13.0"
+    "node": ">=v18.15.0"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
