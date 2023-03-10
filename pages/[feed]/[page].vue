@@ -98,7 +98,7 @@ watch(page, to => pageChanged(to))
   width: 100%;
   transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 
-  ul {
+  & ul {
     list-style-type: none;
     padding: 0;
     margin: 0;

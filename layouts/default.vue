@@ -80,7 +80,7 @@ a {
     place-items: center;
   }
 
-  a {
+  & a {
     color: #fff;
     line-height: 24px;
     transition: color 0.15s ease;
@@ -109,7 +109,7 @@ a {
     margin: auto;
     text-align: right;
     flex-grow: 1;
-    a {
+    & a {
       margin-right: 0;
     }
   }
@@ -149,7 +149,7 @@ a {
       padding: 15px;
     }
 
-    a {
+    & a {
       margin-right: 1em;
     }
 

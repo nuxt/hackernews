@@ -72,11 +72,11 @@ defineProps<{
     font-size: 0.85em;
     color: #595959;
 
-    span {
+    & span {
       margin: 0 0.2rem;
     }
 
-    a {
+    & a {
       color: #595959;
       text-decoration: underline;
 

@@ -64,7 +64,7 @@ useHead({
   padding: 1.8em 2em 1em;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
-  h1 {
+  & h1 {
     display: inline;
     font-size: 1.5em;
     margin: 0;
@@ -109,7 +109,7 @@ useHead({
 
 @media (max-width: 600px) {
   .item-view-header {
-    h1 {
+    & h1 {
       font-size: 1.25em;
     }
   }

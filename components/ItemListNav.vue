@@ -44,7 +44,7 @@ const hasMore = computed(() => props.page < props.maxPage)
   text-align: center;
   user-select: none;
 
-  a {
+  & a {
     margin: 0 1em;
   }
 

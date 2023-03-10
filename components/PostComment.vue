@@ -70,7 +70,7 @@ function pluralize (n: number) {
   .by {
     color: #222;
 
-    a {
+    & a {
       color: #222;
       text-decoration: underline;
     }
@@ -79,11 +79,11 @@ function pluralize (n: number) {
   .text {
     overflow-wrap: break-word;
 
-    a:hover {
+    & a:hover {
       color: #111;
     }
 
-    pre {
+    & pre {
       white-space: pre-wrap;
     }
   }
@@ -93,7 +93,7 @@ function pluralize (n: number) {
     padding: 0.3em 0.5em;
     border-radius: 4px;
 
-    a {
+    & a {
       color: #222;
       cursor: pointer;
     }

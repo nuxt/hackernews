@@ -49,7 +49,7 @@ useHead({
   box-sizing: border-box;
   padding: 2em 3em;
 
-  h1 {
+  & h1 {
     margin: 0;
     font-size: 1.5em;
   }
