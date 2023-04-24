@@ -3,5 +3,8 @@ export default defineNuxtConfig({
     plugins: {
       'postcss-nesting': {}
     }
+  },
+  devtools: {
+    enabled: true
   }
 })

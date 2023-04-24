@@ -25,6 +25,7 @@
     "lint": "eslint --ext .vue,.js,.ts --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@nuxt/devtools": "^0.4.2",
     "@nuxt/eslint-config": "^0.1.1",
     "@types/node": "^18.16.0",
     "eslint": "^8.39.0",
