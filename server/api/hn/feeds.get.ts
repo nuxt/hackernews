@@ -16,7 +16,7 @@ async function fetchFeed (feed: keyof typeof feedsInfo, page = '1') {
   const { fetchItem } = await import('./item.get')
   const entries = Object.values(
     await $fetch(`${baseURL}/${feedUrls[feed]}.json`)
-  ).slice(Number(page) * 10, Number(page) * 10 + 10) as string[]
+  ).slice((Number(page) - 1) * 10, Number(page) * 10) as string[]
   return Promise.all(entries.map(id => fetchItem(id)))
 }
 
