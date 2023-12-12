@@ -14,14 +14,14 @@ useHead({
 <template>
   <div class="item-view view">
     <div
-      v-if="!item?.url"
+      v-if="!item?.url && !item?.title"
       class="item-view-header"
     >
       <h1>Page not found</h1>
     </div>
     <template v-else>
       <div class="item-view-header">
-        <template v-if="isAbsolute(item.url)">
+        <template v-if="item.url && isAbsolute(item.url)">
           <a
             :href="item.url"
             target="_blank"
@@ -31,6 +31,11 @@ useHead({
         </template>
         <template v-else>
           <h1 v-text="item.title" />
+          <div
+            v-if="item.content"
+            class="content"
+            v-html="item.content"
+          />
         </template>
         <p class="meta">
           {{ item.points }} points | by
@@ -69,6 +74,10 @@ useHead({
     font-size: 1.5em;
     margin: 0;
     margin-right: 0.5em;
+  }
+
+  .content {
+    margin-top: 1em;
   }
 
   .host, .meta, .meta a {
