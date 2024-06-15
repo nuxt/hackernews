@@ -6,7 +6,7 @@ const result = await fetchUser(id.value)
 const { data: user, loading } = toRefs(result)
 
 useHead({
-  title: loading.value
+  title: () => loading.value
     ? 'Loading'
     : user.value
       ? user.value.id
