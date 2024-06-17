@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useServerHead({
+  htmlAttrs: { lang: 'en' },
+})
 useSeoMeta({
   titleTemplate: 'Nuxt HN | %s',
   description: 'HackerNews clone built with Nuxt.',
@@ -12,7 +15,6 @@ useSeoMeta({
 </script>
 
 <template>
-  <Html lang="en" />
   <AppHeader />
   <NuxtPage />
 </template>
