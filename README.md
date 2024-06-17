@@ -19,8 +19,6 @@ https://hn.nuxt.dev
 ## Performance
 
 - Lighthouse [100/100](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhn.nuxt.dev%2Fnews%2F1) (Slow 4G / Mobile Moto G4)
-  - Interactive: 1.4s
-  - Total Blocking Time: 30ms
 
 ## Features
 
