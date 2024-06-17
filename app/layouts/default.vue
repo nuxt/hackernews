@@ -23,6 +23,7 @@ useHead({
       >
         <NuxtLink
           to="/"
+          aria-label="Go to homepage"
         >
           <svg
             class="logo"
