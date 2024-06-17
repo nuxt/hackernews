@@ -49,7 +49,7 @@ const hasMore = computed(() => props.page < props.maxPage)
   }
 
   .disabled {
-    opacity: 0.5;
+    opacity: 0.7;
     margin: 0 1em;
   }
 
