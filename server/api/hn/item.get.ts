@@ -5,7 +5,7 @@ export async function fetchItem(
   id: string,
   withComments = false,
 ): Promise<Item> {
-  const item = await $fetch(`${BASE_URL}/item/${id}.json`)
+  const item = await $fetch(`/item/${id}.json`, { baseURL: BASE_URL })
   item.kids = item.kids || {}
   return {
     id: item.id,
@@ -27,8 +27,7 @@ export async function fetchItem(
   }
 }
 
-export default defineEventHandler((event) => {
-  configureSWRHeaders(event)
+export default defineCachedEventHandler((event) => {
   const { id } = getQuery(event) as { id?: string }
 
   if (!id) {
@@ -45,4 +44,12 @@ export default defineEventHandler((event) => {
   }
 
   return fetchItem(id, true)
+}, {
+  name: 'api/hn',
+  getKey(event) {
+    const { id } = getQuery(event)
+    return ['item', id].join('/')
+  },
+  swr: true,
+  maxAge: 10,
 })

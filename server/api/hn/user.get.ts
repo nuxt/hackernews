@@ -2,7 +2,7 @@ import { $fetch } from 'ofetch'
 import type { User } from '~~/types'
 
 async function fetchUser(id: string): Promise<User> {
-  const user = await $fetch(`${BASE_URL}/user/${id}.json`)
+  const user = await $fetch(`/user/${id}.json`, { baseURL: BASE_URL })
   return {
     id: user.id,
     karma: user.karma,
@@ -11,8 +11,7 @@ async function fetchUser(id: string): Promise<User> {
   }
 }
 
-export default defineEventHandler((event) => {
-  configureSWRHeaders(event)
+export default defineCachedEventHandler((event) => {
   const { id } = getQuery(event) as { id?: string }
 
   if (!id) {
@@ -22,4 +21,12 @@ export default defineEventHandler((event) => {
     })
   }
   return fetchUser(id)
+}, {
+  name: 'api/hn',
+  getKey(event) {
+    const { id } = getQuery(event)
+    return ['user', id].join('/')
+  },
+  swr: true,
+  maxAge: 10,
 })

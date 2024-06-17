@@ -18,8 +18,7 @@ async function fetchFeed(feed: keyof typeof feedsInfo, page = '1') {
   return Promise.all(entries.map(id => fetchItem(id)))
 }
 
-export default defineEventHandler((event) => {
-  configureSWRHeaders(event)
+export default defineCachedEventHandler((event) => {
   const { page = '1', feed = 'news' } = getQuery(event) as { page: string, feed: keyof typeof feedsInfo }
 
   if (!validFeeds.includes(feed) || String(Number(page)) !== page) {
@@ -30,4 +29,12 @@ export default defineEventHandler((event) => {
   }
 
   return fetchFeed(feed, page)
+}, {
+  name: 'api/hn',
+  getKey(event) {
+    const { page = '1', feed = 'news' } = getQuery(event)
+    return ['feeds', feed, page].join('/')
+  },
+  swr: true,
+  maxAge: 10,
 })
