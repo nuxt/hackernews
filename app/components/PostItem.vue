@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { timeAgo, isAbsolute, host } from '~/composables/utils'
+import type { Item } from '~~/types'
 
 defineProps<{
-  item: any
+  item: Item
 }>()
 </script>
 

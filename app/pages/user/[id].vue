@@ -10,7 +10,7 @@ useHead({
     ? 'Loading'
     : user.value
       ? user.value.id
-      : 'User not found'
+      : 'User not found',
 })
 </script>
 

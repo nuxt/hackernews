@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { feedsInfo } from '~~/utils/api'
+
 definePageMeta({
-  middleware: 'feed'
+  middleware: 'feed',
 })
 
 const route = useRoute()
@@ -14,7 +16,7 @@ const pageNo = computed(() => Number(page.value) || 1)
 const displayedPage = ref(pageNo.value)
 
 useHead({
-  title: feedsInfo[feed.value]?.title
+  title: feedsInfo[feed.value]?.title,
 })
 
 const state = useStore()
@@ -29,8 +31,10 @@ const maxPage = computed(() => {
   return +(feedsInfo[feed.value]?.pages) || 0
 })
 
-function pageChanged (to: number) {
-  if (!isValidFeed.value) { return }
+function pageChanged(to: number) {
+  if (!isValidFeed.value) {
+    return
+  }
 
   if (to <= 0 || to > maxPage.value) {
     router.replace(`/${feed.value}/1`)
@@ -40,7 +44,7 @@ function pageChanged (to: number) {
   // Prefetch next page
   fetchFeed({
     feed: feed.value,
-    page: page.value + 1
+    page: page.value + 1,
   }).catch(() => {})
 
   // transition.value = from === -1

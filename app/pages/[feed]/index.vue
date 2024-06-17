@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  middleware: 'feed'
+  middleware: 'feed',
 })
 </script>
 

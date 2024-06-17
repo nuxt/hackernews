@@ -7,7 +7,7 @@ const { data: item } = toRefs(resultItem)
 const { data: comments, loading: commentsLoading } = toRefs(resultComments)
 
 useHead({
-  title: item.value?.title
+  title: item.value?.title,
 })
 </script>
 
