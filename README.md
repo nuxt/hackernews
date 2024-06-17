@@ -3,8 +3,8 @@
 Hacker News clone built with [Nuxt](https://nuxt.com).
 
 <p align="center">
-  <a href="https://hn.nuxt.space" target="_blank">
-    <img width="1090" src="https://hn.nuxt.space/cover.jpg">
+  <a href="https://hn.nuxt.dev" target="_blank">
+    <img width="1090" src="https://hn.nuxt.dev/cover.jpg">
     <br>
     Live Demo
   </a>
@@ -12,15 +12,13 @@ Hacker News clone built with [Nuxt](https://nuxt.com).
 
 ## Demo
 
-https://hn.nuxt.space
+https://hn.nuxt.dev
 
-> Hosted on [Vercel](https://vercel.com/): `npm run build`
-
-To disable server-side render for a page, simply append `?csr` to the URL, example: https://hn.nuxt.space/news/1?csr
+> Hosted on Cloudflare Pages with [NuxtHub](https://hub.nuxt.com): `npm run build`
 
 ## Performance
 
-- Lighthouse [100/100](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhackernews-git-nuxt3-nuxt-js.vercel.app%2Fnews%2F1) (Slow 4G / Mobile Moto G4)
+- Lighthouse [100/100](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhn.nuxt.dev%2Fnews%2F1) (Slow 4G / Mobile Moto G4)
   - Interactive: 1.4s
   - Total Blocking Time: 30ms
 
@@ -28,7 +26,7 @@ To disable server-side render for a page, simply append `?csr` to the URL, examp
 
 - Server Side Rendering
 - Vite-based hot module replacement (HMR) dev environment
-- Deploys anywhere with zero config (Vercel, Netlify, Cloudflare, etc.) powered by [Nitro](https://github.com/unjs/nitro)
+- Deploys anywhere with zero config (Vercel, Netlify, Cloudflare, etc.) powered by [Nitro](https://nitro.unjs.io)
 - Code Splitting
 - Prefetch/Preload JS + DNS + Data
 

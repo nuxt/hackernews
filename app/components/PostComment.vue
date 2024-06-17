@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import { timeAgo } from '~/composables/utils'
-
 defineProps({
   comment: {
     type: Object,
-    required: true
-  }
+    required: true,
+  },
 })
 
 const open = ref(true)
 
-function pluralize (n: number) {
+function pluralize(n: number) {
   return n + (n === 1 ? ' reply' : ' replies')
 }
 </script>

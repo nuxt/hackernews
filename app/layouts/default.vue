@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import { feedsInfo } from '~~/utils/api'
+
 const route = useRoute()
-const host = process.server
+const host = import.meta.server
   ? useRequestHeaders().host
   : window.location.host
 
 useHead({
   link: [
     // We use route.path since we don't use query parameters
-    { rel: 'canonical', href: `https://${host}${route.path}` }
-  ]
+    { rel: 'canonical', href: `https://${host}${route.path}` },
+  ],
 })
 </script>
 
@@ -32,7 +34,7 @@ useHead({
           v-for="(list, key) in feedsInfo"
           :key="key"
           :to="`/${key}`"
-          :class="{ active: $route.path.startsWith(`/${key}`)}"
+          :class="{ active: $route.path.startsWith(`/${key}`) }"
         >
           {{ list.title }}
         </NuxtLink>
@@ -58,16 +60,16 @@ body {
   background-color: #F4F4F5;
   margin: 0;
   padding: 0;
-  color: #18181B;
+  color: #020420;
   overflow-y: scroll;
 }
 
 a {
-  color: #18181B;
+  color: #020420;
   text-decoration: none;
 }
 .header {
-  background-color: #18181B;
+  background-color: #020420;
   z-index: 999;
   height: 55px;
 

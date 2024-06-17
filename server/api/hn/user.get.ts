@@ -1,26 +1,32 @@
 import { $fetch } from 'ofetch'
-import { User } from '~/types'
-import { baseURL } from '~/server/constants'
+import type { User } from '~~/types'
 
-async function fetchUser (id: string): Promise<User> {
-  const user = await $fetch(`${baseURL}/user/${id}.json`)
+async function fetchUser(id: string): Promise<User> {
+  const user = await $fetch(`/user/${id}.json`, { baseURL: BASE_URL })
   return {
     id: user.id,
     karma: user.karma,
     created_time: user.created,
-    about: user.about
+    about: user.about,
   }
 }
 
-export default defineEventHandler((event) => {
-  configureSWRHeaders(event)
+export default defineCachedEventHandler((event) => {
   const { id } = getQuery(event) as { id?: string }
 
   if (!id) {
     throw createError({
       statusCode: 422,
-      statusMessage: 'Must provide a user ID.'
+      statusMessage: 'Must provide a user ID.',
     })
   }
   return fetchUser(id)
+}, {
+  name: 'api/hn',
+  getKey(event) {
+    const { id } = getQuery(event)
+    return ['user', id].join('/')
+  },
+  swr: true,
+  maxAge: 10,
 })

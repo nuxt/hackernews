@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
-  feed: string,
-  page: number,
+  feed: string
+  page: number
   maxPage: number
 }>()
 
