@@ -4,11 +4,11 @@ Hacker News clone built with [Nuxt](https://nuxt.com).
 
 <p align="center">
   <a href="https://hn.nuxt.dev" target="_blank">
-    <img width="1090" src="https://hn.nuxt.dev/cover.jpg">
+    <img width="1090" src="https://github.com/nuxt/hackernews/assets/904724/9aa478bf-a43d-4222-8adf-a7a715d71e38">
     <br>
     Live Demo
   </a>
-</p>
+
 
 ## Demo
 
