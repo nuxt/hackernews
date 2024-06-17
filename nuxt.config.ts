@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   // https://nuxt.com/modules
-  modules: ['@nuxt/eslint', "@nuxthub/core"],
+  modules: ['@nuxt/eslint'],
   postcss: {
     plugins: {
       'postcss-nesting': {},
