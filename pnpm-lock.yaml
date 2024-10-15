@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^0.6.0
     version: 0.6.0(eslint@9.12.0)(typescript@5.6.3)
   '@nuxthub/core':
-    specifier: ^0.7.31
-    version: 0.7.31(vite@5.4.5)
+    specifier: ^0.7.32
+    version: 0.7.32(vite@5.4.5)
   '@types/node':
     specifier: ^20.16.11
     version: 20.16.11
@@ -1413,7 +1413,7 @@ packages:
       global-directory: 4.0.1
       magicast: 0.3.5
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       prompts: 2.4.2
       rc9: 2.1.2
       semver: 7.6.3
@@ -1567,7 +1567,7 @@ packages:
       knitwork: 1.1.0
       mlly: 1.7.2
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       scule: 1.3.0
       semver: 7.6.3
       ufo: 1.5.4
@@ -1590,7 +1590,7 @@ packages:
       defu: 6.1.4
       hookable: 5.5.3
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       scule: 1.3.0
       std-env: 3.7.0
       ufo: 1.5.4
@@ -1619,7 +1619,7 @@ packages:
       jiti: 1.21.6
       mri: 1.2.0
       nanoid: 5.0.7
-      ofetch: 1.3.4
+      ofetch: 1.4.1
       package-manager-detector: 0.2.0
       parse-git-config: 3.0.0
       pathe: 1.1.2
@@ -1655,11 +1655,11 @@ packages:
       h3: 1.13.0
       knitwork: 1.1.0
       magic-string: 0.30.11
-      mlly: 1.7.1
+      mlly: 1.7.2
       ohash: 1.1.4
       pathe: 1.1.2
       perfect-debounce: 1.0.0
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       postcss: 8.4.47
       rollup-plugin-visualizer: 5.12.0(rollup@4.18.0)
       std-env: 3.7.0
@@ -1697,8 +1697,8 @@ packages:
       - webpack-sources
     dev: true
 
-  /@nuxthub/core@0.7.31(vite@5.4.5):
-    resolution: {integrity: sha512-2pCjk+QPtYIrO56/bi2zgoW5/12Q0m1nNqoPBOLzbthC07HTqIcnKe2wetwlpD6YKDJZDKyZgm8ypDbkUyBI/A==}
+  /@nuxthub/core@0.7.32(vite@5.4.5):
+    resolution: {integrity: sha512-r5fTXqtVKjLGPp9g/pTgNtpnb4V5XACrcQI7KPOeYOf9fnuQkCe6XHDGf0ywWmg86sBimQzTtBCYffNrgfk5Ag==}
     dependencies:
       '@cloudflare/workers-types': 4.20241011.0
       '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(vite@5.4.5)
@@ -3056,17 +3056,17 @@ packages:
         optional: true
     dependencies:
       chokidar: 3.6.0
-      confbox: 0.1.7
+      confbox: 0.1.8
       defu: 6.1.4
       dotenv: 16.4.5
       giget: 1.2.3
       jiti: 1.21.6
       magicast: 0.3.5
-      mlly: 1.7.1
+      mlly: 1.7.2
       ohash: 1.1.4
       pathe: 1.1.2
       perfect-debounce: 1.0.0
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       rc9: 2.1.2
     dev: true
 
@@ -3262,10 +3262,6 @@ packages:
 
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
-    dev: true
-
-  /confbox@0.1.7:
-    resolution: {integrity: sha512-uJcB/FKZtBMCJpK8MQji6bJHgu1tixKPxRLeGkNzBoOZzpnZUJm0jm2/sBDWcuBx1dYgxV4JU+g5hmNxCyAmdA==}
     dev: true
 
   /confbox@0.1.8:
@@ -4626,7 +4622,7 @@ packages:
     resolution: {integrity: sha512-F9nJgOsDc3tysjN74edE0vGPEQrU7DAje6g5nNAL5Jc9Tv4JW3mH7XMGne+EaadTniDXLeUrVR21opkNfWO1zQ==}
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
-      mlly: 1.7.1
+      mlly: 1.7.2
       pathe: 1.1.2
       unenv: 1.10.0
       unplugin: 1.14.1
@@ -5005,7 +5001,7 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       mlly: 1.7.1
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
     dev: true
 
   /locate-path@5.0.0:
@@ -5128,12 +5124,6 @@ packages:
     hasBin: true
     dev: true
 
-  /mime@4.0.3:
-    resolution: {integrity: sha512-KgUb15Oorc0NEKPbvfa0wRU+PItIEZmiv+pyAO2i0oTIVTJhlzMclU7w4RXWQrSOVH5ax/p/CkIO7KI4OyFJTQ==}
-    engines: {node: '>=16'}
-    hasBin: true
-    dev: true
-
   /mime@4.0.4:
     resolution: {integrity: sha512-v8yqInVjhXyqP6+Kw4fV3ZzeMRqEW6FotRsKXjRS5VMTNIuXsdRoAvklpoRgSqXm6o9VNH4/C0mgedko9DdLsQ==}
     engines: {node: '>=16'}
@@ -5210,7 +5200,7 @@ packages:
     dependencies:
       acorn: 8.12.1
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       ufo: 1.5.4
     dev: true
 
@@ -5219,7 +5209,7 @@ packages:
     dependencies:
       acorn: 8.12.1
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       ufo: 1.5.4
     dev: true
 
@@ -5323,16 +5313,16 @@ packages:
       knitwork: 1.1.0
       listhen: 1.7.2
       magic-string: 0.30.11
-      mime: 4.0.3
-      mlly: 1.7.1
+      mime: 4.0.4
+      mlly: 1.7.2
       mri: 1.2.0
       node-fetch-native: 1.6.4
-      ofetch: 1.3.4
+      ofetch: 1.4.1
       ohash: 1.1.4
       openapi-typescript: 6.7.6
       pathe: 1.1.2
       perfect-debounce: 1.0.0
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       pretty-bytes: 6.1.1
       radix3: 1.1.2
       rollup: 4.18.0
@@ -5603,7 +5593,7 @@ packages:
       consola: 3.2.3
       execa: 8.0.1
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       ufo: 1.5.4
     dev: true
 
@@ -5863,7 +5853,7 @@ packages:
   /pkg-types@1.2.0:
     resolution: {integrity: sha512-+ifYuSSqOQ8CqP4MbZA5hDpb97n3E8SVWdJe+Wms9kj745lmd3b7EZJiqvmLwAlmRfjrI7Hi5z3kdBJ93lFNPA==}
     dependencies:
-      confbox: 0.1.7
+      confbox: 0.1.8
       mlly: 1.7.1
       pathe: 1.1.2
     dev: true
@@ -7072,7 +7062,7 @@ packages:
       magic-string: 0.30.11
       mlly: 1.7.1
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       scule: 1.3.0
       strip-literal: 2.1.0
       unplugin: 1.14.1
@@ -7093,7 +7083,7 @@ packages:
       magic-string: 0.30.11
       mlly: 1.7.2
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       scule: 1.3.0
       strip-literal: 2.1.0
       unplugin: 1.14.1
@@ -7124,7 +7114,7 @@ packages:
       json5: 2.2.3
       local-pkg: 0.5.0
       magic-string: 0.30.11
-      mlly: 1.7.1
+      mlly: 1.7.2
       pathe: 1.1.2
       scule: 1.3.0
       unplugin: 1.14.1
@@ -7239,7 +7229,7 @@ packages:
       magic-string: 0.30.11
       mlly: 1.7.2
       pathe: 1.1.2
-      pkg-types: 1.2.0
+      pkg-types: 1.2.1
       unplugin: 1.14.1
     transitivePeerDependencies:
       - webpack-sources
