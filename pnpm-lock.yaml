@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^0.6.0
     version: 0.6.0(eslint@9.13.0)(typescript@5.6.3)
   '@nuxthub/core':
-    specifier: ^0.7.34
-    version: 0.7.34(vite@5.4.5)
+    specifier: ^0.7.36
+    version: 0.7.36(vite@5.4.5)
   '@types/node':
     specifier: ^20.16.14
     version: 20.16.14
@@ -427,8 +427,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/workers-types@4.20241011.0:
-    resolution: {integrity: sha512-emwBnuFB/2lS1z6NXAeBqrSL8Xwnr7YpgdLuchOmgu/igqBsLLNPBb4Qmgh3neFWUe9wbzQyx030836YF3c3Xw==}
+  /@cloudflare/workers-types@4.20241018.0:
+    resolution: {integrity: sha512-gGWumpaaqnjN/G6SI7CZQ13G4SpIUV+EM8QqvuN2D3cGDF6mKIm+ov7H4x7V/c+AdY90v0FCc8B5nmEEt90MvQ==}
     dev: true
 
   /@csstools/selector-resolve-nested@2.0.0(postcss-selector-parser@6.1.2):
@@ -1702,10 +1702,10 @@ packages:
       - webpack-sources
     dev: true
 
-  /@nuxthub/core@0.7.34(vite@5.4.5):
-    resolution: {integrity: sha512-ia7lK5m4MhhMzg+B6M4Z2o6jcThLxHrRq/YLSob8JSmw1MTv9wjBCZIGR6NLnZDPEny+wTYRd01xEzibQz1Cig==}
+  /@nuxthub/core@0.7.36(vite@5.4.5):
+    resolution: {integrity: sha512-X25yOYMqmt1KxE190S1dS6biLVqQVfHMy3pCp2i38p5+JIFSwqXjYNWO1dWo3CLohFKHhDSuPgAzwlgRc6Fd/Q==}
     dependencies:
-      '@cloudflare/workers-types': 4.20241011.0
+      '@cloudflare/workers-types': 4.20241018.0
       '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(vite@5.4.5)
       '@nuxt/kit': 3.13.2(magicast@0.3.5)
       '@uploadthing/mime-types': 0.3.0
@@ -1715,7 +1715,7 @@ packages:
       destr: 2.0.3
       h3: 1.13.0
       mime: 4.0.4
-      nitro-cloudflare-dev: 0.2.0
+      nitro-cloudflare-dev: 0.2.1
       ofetch: 1.4.1
       pathe: 1.1.2
       pkg-types: 1.2.1
@@ -5253,8 +5253,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /nitro-cloudflare-dev@0.2.0:
-    resolution: {integrity: sha512-wcvKa0vFZViQm4VBlnVn0SforhfbYvRtq80+18vPXBvhMiTN7KfOthw71goeXelndlmF65TkvNy6SVUWXwOLqg==}
+  /nitro-cloudflare-dev@0.2.1:
+    resolution: {integrity: sha512-zHAN21dp+As0ldkAr5tWTop/I721j7MssZG6qb7a7EMorFwdRIhyTUwltr2L6v4qT4209S4eb2S9rszP1fxS7A==}
     dependencies:
       consola: 3.2.3
       mlly: 1.7.2
