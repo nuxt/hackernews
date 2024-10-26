@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^0.6.0
     version: 0.6.0(eslint@9.13.0)(typescript@5.6.3)
   '@nuxthub/core':
-    specifier: ^0.7.37
-    version: 0.7.37(vite@5.4.5)
+    specifier: ^0.8.2
+    version: 0.8.2(vite@5.4.5)
   '@types/node':
     specifier: ^20.17.1
     version: 20.17.1
@@ -1702,13 +1702,13 @@ packages:
       - webpack-sources
     dev: true
 
-  /@nuxthub/core@0.7.37(vite@5.4.5):
-    resolution: {integrity: sha512-SOAGUsW+XGA9oghwItTYjx3CtPyKuc7OhBONeGpUMGJ26xs2dKdEW7DV+My2woW2PXBWL4N5YLfV+m5e60yfAg==}
+  /@nuxthub/core@0.8.2(vite@5.4.5):
+    resolution: {integrity: sha512-C9XKgqQq0AXaH2AbCeFVFAEU14aTl0nP0g7mdtUN0c/JiQhdX1MIn70ANDUgFPVbNN5S6s8f38/OfJlXiDdpFA==}
     dependencies:
       '@cloudflare/workers-types': 4.20241022.0
       '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(vite@5.4.5)
       '@nuxt/kit': 3.13.2(magicast@0.3.5)
-      '@uploadthing/mime-types': 0.3.0
+      '@uploadthing/mime-types': 0.3.1
       citty: 0.1.6
       confbox: 0.1.8
       defu: 6.1.4
@@ -2528,8 +2528,8 @@ packages:
       vue: 3.5.5(typescript@5.6.3)
     dev: true
 
-  /@uploadthing/mime-types@0.3.0:
-    resolution: {integrity: sha512-jN/XFvpKTzcd3MXT/9D9oxx05scnYiSYxAXF/e6hyg377zFducRxivU/kHyYTkpUZPTmOL5q9EQbOkUsXMlSMg==}
+  /@uploadthing/mime-types@0.3.1:
+    resolution: {integrity: sha512-CaEadjn33CzPSLRaU8uL8IRv8MpW9xU5Rg/R45T5In8608dzovDDk0uQ9jzmmLYU5hHt+4v2qugcG/jirm/KEA==}
     dev: true
 
   /@vercel/nft@0.26.5:
