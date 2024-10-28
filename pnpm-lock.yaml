@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^0.6.0
     version: 0.6.0(eslint@9.13.0)(typescript@5.6.3)
   '@nuxthub/core':
-    specifier: ^0.8.2
-    version: 0.8.2(vite@5.4.5)
+    specifier: ^0.8.3
+    version: 0.8.3(vite@5.4.5)
   '@types/node':
     specifier: ^20.17.1
     version: 20.17.1
@@ -1702,8 +1702,8 @@ packages:
       - webpack-sources
     dev: true
 
-  /@nuxthub/core@0.8.2(vite@5.4.5):
-    resolution: {integrity: sha512-C9XKgqQq0AXaH2AbCeFVFAEU14aTl0nP0g7mdtUN0c/JiQhdX1MIn70ANDUgFPVbNN5S6s8f38/OfJlXiDdpFA==}
+  /@nuxthub/core@0.8.3(vite@5.4.5):
+    resolution: {integrity: sha512-3oae5Za/SYSuLOThj48viDVjlFo1XxEaOL/W77Z83zg5eb54Shnh18QIipRz4BURUpAXpYRbzlwxOpgW2Zs7JQ==}
     dependencies:
       '@cloudflare/workers-types': 4.20241022.0
       '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(vite@5.4.5)
