@@ -27,6 +27,5 @@ export default defineCachedEventHandler((event) => {
     const { id } = getQuery(event)
     return ['user', id].join('/')
   },
-  swr: true,
-  maxAge: 10,
+  maxAge: 60,
 })
