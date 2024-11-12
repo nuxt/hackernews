@@ -35,5 +35,6 @@ export default defineCachedEventHandler((event) => {
     const { page = '1', feed = 'news' } = getQuery(event)
     return ['feeds', feed, page].join('/')
   },
+  swr: false,
   maxAge: 60,
 })
