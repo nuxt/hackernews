@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^0.6.1
     version: 0.6.1(eslint@9.14.0)(typescript@5.6.3)
   '@nuxthub/core':
-    specifier: ^0.8.6
-    version: 0.8.6(vite@5.4.10)
+    specifier: ^0.8.7
+    version: 0.8.7(vite@5.4.10)
   '@types/node':
     specifier: ^22.9.0
     version: 22.9.0
@@ -647,8 +647,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/workers-types@4.20241022.0:
-    resolution: {integrity: sha512-1zOAw5QIDKItzGatzCrEpfLOB1AuMTwVqKmbw9B9eBfCUGRFNfJYMrJxIwcse9EmKahsQt2GruqU00pY/GyXgg==}
+  /@cloudflare/workers-types@4.20241112.0:
+    resolution: {integrity: sha512-Q4p9bAWZrX14bSCKY9to19xl0KMU7nsO5sJ2cTVspHoypsjPUMeQCsjHjmsO2C4Myo8/LPeDvmqFmkyNAPPYZw==}
     dev: true
 
   /@csstools/selector-resolve-nested@3.0.0(postcss-selector-parser@7.0.0):
@@ -1403,8 +1403,8 @@ packages:
     peerDependencies:
       vite: '*'
     dependencies:
-      '@nuxt/kit': 3.14.0(magicast@0.3.5)
-      '@nuxt/schema': 3.14.0(magicast@0.3.5)
+      '@nuxt/kit': 3.14.159(magicast@0.3.5)
+      '@nuxt/schema': 3.14.159(magicast@0.3.5)
       execa: 7.2.0
       vite: 5.4.10(@types/node@22.9.0)
     transitivePeerDependencies:
@@ -1591,42 +1591,11 @@ packages:
       - webpack-sources
     dev: true
 
-  /@nuxt/kit@3.14.0(magicast@0.3.5):
-    resolution: {integrity: sha512-Gl30WrzX7YSJqkTyOJlG4LkErShkGoHigWF/htFt9Q27Lx9JNCkOpXlEf+rA/vsDlXJeo8mVNRoMhS4Q+0d1Kg==}
-    engines: {node: ^14.18.0 || >=16.10.0}
-    dependencies:
-      '@nuxt/schema': 3.14.0(magicast@0.3.5)
-      c12: 2.0.1(magicast@0.3.5)
-      consola: 3.2.3
-      defu: 6.1.4
-      destr: 2.0.3
-      globby: 14.0.2
-      hash-sum: 2.0.0
-      ignore: 6.0.2
-      jiti: 2.4.0
-      klona: 2.0.6
-      knitwork: 1.1.0
-      mlly: 1.7.2
-      pathe: 1.1.2
-      pkg-types: 1.2.1
-      scule: 1.3.0
-      semver: 7.6.3
-      ufo: 1.5.4
-      unctx: 2.3.1
-      unimport: 3.13.1(rollup@4.24.4)
-      untyped: 1.5.1
-    transitivePeerDependencies:
-      - magicast
-      - rollup
-      - supports-color
-      - webpack-sources
-    dev: true
-
-  /@nuxt/kit@3.14.159:
+  /@nuxt/kit@3.14.159(magicast@0.3.5):
     resolution: {integrity: sha512-ZqxsCI1NKV/gjfEUUZjMcr82sg0MKYZOuyB6bu9QY5Zr7NGpfIZY/z5Z822AKTmFxKGChnuz9M0UaS4ze6p42g==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
-      '@nuxt/schema': 3.14.159
+      '@nuxt/schema': 3.14.159(magicast@0.3.5)
       c12: 2.0.1(magicast@0.3.5)
       consola: 3.2.3
       defu: 6.1.4
@@ -1668,38 +1637,14 @@ packages:
       ufo: 1.5.4
       uncrypto: 0.1.3
       unimport: 3.13.1(rollup@4.24.4)
-      untyped: 1.4.2
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-      - webpack-sources
-    dev: true
-
-  /@nuxt/schema@3.14.0(magicast@0.3.5):
-    resolution: {integrity: sha512-uLAAS7Za7+JXJg6phAjUecqBUfON/WZN/NbYic7uCM+4LUT8B4M/5WM9zFCZJi1g9Krns5Wr5GmJJPIfaYt0eQ==}
-    engines: {node: ^14.18.0 || >=16.10.0}
-    dependencies:
-      c12: 2.0.1(magicast@0.3.5)
-      compatx: 0.1.8
-      consola: 3.2.3
-      defu: 6.1.4
-      hookable: 5.5.3
-      pathe: 1.1.2
-      pkg-types: 1.2.1
-      scule: 1.3.0
-      std-env: 3.7.0
-      ufo: 1.5.4
-      uncrypto: 0.1.3
-      unimport: 3.13.1(rollup@4.24.4)
       untyped: 1.5.1
     transitivePeerDependencies:
-      - magicast
       - rollup
       - supports-color
       - webpack-sources
     dev: true
 
-  /@nuxt/schema@3.14.159:
+  /@nuxt/schema@3.14.159(magicast@0.3.5):
     resolution: {integrity: sha512-ggXA3F2f9udQoEy5WwrY6bTMvpDaErUYRLSEzdMqqCqjOQ5manfFgfuScGj3ooZiXLIX2TGLVTzcll4nnpDlnQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
@@ -1727,7 +1672,7 @@ packages:
     resolution: {integrity: sha512-h4YJ1d32cU7tDKjjhjtIIEck4WF/w3DTQBT348E9Pz85YLttnLqktLM0Ez9Xc2LzCeUgBDQv1el7Ob/zT3KUqg==}
     hasBin: true
     dependencies:
-      '@nuxt/kit': 3.14.159
+      '@nuxt/kit': 3.14.159(magicast@0.3.5)
       ci-info: 4.0.0
       consola: 3.2.3
       create-require: 1.1.1
@@ -1758,7 +1703,7 @@ packages:
     peerDependencies:
       vue: ^3.3.4
     dependencies:
-      '@nuxt/kit': 3.14.159
+      '@nuxt/kit': 3.14.159(magicast@0.3.5)
       '@rollup/plugin-replace': 6.0.1(rollup@4.24.4)
       '@vitejs/plugin-vue': 5.1.4(vite@5.4.10)(vue@3.5.12)
       '@vitejs/plugin-vue-jsx': 4.0.1(vite@5.4.10)(vue@3.5.12)
@@ -1817,13 +1762,13 @@ packages:
       - webpack-sources
     dev: true
 
-  /@nuxthub/core@0.8.6(vite@5.4.10):
-    resolution: {integrity: sha512-MP/nvSCY7dHkrmnJj3LEKxBvXocw6MDwGM8nzv4iD9ZKHosex/VuY9g+TCv97PguRbE0wdlCdM+iap8Y6UAf7A==}
+  /@nuxthub/core@0.8.7(vite@5.4.10):
+    resolution: {integrity: sha512-XPP+H/pdr3ubWY/V+EkAdqnBeNAP97Q0TtOXFebksP9yZ1LfMCXX/vjxdh747SWxMQVzY8HyandllJ3+6BNrkg==}
     dependencies:
-      '@cloudflare/workers-types': 4.20241022.0
+      '@cloudflare/workers-types': 4.20241112.0
       '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(vite@5.4.10)
-      '@nuxt/kit': 3.14.0(magicast@0.3.5)
-      '@uploadthing/mime-types': 0.3.1
+      '@nuxt/kit': 3.14.159(magicast@0.3.5)
+      '@uploadthing/mime-types': 0.3.2
       citty: 0.1.6
       confbox: 0.1.8
       defu: 6.1.4
@@ -1834,7 +1779,7 @@ packages:
       ofetch: 1.4.1
       pathe: 1.1.2
       pkg-types: 1.2.1
-      std-env: 3.7.0
+      std-env: 3.8.0
       ufo: 1.5.4
       uncrypto: 0.1.3
       unstorage: 1.13.1(ioredis@5.4.1)
@@ -2618,8 +2563,8 @@ packages:
       vue: 3.5.12(typescript@5.6.3)
     dev: true
 
-  /@uploadthing/mime-types@0.3.1:
-    resolution: {integrity: sha512-CaEadjn33CzPSLRaU8uL8IRv8MpW9xU5Rg/R45T5In8608dzovDDk0uQ9jzmmLYU5hHt+4v2qugcG/jirm/KEA==}
+  /@uploadthing/mime-types@0.3.2:
+    resolution: {integrity: sha512-WP/K75S/649lM0GUcd9jq4RjeTIc/0bO2UmLx4+usTSNy/x0K8gV0JdLWeUUbmTQtJoHd4ZTSvAdG7ZQgcmXvA==}
     dev: true
 
   /@vercel/nft@0.27.5:
@@ -5751,8 +5696,8 @@ packages:
     dependencies:
       '@nuxt/devalue': 2.0.2
       '@nuxt/devtools': 1.6.0(vite@5.4.10)(vue@3.5.12)
-      '@nuxt/kit': 3.14.159
-      '@nuxt/schema': 3.14.159
+      '@nuxt/kit': 3.14.159(magicast@0.3.5)
+      '@nuxt/schema': 3.14.159(magicast@0.3.5)
       '@nuxt/telemetry': 2.6.0
       '@nuxt/vite-builder': 3.14.159(@types/node@22.9.0)(eslint@9.14.0)(typescript@5.6.3)(vue@3.5.12)
       '@types/node': 22.9.0
@@ -6997,6 +6942,10 @@ packages:
 
   /std-env@3.7.0:
     resolution: {integrity: sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==}
+    dev: true
+
+  /std-env@3.8.0:
+    resolution: {integrity: sha512-Bc3YwwCB+OzldMxOXJIIvC6cPRWr/LxOp48CdQTOkPyk/t4JWWJbrilwBd7RJzKV8QW7tJkcgAmeuLLJugl5/w==}
     dev: true
 
   /streamx@2.15.5:
