@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.6.0",
-    "@nuxt/eslint": "^0.7.0",
-    "@nuxt/eslint-config": "^0.7.0",
+    "@nuxt/eslint": "^0.7.1",
+    "@nuxt/eslint-config": "^0.7.1",
     "@nuxthub/core": "^0.8.7",
     "@types/node": "^22.9.0",
     "eslint": "^9.15.0",
