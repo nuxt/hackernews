@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import { feedsInfo } from '~~/utils/api'
+
+import { ref } from 'vue'
+
+const isDarkMode = ref(false)
+
+function toggleSwitch() {
+  isDarkMode.value = !isDarkMode.value
+  document.documentElement.classList.toggle('dark-mode', isDarkMode.value)
+}
 </script>
 
 <template>

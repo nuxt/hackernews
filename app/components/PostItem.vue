@@ -86,4 +86,27 @@ defineProps<{
     }
   }
 }
+
+/* Dark mode styles */
+.dark-mode .news-item {
+  background-color: #2e2e2e;
+  border-bottom: 1px solid #444;
+
+  .score {
+    color: #00C48D;
+  }
+
+  .meta, .host {
+    color: #ccc;
+
+    & a {
+      color: #ccc;
+
+      &:hover {
+        color: #00C48D;
+      }
+    }
+  }
+}
+
 </style>
