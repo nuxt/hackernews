@@ -59,4 +59,24 @@ const hasMore = computed(() => props.page < props.maxPage)
     text-align: center;
   }
 }
+
+/* Dark mode styles */
+.dark-mode .news-list-nav, .dark-mode .news-list {
+  background-color: #2e2e2e;
+}
+
+.dark-mode .news-list-nav {
+  & a {
+    color: #ccc;
+  }
+
+  .disabled {
+    opacity: 0.5;
+  }
+
+  .page {
+    color: #ccc;
+  }
+}
+
 </style>

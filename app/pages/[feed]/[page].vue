@@ -139,4 +139,10 @@ watch(page, to => pageChanged(to))
     margin: 10px 0;
   }
 }
+
+/* Dark mode styles */
+.dark-mode .news-list {
+  background-color: #2e2e2e;
+}
+
 </style>

@@ -72,4 +72,27 @@ useHead({
     text-decoration: underline;
   }
 }
+
+/* Dark mode styles */
+.dark-mode .user-view {
+  background-color: #2e2e2e;
+  color: #F4F4F5;
+
+  & h1 {
+    color: #F4F4F5;
+  }
+
+  .label {
+    color: #ccc;
+  }
+
+  .about {
+    color: #ccc;
+  }
+
+  .links a {
+    color: #00C48D;
+  }
+}
+
 </style>

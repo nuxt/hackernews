@@ -103,4 +103,44 @@ function pluralize(n: number) {
     }
   }
 }
+
+/* Dark mode styles */
+.dark-mode .comment {
+  border-top: 1px solid #444;
+
+  .by {
+    color: #ccc;
+
+    & a {
+      color: #ccc;
+    }
+  }
+
+  .text {
+    color: #ccc;
+
+    & a:hover {
+      color: #00C48D;
+    }
+
+    & pre {
+      background-color: #333;
+      color: #ccc;
+    }
+  }
+
+  .toggle {
+    background-color: #333;
+    color: #ccc;
+
+    & a {
+      color: #00C48D;
+    }
+
+    &.open {
+      background-color: transparent;
+    }
+  }
+}
+
 </style>
