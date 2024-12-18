@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^0.7.3
     version: 0.7.3(@vue/compiler-sfc@3.5.13)(eslint@9.17.0)(typescript@5.7.2)
   '@nuxthub/core':
-    specifier: ^0.8.8
-    version: 0.8.8(vite@5.4.11)
+    specifier: ^0.8.10
+    version: 0.8.10(vite@5.4.11)
   '@types/node':
     specifier: ^22.10.2
     version: 22.10.2
@@ -395,8 +395,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/workers-types@4.20241205.0:
-    resolution: {integrity: sha512-pj1VKRHT/ScQbHOIMFODZaNAlJHQHdBSZXNIdr9ebJzwBff9Qz8VdqhbhggV7f+aUEh8WSbrsPIo4a+WtgjUvw==}
+  /@cloudflare/workers-types@4.20241216.0:
+    resolution: {integrity: sha512-PGIINXS+aE9vD2GYyWXfRG+VyxxceRkGDCoPxqwUweh1Bfv75HVotyL/adJ7mRVwh3XZDifGBdTaLReTT+Fcog==}
     dev: true
 
   /@csstools/selector-resolve-nested@3.0.0(postcss-selector-parser@7.0.0):
@@ -1471,11 +1471,11 @@ packages:
       - vue-tsc
     dev: true
 
-  /@nuxthub/core@0.8.8(vite@5.4.11):
-    resolution: {integrity: sha512-r4iiEMROyBN1er1OOQx4Y41NGkkGdZkDKswZJI1Ao1qMYsyQ0I8tkre0Uc4HkfuDHjcRaW67sk7tZ/C/BKRBVA==}
+  /@nuxthub/core@0.8.10(vite@5.4.11):
+    resolution: {integrity: sha512-KqIFlWb1Fx/TF02k32LsvKxiFCcNluTYJdk06XvmCezr8Xz4NLfu/BlqqVIpWz1geR8acmLBrFnk9nJb/50MeA==}
     dependencies:
-      '@cloudflare/workers-types': 4.20241205.0
-      '@nuxt/devtools-kit': 1.6.3(vite@5.4.11)
+      '@cloudflare/workers-types': 4.20241216.0
+      '@nuxt/devtools-kit': 1.6.4(magicast@0.3.5)(vite@5.4.11)
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)
       '@uploadthing/mime-types': 0.3.2
       citty: 0.1.6
