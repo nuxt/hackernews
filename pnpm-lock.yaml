@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^1.7.0
     version: 1.7.0(vite@6.0.11)(vue@3.5.13)
   '@nuxt/eslint':
-    specifier: ^0.7.6
-    version: 0.7.6(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)(typescript@5.7.3)(vite@6.0.11)
+    specifier: ^1.0.0
+    version: 1.0.0(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)(typescript@5.7.3)(vite@6.0.11)
   '@nuxt/eslint-config':
     specifier: ^0.7.6
     version: 0.7.6(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)(typescript@5.7.3)
@@ -694,6 +694,18 @@ packages:
       eslint: 9.19.0
     dev: true
 
+  /@eslint/compat@1.2.5(eslint@9.19.0):
+    resolution: {integrity: sha512-5iuG/StT+7OfvhoBHPlmxkPA9om6aDUFgmD4+mWKAGsYt4vCe8rypneG03AuseyRHBmcCLXQtIH5S26tIoggLg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^9.10.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+    dependencies:
+      eslint: 9.19.0
+    dev: true
+
   /@eslint/config-array@0.19.1:
     resolution: {integrity: sha512-fo6Mtm5mWyKjA/Chy1BYTdn5mGJoDNjC7C64ug20ADsRDGrA85bN3uK3MaKbeRkRuuIEAR5N33Jr1pbm411/PA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1107,6 +1119,42 @@ packages:
       - typescript
     dev: true
 
+  /@nuxt/eslint-config@1.0.0(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)(typescript@5.7.3):
+    resolution: {integrity: sha512-Bxvx6y68WqLkubKv9zDP7mdl82ljO7Zmqi13RWveGTvFt61BwP4bQIF10s8r1rfE+2svDN8d0L9eIDoDHtHZQg==}
+    peerDependencies:
+      eslint: ^9.0.0
+      eslint-plugin-format: '*'
+    peerDependenciesMeta:
+      eslint-plugin-format:
+        optional: true
+    dependencies:
+      '@antfu/install-pkg': 1.0.0
+      '@clack/prompts': 0.9.1
+      '@eslint/js': 9.19.0
+      '@nuxt/eslint-plugin': 1.0.0(eslint@9.19.0)(typescript@5.7.3)
+      '@stylistic/eslint-plugin': 3.0.1(eslint@9.19.0)(typescript@5.7.3)
+      '@typescript-eslint/eslint-plugin': 8.22.0(@typescript-eslint/parser@8.22.0)(eslint@9.19.0)(typescript@5.7.3)
+      '@typescript-eslint/parser': 8.22.0(eslint@9.19.0)(typescript@5.7.3)
+      eslint: 9.19.0
+      eslint-config-flat-gitignore: 2.0.0(eslint@9.19.0)
+      eslint-flat-config-utils: 2.0.0
+      eslint-merge-processors: 1.0.0(eslint@9.19.0)
+      eslint-plugin-import-x: 4.6.1(eslint@9.19.0)(typescript@5.7.3)
+      eslint-plugin-jsdoc: 50.6.3(eslint@9.19.0)
+      eslint-plugin-regexp: 2.7.0(eslint@9.19.0)
+      eslint-plugin-unicorn: 56.0.1(eslint@9.19.0)
+      eslint-plugin-vue: 9.32.0(eslint@9.19.0)
+      eslint-processor-vue-blocks: 1.0.0(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)
+      globals: 15.14.0
+      local-pkg: 1.0.0
+      pathe: 2.0.2
+      vue-eslint-parser: 9.4.3(eslint@9.19.0)
+    transitivePeerDependencies:
+      - '@vue/compiler-sfc'
+      - supports-color
+      - typescript
+    dev: true
+
   /@nuxt/eslint-plugin@0.7.6(eslint@9.19.0)(typescript@5.7.3):
     resolution: {integrity: sha512-x06lBR7sbsSP+H3zepVhgP7mSX6LTyluj2mj4HwMCQUXQo/7pW5mmOGnN3QU9PRxKNG2qz5Zhxb/w3NSjkyV3g==}
     peerDependencies:
@@ -1120,12 +1168,25 @@ packages:
       - typescript
     dev: true
 
-  /@nuxt/eslint@0.7.6(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)(typescript@5.7.3)(vite@6.0.11):
-    resolution: {integrity: sha512-q0tKt+2LHczd0xdlfQoB11i6rgdLHHG/OZk7f/DCQdsr5IxAobGZhPAdhRn9FPxo1IecRh732BYA+usr4MPd7g==}
+  /@nuxt/eslint-plugin@1.0.0(eslint@9.19.0)(typescript@5.7.3):
+    resolution: {integrity: sha512-mYkq6V3xCVwnJxiwqTYfEe3HYV/Nxayes9cqY5maijSMJSCSI8l73FYWal2HFvsSoqilYhN4EfgzCHPhyWHqQQ==}
     peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
+      eslint: ^9.0.0
+    dependencies:
+      '@typescript-eslint/types': 8.22.0
+      '@typescript-eslint/utils': 8.22.0(eslint@9.19.0)(typescript@5.7.3)
+      eslint: 9.19.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
+  /@nuxt/eslint@1.0.0(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)(typescript@5.7.3)(vite@6.0.11):
+    resolution: {integrity: sha512-RtVvRM+rv9q4x9nZVHkVo7X0gRvockZm6b5EYshO0A0qjughD3fj7N1sSYxvyO9n8IBxrnWT5jHa+2txdzuthg==}
+    peerDependencies:
+      eslint: ^9.0.0
       eslint-webpack-plugin: ^4.1.0
-      vite-plugin-eslint2: ^4.4.0 || ^5.0.0
+      vite-plugin-eslint2: ^5.0.0
     peerDependenciesMeta:
       eslint-webpack-plugin:
         optional: true
@@ -1134,8 +1195,8 @@ packages:
     dependencies:
       '@eslint/config-inspector': 1.0.0(eslint@9.19.0)
       '@nuxt/devtools-kit': 1.7.0(magicast@0.3.5)(vite@6.0.11)
-      '@nuxt/eslint-config': 0.7.6(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)(typescript@5.7.3)
-      '@nuxt/eslint-plugin': 0.7.6(eslint@9.19.0)(typescript@5.7.3)
+      '@nuxt/eslint-config': 1.0.0(@vue/compiler-sfc@3.5.13)(eslint@9.19.0)(typescript@5.7.3)
+      '@nuxt/eslint-plugin': 1.0.0(eslint@9.19.0)(typescript@5.7.3)
       '@nuxt/kit': 3.15.4(magicast@0.3.5)
       chokidar: 4.0.3
       eslint: 9.19.0
@@ -3381,6 +3442,15 @@ packages:
       find-up-simple: 1.0.0
     transitivePeerDependencies:
       - eslint
+    dev: true
+
+  /eslint-config-flat-gitignore@2.0.0(eslint@9.19.0):
+    resolution: {integrity: sha512-9iH+DZO94uxsw5iFjzqa9GfahA5oK3nA1GoJK/6u8evAtooYJMwuSWiLcGDfrdLoqdQ5/kqFJKKuMY/+SAasvg==}
+    peerDependencies:
+      eslint: ^9.5.0
+    dependencies:
+      '@eslint/compat': 1.2.5(eslint@9.19.0)
+      eslint: 9.19.0
     dev: true
 
   /eslint-flat-config-utils@2.0.0:
