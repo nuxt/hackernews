@@ -22,7 +22,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@nuxt/devtools": "^2.1.0",
+    "@nuxt/devtools": "^2.1.1",
     "@nuxt/eslint": "^1.1.0",
     "@nuxt/eslint-config": "^1.1.0",
     "@nuxthub/core": "^0.8.17",
