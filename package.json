@@ -25,7 +25,7 @@
     "@nuxt/devtools": "^2.3.1",
     "@nuxt/eslint": "^1.2.0",
     "@nuxt/eslint-config": "^1.2.0",
-    "@nuxthub/core": "^0.8.18",
+    "@nuxthub/core": "^0.8.19",
     "@types/node": "^22.13.13",
     "eslint": "^9.23.0",
     "nuxt": "^3.16.1",
