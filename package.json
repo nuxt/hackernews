@@ -30,6 +30,6 @@
     "eslint": "^9.24.0",
     "nuxt": "^3.16.2",
     "postcss-nesting": "^13.0.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }
