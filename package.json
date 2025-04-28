@@ -28,7 +28,7 @@
     "@nuxthub/core": "^0.8.24",
     "@types/node": "^22.14.1",
     "eslint": "^9.25.1",
-    "nuxt": "^3.16.2",
+    "nuxt": "^3.17.0",
     "postcss-nesting": "^13.0.1",
     "typescript": "^5.8.3"
   }
