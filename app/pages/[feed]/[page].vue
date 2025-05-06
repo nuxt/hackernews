@@ -141,7 +141,7 @@ watch(page, to => pageChanged(to))
 }
 
 /* Dark mode styles */
-.dark-mode .news-list {
+.dark .news-list {
   background-color: #2e2e2e;
 }
 

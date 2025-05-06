@@ -74,7 +74,7 @@ useHead({
 }
 
 /* Dark mode styles */
-.dark-mode .user-view {
+.dark .user-view {
   background-color: #2e2e2e;
   color: #F4F4F5;
 

@@ -88,7 +88,7 @@ defineProps<{
 }
 
 /* Dark mode styles */
-.dark-mode .news-item {
+.dark .news-item {
   background-color: #2e2e2e;
   border-bottom: 1px solid #444;
 

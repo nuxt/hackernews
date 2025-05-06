@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { feedsInfo } from '~~/utils/api'
 
-import { ref } from 'vue'
-
-const isDarkMode = ref(false)
+const colorMode = useColorMode()
 
 function toggleSwitch() {
-  isDarkMode.value = !isDarkMode.value
-  document.documentElement.classList.toggle('dark-mode', isDarkMode.value)
+  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
 </script>
 

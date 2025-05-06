@@ -61,22 +61,26 @@ const hasMore = computed(() => props.page < props.maxPage)
 }
 
 /* Dark mode styles */
-.dark-mode .news-list-nav, .dark-mode .news-list {
+.dark .news-list-nav, .dark .news-list {
   background-color: #2e2e2e;
 }
 
-.dark-mode .news-list-nav {
+.dark .news-list-nav {
   & a {
     color: #ccc;
+    
+    &:hover {
+      color: #fff;
+    }
   }
 
   .disabled {
     opacity: 0.5;
+    color: #666;
   }
 
   .page {
     color: #ccc;
   }
 }
-
 </style>

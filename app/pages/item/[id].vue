@@ -125,7 +125,7 @@ useHead({
 }
 
 /* Dark mode styles */
-.dark-mode .item-view-header {
+.dark .item-view-header {
   background-color: #2e2e2e;
   box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
 
@@ -141,11 +141,11 @@ useHead({
   }
 }
 
-.dark-mode .item-view-comments {
+.dark .item-view-comments {
   background-color: #2e2e2e;
 }
 
-.dark-mode .item-view-comments-header {
+.dark .item-view-comments-header {
   color: #F4F4F5;
 }
 

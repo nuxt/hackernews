@@ -105,7 +105,7 @@ function pluralize(n: number) {
 }
 
 /* Dark mode styles */
-.dark-mode .comment {
+.dark .comment {
   border-top: 1px solid #444;
 
   .by {

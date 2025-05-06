@@ -128,12 +128,12 @@ a {
 }
 
 /* Dark mode styles */
-.dark-mode body {
+.dark body {
   background-color: #020420;
   color: #F4F4F5;
 }
 
-.dark-mode a {
+.dark a {
   color: #F4F4F5;
 }
 
