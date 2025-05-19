@@ -172,8 +172,8 @@ packages:
     resolution: {integrity: sha512-+tv3z+SPp+gqTIcImN9o0hqE9xyfQjI1XD9pL6NuKjua9B1y7mNYv0S9cP+QEbA4ppVgGZEmKOvHX5G5Ei1CVA==}
     engines: {node: '>=18.0.0'}
 
-  '@cloudflare/workers-types@4.20250517.0':
-    resolution: {integrity: sha512-DYttpORVcvKGXI+zQDHBO6r0pDsAc8fkmJg0x1PK7+t0ijfc6nMVnUF/IVJIllScOWWHHCBknCbCmV0eGq2njA==}
+  '@cloudflare/workers-types@4.20250519.0':
+    resolution: {integrity: sha512-glS4kimqTyxVuNNPCoOzE/BmQ3w+HVQuPwYdPAQrUDaj2AKS8Y3O5w85TVFTKZGhCtwfNs8h4iohldjEs/P5Vw==}
 
   '@colors/colors@1.6.0':
     resolution: {integrity: sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==}
@@ -4550,7 +4550,7 @@ snapshots:
     dependencies:
       mime: 3.0.0
 
-  '@cloudflare/workers-types@4.20250517.0': {}
+  '@cloudflare/workers-types@4.20250519.0': {}
 
   '@colors/colors@1.6.0': {}
 
@@ -5231,7 +5231,7 @@ snapshots:
 
   '@nuxthub/core@0.8.27(db0@0.3.2)(ioredis@5.6.1)(magicast@0.3.5)(vite@6.3.5(@types/node@22.15.19)(jiti@2.4.2)(terser@5.39.2)(yaml@2.8.0))':
     dependencies:
-      '@cloudflare/workers-types': 4.20250517.0
+      '@cloudflare/workers-types': 4.20250519.0
       '@nuxt/devtools-kit': 2.4.1(magicast@0.3.5)(vite@6.3.5(@types/node@22.15.19)(jiti@2.4.2)(terser@5.39.2)(yaml@2.8.0))
       '@nuxt/kit': 3.17.3(magicast@0.3.5)
       '@uploadthing/mime-types': 0.3.5
