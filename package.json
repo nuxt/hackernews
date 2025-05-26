@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^2.4.1",
-    "@nuxt/eslint": "^1.4.0",
-    "@nuxt/eslint-config": "^1.4.0",
+    "@nuxt/eslint": "^1.4.1",
+    "@nuxt/eslint-config": "^1.4.1",
     "@nuxthub/core": "^0.8.27",
-    "@types/node": "^22.15.19",
+    "@types/node": "^22.15.21",
     "eslint": "^9.27.0",
     "nuxt": "^3.17.4",
     "postcss-nesting": "^13.0.1",
