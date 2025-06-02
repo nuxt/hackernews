@@ -16,9 +16,9 @@
     }
   ],
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "nuxi start",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
     "lint": "eslint ."
   },
   "devDependencies": {
