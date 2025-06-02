@@ -21,10 +21,10 @@ importers:
         specifier: ^0.8.27
         version: 0.8.27(db0@0.3.2)(ioredis@5.6.1)(magicast@0.3.5)(vite@6.3.5(@types/node@22.15.29)(jiti@2.4.2)(terser@5.40.0)(yaml@2.8.0))
       '@types/node':
-        specifier: ^22.15.21
+        specifier: ^22.15.29
         version: 22.15.29
       eslint:
-        specifier: ^9.27.0
+        specifier: ^9.28.0
         version: 9.28.0(jiti@2.4.2)
       nuxt:
         specifier: ^3.17.4
