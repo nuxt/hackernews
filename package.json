@@ -26,7 +26,7 @@
     "@nuxt/eslint": "^1.9.0",
     "@nuxt/eslint-config": "^1.9.0",
     "@nuxthub/core": "^0.9.0",
-    "@types/node": "^22.17.2",
+    "@types/node": "^22.18.0",
     "eslint": "^9.34.0",
     "nuxt": "^4.0.3",
     "postcss-nesting": "^13.0.2",
