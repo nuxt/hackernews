@@ -27,7 +27,7 @@ importers:
         specifier: ^9.35.0
         version: 9.35.0(jiti@2.5.1)
       nuxt:
-        specifier: ^4.1.1
+        specifier: ^4.1.2
         version: 4.1.2(@parcel/watcher@2.5.1)(@types/node@22.18.3)(@vue/compiler-sfc@3.5.21)(db0@0.3.2)(eslint@9.35.0(jiti@2.5.1))(ioredis@5.7.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.50.1)(terser@5.44.0)(typescript@5.9.2)(vite@7.1.5(@types/node@22.18.3)(jiti@2.5.1)(terser@5.44.0)(yaml@2.8.1))(yaml@2.8.1)
       postcss-nesting:
         specifier: ^13.0.2
