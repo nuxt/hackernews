@@ -41,6 +41,10 @@ function pageChanged(to: number) {
     return
   }
 
+  if (to === maxPage.value) {
+    return
+  }
+
   // Prefetch next page
   fetchFeed({
     feed: feed.value,
