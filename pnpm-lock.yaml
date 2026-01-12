@@ -21,7 +21,7 @@ importers:
         specifier: ^0.10.4
         version: 0.10.4(db0@0.3.4)(ioredis@5.8.2)(magicast@0.5.1)(typescript@5.9.3)
       '@types/node':
-        specifier: ^24.10.4
+        specifier: ^24.10.7
         version: 24.10.7
       eslint:
         specifier: ^9.39.2
