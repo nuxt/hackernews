@@ -29,7 +29,7 @@
     "@types/node": "^24.10.7",
     "eslint": "^9.39.2",
     "nuxt": "^4.2.2",
-    "postcss-nesting": "^13.0.2",
+    "postcss-nesting": "^14.0.0",
     "typescript": "^5.9.3"
   }
 }
