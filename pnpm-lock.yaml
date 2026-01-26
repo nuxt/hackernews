@@ -12,13 +12,13 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       '@nuxt/eslint':
-        specifier: ^1.12.1
+        specifier: ^1.13.0
         version: 1.13.0(@typescript-eslint/utils@8.53.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.27)(eslint@9.39.2(jiti@2.6.1))(magicast@0.5.1)(typescript@5.9.3)(vite@7.3.1(@types/node@24.10.9)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))
       '@nuxt/eslint-config':
-        specifier: ^1.12.1
+        specifier: ^1.13.0
         version: 1.13.0(@typescript-eslint/utils@8.53.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.27)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       '@nuxthub/core':
-        specifier: ^0.10.4
+        specifier: ^0.10.5
         version: 0.10.5(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)
       '@types/node':
         specifier: ^24.10.9
