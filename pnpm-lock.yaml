@@ -19,7 +19,7 @@ importers:
         version: 1.13.0(@typescript-eslint/utils@8.53.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.27)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       '@nuxthub/core':
         specifier: ^0.10.5
-        version: 0.10.5(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)
+        version: 0.10.6(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)
       '@types/node':
         specifier: ^24.10.9
         version: 24.10.9
@@ -620,8 +620,8 @@ packages:
       rolldown:
         optional: true
 
-  '@nuxthub/core@0.10.5':
-    resolution: {integrity: sha512-I733Mdv2P6FKizo4049bSMfkW4zNchcQmd5iUSnXNaJdQSUze66Qmzv4SgiXtSu7zWC0wiXzHsPYnH25+QNUDA==}
+  '@nuxthub/core@0.10.6':
+    resolution: {integrity: sha512-RkUR58YYip0a8kDwmVR3i2px6qJxRfo/FoCw2eANTNt+1oNMtxlAtvI98/fpVPB2/e/xXGX4uiZEnybWjqAO7g==}
     hasBin: true
 
   '@oxc-minify/binding-android-arm-eabi@0.110.0':
@@ -5310,7 +5310,7 @@ snapshots:
       - vue-tsc
       - yaml
 
-  '@nuxthub/core@0.10.5(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)':
+  '@nuxthub/core@0.10.6(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)':
     dependencies:
       '@cloudflare/workers-types': 4.20260103.0
       '@nuxt/kit': 4.3.0(magicast@0.5.1)
