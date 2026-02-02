@@ -18,7 +18,7 @@ importers:
         specifier: ^1.13.0
         version: 1.13.0(@typescript-eslint/utils@8.53.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.27)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       '@nuxthub/core':
-        specifier: ^0.10.5
+        specifier: ^0.10.6
         version: 0.10.6(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.1)(typescript@5.9.3)
       '@types/node':
         specifier: ^24.10.9
