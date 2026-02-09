@@ -1,7 +1,7 @@
 {
   "name": "nuxt-hn",
   "private": true,
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.2",
   "description": "Nuxt Hacker News",
   "author": "Evan You <yyx990803@gmail.com>",
   "contributors": [
@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.1.1",
-    "@nuxt/eslint": "^1.13.0",
-    "@nuxt/eslint-config": "^1.13.0",
+    "@nuxt/eslint": "^1.14.0",
+    "@nuxt/eslint-config": "^1.14.0",
     "@nuxthub/core": "^0.10.6",
-    "@types/node": "^24.10.9",
+    "@types/node": "^24.10.12",
     "eslint": "^9.39.2",
     "nuxt": "^4.3.1",
     "postcss-nesting": "^14.0.0",
