@@ -9,19 +9,19 @@ importers:
   .:
     devDependencies:
       '@nuxt/devtools':
-        specifier: ^3.1.1
+        specifier: ^3.2.1
         version: 3.2.1(vite@7.3.1(@types/node@24.10.13)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       '@nuxt/eslint':
-        specifier: ^1.14.0
+        specifier: ^1.15.1
         version: 1.15.1(@typescript-eslint/utils@8.55.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.27)(eslint@10.0.0(jiti@2.6.1))(magicast@0.5.2)(typescript@5.9.3)(vite@7.3.1(@types/node@24.10.13)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.2))
       '@nuxt/eslint-config':
-        specifier: ^1.14.0
+        specifier: ^1.15.1
         version: 1.15.1(@typescript-eslint/utils@8.55.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.27)(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.3)
       '@nuxthub/core':
         specifier: ^0.10.6
         version: 0.10.6(db0@0.3.4)(ioredis@5.9.2)(magicast@0.5.2)(typescript@5.9.3)
       '@types/node':
-        specifier: ^24.10.12
+        specifier: ^24.10.13
         version: 24.10.13
       eslint:
         specifier: ^10.0.0
