@@ -22,12 +22,12 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@nuxt/devtools": "^3.2.3",
+    "@nuxt/devtools": "^3.2.4",
     "@nuxt/eslint": "^1.15.2",
     "@nuxt/eslint-config": "^1.15.2",
     "@nuxthub/core": "^0.10.7",
     "@types/node": "^24.12.0",
-    "eslint": "^10.0.3",
+    "eslint": "^10.1.0",
     "nuxt": "^4.4.2",
     "postcss-nesting": "^14.0.0",
     "typescript": "^5.9.3"
