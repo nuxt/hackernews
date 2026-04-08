@@ -21,10 +21,10 @@ importers:
         specifier: ^0.10.7
         version: 0.10.7(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.2)(typescript@6.0.2)
       '@types/node':
-        specifier: ^24.12.0
+        specifier: ^24.12.2
         version: 24.12.2
       eslint:
-        specifier: ^10.1.0
+        specifier: ^10.2.0
         version: 10.2.0(jiti@2.6.1)
       nuxt:
         specifier: ^4.4.2
