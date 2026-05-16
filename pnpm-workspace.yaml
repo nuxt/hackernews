@@ -1,0 +1,8 @@
+shamefullyHoist: true
+
+autoInstallPeers: true
+
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: false
+  unrs-resolver: false
