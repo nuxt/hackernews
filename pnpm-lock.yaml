@@ -24,7 +24,7 @@ importers:
         specifier: ^24.12.4
         version: 24.12.4
       eslint:
-        specifier: ^10.3.0
+        specifier: ^10.4.0
         version: 10.4.0(jiti@2.7.0)
       nuxt:
         specifier: ^4.4.6
