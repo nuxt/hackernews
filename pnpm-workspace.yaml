@@ -6,3 +6,10 @@ allowBuilds:
   '@parcel/watcher': false
   esbuild: false
   unrs-resolver: false
+
+minimumReleaseAgeExclude:
+  - nuxt
+  - nuxt-nightly
+  - '@nuxt/*'
+  - vue
+  - '@vue/*'
