@@ -1,10 +1,15 @@
 export default defineNuxtConfig({
-  future: { compatibilityVersion: 4 },
   // https://nuxt.com/modules
   modules: [
     '@nuxthub/core',
     '@nuxt/eslint',
   ],
+
+  // https://devtools.nuxt.com
+  devtools: {
+    enabled: true,
+  },
+  future: { compatibilityVersion: 4 },
   hub: {
     cache: true,
   },
@@ -12,11 +17,6 @@ export default defineNuxtConfig({
     plugins: {
       'postcss-nesting': {},
     },
-  },
-
-  // https://devtools.nuxt.com
-  devtools: {
-    enabled: true,
   },
   // https://eslint.nuxt.com
   eslint: {

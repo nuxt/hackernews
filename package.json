@@ -1,5 +1,6 @@
 {
   "name": "nuxt-hn",
+  "type": "module",
   "private": true,
   "packageManager": "pnpm@11.18.0",
   "description": "Nuxt Hacker News",
@@ -19,17 +20,26 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:nuxt": "vitest run --project nuxt",
+    "test:e2e": "vitest run --project e2e"
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.4.0",
     "@nuxt/eslint": "^1.16.0",
     "@nuxt/eslint-config": "^1.16.0",
+    "@nuxt/test-utils": "^4.1.0",
     "@nuxthub/core": "^0.10.8",
     "@types/node": "^24.13.3",
+    "@vue/test-utils": "^2.4.11",
     "eslint": "^10.8.0",
+    "happy-dom": "^20.11.2",
     "nuxt": "^4.5.2",
     "postcss-nesting": "^14.0.1",
-    "typescript": "^7.0.2"
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
   }
 }
