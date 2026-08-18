@@ -19,10 +19,10 @@ export async function fetchItem(
     comments_count: Object.values(item.kids).length,
     comments: withComments
       ? await Promise.all(
-        Object.values(item.kids as string[]).map(id =>
-          fetchItem(id, withComments),
-        ),
-      )
+          Object.values(item.kids as string[]).map(id =>
+            fetchItem(id, withComments),
+          ),
+        )
       : [],
   }
 }
