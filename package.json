@@ -28,18 +28,18 @@
     "test:e2e": "vitest run --project e2e"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^3.4.1",
+    "@nuxt/devtools": "^3.4.2",
     "@nuxt/eslint": "^1.17.0",
     "@nuxt/eslint-config": "^1.17.0",
     "@nuxt/test-utils": "^4.1.0",
     "@nuxthub/core": "^0.10.8",
     "@types/node": "^24.13.3",
     "@vue/test-utils": "^2.4.11",
-    "eslint": "^10.8.1",
-    "happy-dom": "^20.11.2",
+    "eslint": "^10.9.0",
+    "happy-dom": "^20.11.6",
     "nuxt": "^4.5.2",
     "postcss-nesting": "^14.0.1",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   }
 }
