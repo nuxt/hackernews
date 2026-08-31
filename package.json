@@ -39,7 +39,7 @@
     "happy-dom": "^20.12.0",
     "nuxt": "^4.5.2",
     "postcss-nesting": "^14.0.1",
-    "typescript": "^5.9.3",
+    "typescript": "^7.0.2",
     "vitest": "^4.1.11"
   }
 }
