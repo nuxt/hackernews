@@ -2,7 +2,18 @@
   "name": "nuxt-hn",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@12.3.4",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.0.0",
+      "onFail": "download"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.3.4",
+      "onFail": "download"
+    }
+  },
   "description": "Nuxt Hacker News",
   "author": "Evan You <yyx990803@gmail.com>",
   "contributors": [
