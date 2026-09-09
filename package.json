@@ -6,12 +6,12 @@
     "runtime": {
       "name": "node",
       "version": "^24.0.0",
-      "onFail": "download"
+      "onFail": "warn"
     },
     "packageManager": {
       "name": "pnpm",
       "version": "12.3.4",
-      "onFail": "download"
+      "onFail": "warn"
     }
   },
   "description": "Nuxt Hacker News",
