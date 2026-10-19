@@ -5,12 +5,12 @@
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "^24.21.0",
+      "version": "^24.22.0",
       "onFail": "warn"
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.11.2",
+      "version": "12.14.0",
       "onFail": "warn"
     }
   },
@@ -39,18 +39,18 @@
     "test:e2e": "vitest run --project e2e"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^3.4.2",
+    "@nuxt/devtools": "^3.4.3",
     "@nuxt/eslint": "^1.17.0",
     "@nuxt/eslint-config": "^1.17.0",
-    "@nuxt/test-utils": "^4.3.3",
+    "@nuxt/test-utils": "^4.3.4",
     "@nuxthub/core": "^0.10.8",
     "@types/node": "^24.19.2",
     "@vue/test-utils": "^2.5.1",
-    "eslint": "^10.12.0",
+    "eslint": "^10.13.0",
     "happy-dom": "^20.14.6",
     "nuxt": "^4.6.2",
     "postcss-nesting": "^14.0.3",
     "typescript": "^5.9.3",
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.5"
   }
 }
