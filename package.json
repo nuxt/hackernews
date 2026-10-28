@@ -48,7 +48,7 @@
     "@vue/test-utils": "^2.5.1",
     "eslint": "^10.13.0",
     "happy-dom": "^21.0.4",
-    "nuxt": "^4.6.2",
+    "nuxt": "^4.6.3",
     "postcss-nesting": "^14.0.3",
     "typescript": "^5.9.3",
     "vitest": "^5.0.5"
