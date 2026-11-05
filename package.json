@@ -39,7 +39,7 @@
     "test:e2e": "vitest run --project e2e"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^3.4.4",
+    "@nuxt/devtools": "^4.1.0",
     "@nuxt/eslint": "^1.17.0",
     "@nuxt/eslint-config": "^1.17.0",
     "@nuxt/test-utils": "^4.3.4",
