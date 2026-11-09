@@ -5,7 +5,7 @@
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "^24.22.2",
+      "version": "^26.13.0",
       "onFail": "warn"
     },
     "packageManager": {
@@ -44,7 +44,7 @@
     "@nuxt/eslint-config": "^1.17.0",
     "@nuxt/test-utils": "^4.3.4",
     "@nuxthub/core": "^0.10.12",
-    "@types/node": "^24.19.2",
+    "@types/node": "^26.6.6",
     "@vue/test-utils": "^2.5.1",
     "eslint": "^10.14.0",
     "happy-dom": "^21.0.4",
