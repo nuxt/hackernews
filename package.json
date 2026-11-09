@@ -10,7 +10,7 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.16.1",
+      "version": "12.18.0",
       "onFail": "warn"
     }
   },
@@ -51,6 +51,6 @@
     "nuxt": "^4.6.4",
     "postcss-nesting": "^14.0.3",
     "typescript": "^5.9.3",
-    "vitest": "^5.0.5"
+    "vitest": "^5.1.0"
   }
 }
